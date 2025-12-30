@@ -727,7 +727,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div class="keai-mobile-menu" id="keaiMobileMenu">
+    <div class="keai-mobile-menu" id="dbizlabMobileMenu">
         <div class="keai-mobile-menu-header">
             <span class="keai-mobile-menu-title">메뉴</span>
             <button class="keai-mobile-menu-close" onclick="toggleMobileMenu()" aria-label="메뉴 닫기">
@@ -746,7 +746,7 @@
         </nav>
     </div>
 
-    <div class="keai-mobile-overlay" id="keaiMobileOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="keai-mobile-overlay" id="dbizlabMobileOverlay" onclick="toggleMobileMenu()"></div>
 </header>
 
 <!-- ================================================
@@ -1358,7 +1358,7 @@ function scrollToForm(event) {
 
 // 모바일 메뉴 토글
 function toggleMobileMenu() {
-    const menu = document.getElementById('keaiMobileMenu');
+    const menu = document.getElementById('dbizlabMobileMenu');
     menu.classList.toggle('active');
     document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
 }
