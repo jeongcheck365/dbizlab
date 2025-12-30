@@ -1,7 +1,8 @@
 # 드림비즈랩 텍스트 리라이팅 TDD (기술 설계 문서)
 
 **작성일**: 2025-12-30
-**버전**: 1.0
+**버전**: 1.1
+**최종수정**: 2025-12-31
 **관련 문서**: [rewriting-rules.md](./rewriting-rules.md)
 
 ---
@@ -42,8 +43,20 @@
 | hero-mkt | mkt.html | 디지털/IT 빌딩, 현대적 |
 
 ### 2.3 생성 도구
-- Gemini 2.5 Flash Image (Nano Banana)
-- 저장 위치: `public/images/hero/`
+- **모델**: `gemini-3-pro-image-preview` (CLAUDE.md 참조)
+- **저장 위치**: `public/images/hero/`
+- **상태**: ✅ **완료** (2025-12-31)
+
+### 2.4 생성 결과
+
+| 파일명 | 용량 | 상태 |
+|--------|------|------|
+| hero-index.webp | 860KB | ✅ 완료 |
+| hero-company.webp | 1020KB | ✅ 완료 |
+| hero-fund.webp | 1038KB | ✅ 완료 |
+| hero-process.webp | 996KB | ✅ 완료 |
+| hero-pro.webp | 882KB | ✅ 완료 |
+| hero-mkt.webp | 897KB | ✅ 완료 |
 
 ---
 
@@ -122,13 +135,13 @@
 
 ## 4. 작업 순서
 
-### Phase 1: 히어로 이미지 생성 (6개)
+### Phase 1: 히어로 이미지 생성 (6개) ✅ 완료
 ```
-1. Gemini API로 이미지 생성
-2. WebP 변환 및 압축
-3. public/images/hero/ 저장
-4. 각 페이지 히어로 이미지 src 교체
-5. 커밋
+1. ✅ Gemini API로 이미지 생성 (gemini-3-pro-image-preview)
+2. ✅ WebP 포맷으로 저장
+3. ✅ public/images/hero/ 저장
+4. ⏳ 각 페이지 히어로 이미지 src 교체 (Phase 2에서 진행)
+5. ⏳ 커밋
 ```
 
 ### Phase 2: 페이지별 리라이팅
