@@ -372,7 +372,7 @@ img {
 .keai-hero {
     position: relative;
     width: 100%;
-    background: url('/images/generated/hero-main.jpg') center/cover no-repeat;
+    background: url('/images/generated/hero-main.png') center/cover no-repeat;
     margin-top: 80px;
 }
 
@@ -803,7 +803,7 @@ img {
 .keai-process {
     position: relative;
     width: 100%;
-    background: url('/images/generated/hero-process.jpg') center/cover no-repeat;
+    background: url('/images/generated/hero-process.png') center/cover no-repeat;
 }
 
 .keai-process::before {
@@ -1103,7 +1103,7 @@ img {
     max-width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    background: url('/images/generated/hero-pro.jpg') center/cover no-repeat;
+    background: url('/images/generated/hero-pro.png') center/cover no-repeat;
 }
 
 .keai-service::before {
@@ -1944,7 +1944,7 @@ textarea.keai-form-control {
 .keai-about-hero {
     position: relative;
     width: 100%;
-    background: url('/images/generated/hero-company.jpg') center/cover no-repeat;
+    background: url('/images/generated/hero-company.png') center/cover no-repeat;
     margin-top: 80px;
 }
 
