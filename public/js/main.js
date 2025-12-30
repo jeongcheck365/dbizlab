@@ -375,7 +375,7 @@
                     <tr><td style="padding: 8px 0;"><span style="color: #999;">사업자번호</span></td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${BRAND_INFO.bizno}</td></tr>
                 </table>
             </div>
-            <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #999;">본 메일은 발신전용 메일입니다. 문의사항은 위 연락처로 회신바랍니다.</p>
+            <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #999;">본 메일은 발신전용 메일입니다.<br>문의사항은 위 연락처로 회신바랍니다.</p>
         </div>
     </div>
 </body>
