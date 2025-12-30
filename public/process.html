@@ -14,27 +14,30 @@
 
     <!-- SEO 기본 -->
     <title>진행과정 | 드림비즈랩 DreamBizLab - 정부지원자금 신청 절차</title>
-    <meta name="description" content="정부정책자금 신청 진행과정 안내 - 역량파악부터 사후관리까지 체계적인 5단계 프로세스. 전문 경영컨설팅과 함께하는 자금확보 여정.">
-    <meta name="keywords" content="정부정책자금 진행과정, 자금확보 절차, 컨설팅 프로세스, 드림비즈랩, DreamBizLab">
+    <meta name="description" content="기업자금 신청 진행과정 안내 - 역량파악부터 사후관리까지 체계적인 5단계 프로세스. 전문 경영컨설팅과 함께하는 자금확보 여정.">
+    <meta name="keywords" content="기업자금 진행과정, 자금확보 절차, 컨설팅 프로세스, 드림비즈랩, DreamBizLab">
     <meta name="author" content="드림비즈랩 DreamBizLab">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.dbizlab.co.kr/process.html">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="canonical" href="https://dbizlab.co.kr/process.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="드림비즈랩 DreamBizLab">
     <meta property="og:title" content="진행과정 | 드림비즈랩 DreamBizLab">
     <meta property="og:description" content="역량파악부터 사후관리까지 체계적인 5단계 프로세스.">
-    <meta property="og:image" content="https://www.dbizlab.co.kr/og/og-process.png">
-    <meta property="og:url" content="https://www.dbizlab.co.kr/process.html">
+    <meta property="og:image" content="https://dbizlab.co.kr/og/og-process.png">
+    <meta property="og:url" content="https://dbizlab.co.kr/process.html">
     <meta property="og:locale" content="ko_KR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="진행과정 | 드림비즈랩 DreamBizLab">
     <meta name="twitter:description" content="역량파악부터 사후관리까지 체계적인 5단계 프로세스.">
-    <meta name="twitter:image" content="https://www.dbizlab.co.kr/og/og-process.png">
+    <meta name="twitter:image" content="https://dbizlab.co.kr/og/og-process.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="파비콘.png">
+    <link rel="apple-touch-icon" href="파비콘.png">
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -44,13 +47,13 @@
     /* ================================================
        FAQ SECTION STYLES
        ================================================ */
-    .dbizlab-faq-section {
+    .keai-faq-section {
         background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/hero-main.webp') center/cover no-repeat;
         padding: 60px 0;
         position: relative;
     }
 
-    .dbizlab-faq-section::before {
+    .keai-faq-section::before {
         content: '';
         position: absolute;
         top: 0;
@@ -61,7 +64,7 @@
         z-index: 0;
     }
 
-    .dbizlab-faq-container {
+    .keai-faq-container {
         max-width: 1000px;
         margin: 0 auto;
         padding: 0 20px;
@@ -69,12 +72,12 @@
         z-index: 1;
     }
 
-    .dbizlab-faq-header {
+    .keai-faq-header {
         text-align: center;
         margin-bottom: 30px;
     }
 
-    .dbizlab-faq-header h2 {
+    .keai-faq-header h2 {
         font-size: 38px;
         font-weight: 700;
         color: #1F2937;
@@ -83,7 +86,7 @@
         display: inline-block;
     }
 
-    .dbizlab-faq-header h2::after {
+    .keai-faq-header h2::after {
         content: '';
         position: absolute;
         bottom: -8px;
@@ -94,19 +97,19 @@
         background: linear-gradient(90deg, transparent, #0F4C81, #1A73E8, transparent);
     }
 
-    .dbizlab-faq-header p {
+    .keai-faq-header p {
         font-size: 18px;
         color: #6B7280;
         line-height: 1.5;
     }
 
-    .dbizlab-faq-list {
+    .keai-faq-list {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
 
-    .dbizlab-faq-item {
+    .keai-faq-item {
         background: #FFFFFF;
         border-radius: 12px;
         overflow: hidden;
@@ -116,7 +119,7 @@
         position: relative;
     }
 
-    .dbizlab-faq-item::before {
+    .keai-faq-item::before {
         content: '';
         position: absolute;
         top: 0;
@@ -128,27 +131,27 @@
         transition: opacity 0.3s ease;
     }
 
-    .dbizlab-faq-item:hover {
+    .keai-faq-item:hover {
         box-shadow: 0 4px 12px rgba(15, 76, 129, 0.08);
         border-color: #D1D5DB;
     }
 
-    .dbizlab-faq-item:hover::before {
+    .keai-faq-item:hover::before {
         opacity: 1;
     }
 
-    .dbizlab-faq-item.active {
+    .keai-faq-item.active {
         border-color: #0F4C81;
         box-shadow: 0 6px 20px rgba(15, 76, 129, 0.15);
         background: rgba(15, 76, 129, 0.02);
     }
 
-    .dbizlab-faq-item.active::before {
+    .keai-faq-item.active::before {
         opacity: 1;
         height: 3px;
     }
 
-    .dbizlab-faq-question {
+    .keai-faq-question {
         padding: 25px 30px;
         cursor: pointer;
         display: flex;
@@ -157,12 +160,12 @@
         transition: all 0.3s ease;
     }
 
-    .dbizlab-faq-item.active .dbizlab-faq-question {
+    .keai-faq-item.active .keai-faq-question {
         background: #FFFFFF;
         border-bottom: 1px solid #E5E7EB;
     }
 
-    .dbizlab-faq-number {
+    .keai-faq-number {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -179,13 +182,13 @@
         transition: all 0.3s ease;
     }
 
-    .dbizlab-faq-item.active .dbizlab-faq-number {
+    .keai-faq-item.active .keai-faq-number {
         background: linear-gradient(135deg, #0D47A1 0%, #1A73E8 100%);
         box-shadow: 0 4px 12px rgba(15, 76, 129, 0.4);
         transform: scale(1.05);
     }
 
-    .dbizlab-faq-question-text {
+    .keai-faq-question-text {
         flex: 1;
         font-size: 18px;
         font-weight: 600;
@@ -194,15 +197,15 @@
         padding-right: 20px;
     }
 
-    .dbizlab-faq-toggle {
+    .keai-faq-toggle {
         width: 22px;
         height: 22px;
         position: relative;
         flex-shrink: 0;
     }
 
-    .dbizlab-faq-toggle::before,
-    .dbizlab-faq-toggle::after {
+    .keai-faq-toggle::before,
+    .keai-faq-toggle::after {
         content: '';
         position: absolute;
         background: #6B7280;
@@ -210,7 +213,7 @@
         border-radius: 1px;
     }
 
-    .dbizlab-faq-toggle::before {
+    .keai-faq-toggle::before {
         width: 22px;
         height: 2px;
         top: 50%;
@@ -218,7 +221,7 @@
         transform: translateY(-50%);
     }
 
-    .dbizlab-faq-toggle::after {
+    .keai-faq-toggle::after {
         width: 2px;
         height: 22px;
         left: 50%;
@@ -226,41 +229,41 @@
         transform: translateX(-50%);
     }
 
-    .dbizlab-faq-item:hover .dbizlab-faq-toggle::before,
-    .dbizlab-faq-item:hover .dbizlab-faq-toggle::after {
+    .keai-faq-item:hover .keai-faq-toggle::before,
+    .keai-faq-item:hover .keai-faq-toggle::after {
         background: #0F4C81;
     }
 
-    .dbizlab-faq-item.active .dbizlab-faq-toggle::after {
+    .keai-faq-item.active .keai-faq-toggle::after {
         opacity: 0;
     }
 
-    .dbizlab-faq-item.active .dbizlab-faq-toggle::before {
+    .keai-faq-item.active .keai-faq-toggle::before {
         background: #0F4C81;
     }
 
-    .dbizlab-faq-answer {
+    .keai-faq-answer {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
     }
 
-    .dbizlab-faq-answer-inner {
+    .keai-faq-answer-inner {
         padding: 25px 30px 25px 90px;
     }
 
-    .dbizlab-faq-answer p {
+    .keai-faq-answer p {
         font-size: 16px;
         color: #374151;
         line-height: 1.7;
         margin: 0;
     }
 
-    .dbizlab-faq-answer p + p {
+    .keai-faq-answer p + p {
         margin-top: 14px;
     }
 
-    .dbizlab-faq-answer strong {
+    .keai-faq-answer strong {
         color: #0F4C81;
         font-weight: 700;
         background: rgba(15, 76, 129, 0.08);
@@ -269,14 +272,14 @@
         display: inline-block;
     }
 
-    .dbizlab-faq-highlight {
+    .keai-faq-highlight {
         color: #1A73E8;
         font-weight: 700;
         position: relative;
         display: inline-block;
     }
 
-    .dbizlab-faq-highlight::after {
+    .keai-faq-highlight::after {
         content: '';
         position: absolute;
         bottom: -2px;
@@ -287,20 +290,20 @@
         opacity: 0.6;
     }
 
-    .dbizlab-faq-item.active .dbizlab-faq-answer {
+    .keai-faq-item.active .keai-faq-answer {
         max-height: 700px;
     }
 
     /* ================================================
        CTA SECTION STYLES
        ================================================ */
-    .dbizlab-cta-section {
+    .keai-cta-section {
         background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/hero-main.webp') center/cover no-repeat;
         position: relative;
         overflow: hidden;
     }
 
-    .dbizlab-cta-section::before {
+    .keai-cta-section::before {
         content: '';
         position: absolute;
         top: 0;
@@ -312,7 +315,7 @@
         pointer-events: none;
     }
 
-    .dbizlab-cta-container {
+    .keai-cta-container {
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
@@ -321,7 +324,7 @@
         z-index: 1;
     }
 
-    .dbizlab-cta-content {
+    .keai-cta-content {
         text-align: center;
         color: #ffffff;
         max-width: 800px;
@@ -329,7 +332,7 @@
         margin: 0 auto;
     }
 
-    .dbizlab-cta-content h2 {
+    .keai-cta-content h2 {
         font-size: 42px;
         font-weight: 700;
         line-height: 1.3;
@@ -337,12 +340,12 @@
         margin: 0 0 18px 0;
     }
 
-    .dbizlab-cta-content .dbizlab-cta-highlight {
+    .keai-cta-content .keai-cta-highlight {
         color: #90CAF9;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .dbizlab-cta-content p {
+    .keai-cta-content p {
         font-size: 20px;
         line-height: 1.6;
         color: rgba(255, 255, 255, 0.95);
@@ -350,14 +353,14 @@
         margin: 0 0 35px 0;
     }
 
-    .dbizlab-cta-buttons {
+    .keai-cta-buttons {
         display: flex;
         gap: 20px;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .dbizlab-cta-btn {
+    .keai-cta-btn {
         display: inline-block;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
@@ -374,34 +377,34 @@
         text-align: center;
     }
 
-    .dbizlab-cta-btn:hover {
+    .keai-cta-btn:hover {
         transform: translateY(-3px);
         background: rgba(255, 255, 255, 0.2);
         border-color: rgba(255, 255, 255, 0.5);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    .dbizlab-cta-btn.primary {
+    .keai-cta-btn.primary {
         background: linear-gradient(135deg, #FFFFFF 0%, #E3F2FD 100%);
         color: #0F4C81;
         border: none;
         box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
     }
 
-    .dbizlab-cta-btn.primary:hover {
+    .keai-cta-btn.primary:hover {
         background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
         box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
         transform: translateY(-3px);
     }
 
     /* 정부기관 섹션 */
-    .dbizlab-gov-section {
+    .keai-gov-section {
         margin: 60px 0 0 0;
         padding: 40px 0 0 0;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .dbizlab-gov-title {
+    .keai-gov-title {
         text-align: center;
         font-size: 24px;
         color: #ffffff;
@@ -410,7 +413,7 @@
         margin: 0 0 30px 0;
     }
 
-    .dbizlab-gov-logos-wrapper {
+    .keai-gov-logos-wrapper {
         position: relative;
         overflow: hidden;
         background: rgba(255, 255, 255, 0.05);
@@ -420,7 +423,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .dbizlab-gov-logos {
+    .keai-gov-logos {
         display: flex;
         gap: 60px;
         width: calc(300% + 240px);
@@ -428,7 +431,7 @@
         padding: 0 30px;
     }
 
-    .dbizlab-gov-logos:hover {
+    .keai-gov-logos:hover {
         animation-play-state: paused;
     }
 
@@ -437,7 +440,7 @@
         100% { transform: translateX(-33.333%); }
     }
 
-    .dbizlab-gov-logo {
+    .keai-gov-logo {
         flex-shrink: 0;
         width: 200px;
         height: 100px;
@@ -453,20 +456,20 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .dbizlab-gov-logo:hover {
+    .keai-gov-logo:hover {
         transform: scale(1.05) translateY(-2px);
         box-shadow: 0 6px 20px rgba(15, 76, 129, 0.3);
         border-color: rgba(15, 76, 129, 0.3);
         background: #ffffff;
     }
 
-    .dbizlab-gov-logo img {
+    .keai-gov-logo img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
     }
 
-    .dbizlab-gov-indicators {
+    .keai-gov-indicators {
         display: flex;
         justify-content: center;
         gap: 8px;
@@ -474,7 +477,7 @@
         padding: 0 20px;
     }
 
-    .dbizlab-gov-dot {
+    .keai-gov-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
@@ -483,7 +486,7 @@
         cursor: pointer;
     }
 
-    .dbizlab-gov-dot.active {
+    .keai-gov-dot.active {
         background: #90CAF9;
         transform: scale(1.2);
         box-shadow: 0 0 10px rgba(144, 202, 249, 0.5);
@@ -491,89 +494,89 @@
 
     /* 반응형 */
     @media (max-width: 768px) {
-        .dbizlab-faq-section {
+        .keai-faq-section {
             padding: 30px 0;
         }
 
-        .dbizlab-faq-header {
+        .keai-faq-header {
             margin-bottom: 25px;
         }
 
-        .dbizlab-faq-header h2 {
+        .keai-faq-header h2 {
             font-size: 30px;
         }
 
-        .dbizlab-faq-header p {
+        .keai-faq-header p {
             font-size: 16px;
         }
 
-        .dbizlab-faq-list {
+        .keai-faq-list {
             gap: 12px;
         }
 
-        .dbizlab-faq-question {
+        .keai-faq-question {
             padding: 20px 18px;
         }
 
-        .dbizlab-faq-number {
+        .keai-faq-number {
             width: 32px;
             height: 32px;
             font-size: 14px;
             margin-right: 14px;
         }
 
-        .dbizlab-faq-question-text {
+        .keai-faq-question-text {
             font-size: 14px;
             padding-right: 15px;
             line-height: 1.3;
         }
 
-        .dbizlab-faq-answer-inner {
+        .keai-faq-answer-inner {
             padding: 20px 18px 20px 60px;
         }
 
-        .dbizlab-faq-answer p {
+        .keai-faq-answer p {
             font-size: 15px;
         }
 
-        .dbizlab-cta-content h2 {
+        .keai-cta-content h2 {
             font-size: 28px;
             line-height: 1.4;
             word-break: keep-all;
         }
 
-        .dbizlab-cta-content p {
+        .keai-cta-content p {
             font-size: 16px;
             word-break: keep-all;
         }
 
-        .dbizlab-cta-buttons {
+        .keai-cta-buttons {
             gap: 12px;
         }
 
-        .dbizlab-cta-btn {
+        .keai-cta-btn {
             font-size: 15px;
             padding: 16px 25px;
             min-width: 160px;
         }
 
-        .dbizlab-gov-section {
+        .keai-gov-section {
             margin: 45px 0 0 0;
             padding: 35px 0 0 0;
         }
 
-        .dbizlab-gov-title {
+        .keai-gov-title {
             font-size: 20px;
             margin: 0 0 25px 0;
         }
 
-        .dbizlab-gov-logo {
+        .keai-gov-logo {
             width: 150px;
             height: 75px;
             padding: 15px;
         }
 
-        .dbizlab-gov-logos {
+        .keai-gov-logos {
             gap: 25px;
             padding: 0 20px;
             animation: infiniteRolling 60s linear infinite;
@@ -581,84 +584,84 @@
     }
 
     @media (max-width: 480px) {
-        .dbizlab-faq-section {
+        .keai-faq-section {
             padding: 25px 0;
         }
 
-        .dbizlab-faq-container {
+        .keai-faq-container {
             padding: 0 15px;
         }
 
-        .dbizlab-faq-header h2 {
+        .keai-faq-header h2 {
             font-size: 26px;
         }
 
-        .dbizlab-faq-header p {
+        .keai-faq-header p {
             font-size: 15px;
         }
 
-        .dbizlab-faq-question {
+        .keai-faq-question {
             padding: 18px 15px;
         }
 
-        .dbizlab-faq-number {
+        .keai-faq-number {
             width: 28px;
             height: 28px;
             font-size: 13px;
             margin-right: 12px;
         }
 
-        .dbizlab-faq-question-text {
+        .keai-faq-question-text {
             font-size: 12px;
             line-height: 1.3;
         }
 
-        .dbizlab-faq-toggle {
+        .keai-faq-toggle {
             width: 18px;
             height: 18px;
         }
 
-        .dbizlab-faq-toggle::before {
+        .keai-faq-toggle::before {
             width: 18px;
         }
 
-        .dbizlab-faq-toggle::after {
+        .keai-faq-toggle::after {
             height: 18px;
         }
 
-        .dbizlab-faq-answer-inner {
+        .keai-faq-answer-inner {
             padding: 18px 15px 18px 15px;
         }
 
-        .dbizlab-faq-answer p {
+        .keai-faq-answer p {
             font-size: 14px;
         }
 
-        .dbizlab-cta-container {
+        .keai-cta-container {
             padding: 70px 15px 60px;
         }
 
-        .dbizlab-cta-content h2 {
+        .keai-cta-content h2 {
             font-size: 24px;
         }
 
-        .dbizlab-cta-content p {
+        .keai-cta-content p {
             font-size: 15px;
         }
 
-        .dbizlab-cta-btn {
+        .keai-cta-btn {
             font-size: 14px;
             padding: 14px 20px;
             min-width: 140px;
         }
 
-        .dbizlab-gov-logo {
+        .keai-gov-logo {
             width: 130px;
             height: 65px;
             padding: 12px;
         }
 
-        .dbizlab-gov-logos {
+        .keai-gov-logos {
             gap: 15px;
             padding: 0 15px;
             animation: infiniteRolling 45s linear infinite;
@@ -666,23 +669,23 @@
     }
 
     @media (min-width: 768px) {
-        .dbizlab-cta-container {
+        .keai-cta-container {
             padding: 100px 40px 60px;
         }
     }
 
     @media (min-width: 1024px) {
-        .dbizlab-cta-container {
+        .keai-cta-container {
             padding: 120px 40px 60px;
         }
     }
 
-    .dbizlab-mobile-br {
+    .keai-mobile-br {
         display: none;
     }
 
     @media (max-width: 768px) {
-        .dbizlab-mobile-br {
+        .keai-mobile-br {
             display: inline;
         }
     }
@@ -690,24 +693,24 @@
     /* ================================================
        BOARD SECTION STYLES
        ================================================ */
-    .dbizlab-board-section {
+    .keai-board-section {
         background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
         padding: 60px 0;
         position: relative;
     }
 
-    .dbizlab-board-container {
+    .keai-board-container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
 
-    .dbizlab-board-header {
+    .keai-board-header {
         text-align: center;
         margin-bottom: 40px;
     }
 
-    .dbizlab-board-title {
+    .keai-board-title {
         font-size: 38px;
         font-weight: 700;
         color: #1F2937;
@@ -716,7 +719,7 @@
         display: inline-block;
     }
 
-    .dbizlab-board-title::after {
+    .keai-board-title::after {
         content: '';
         position: absolute;
         bottom: -8px;
@@ -727,7 +730,7 @@
         background: linear-gradient(90deg, transparent, #0F4C81, #1A73E8, transparent);
     }
 
-    .dbizlab-board-highlight {
+    .keai-board-highlight {
         color: #0F4C81;
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
         -webkit-background-clip: text;
@@ -735,13 +738,13 @@
         background-clip: text;
     }
 
-    .dbizlab-board-subtitle {
+    .keai-board-subtitle {
         font-size: 18px;
         color: #6B7280;
         font-weight: 500;
     }
 
-    .dbizlab-board-grid {
+    .keai-board-grid {
         display: flex !important;
         flex-wrap: nowrap !important;
         gap: 20px;
@@ -756,11 +759,11 @@
         margin-right: -20px;
     }
 
-    .dbizlab-board-grid::-webkit-scrollbar {
+    .keai-board-grid::-webkit-scrollbar {
         display: none;
     }
 
-    .dbizlab-board-card {
+    .keai-board-card {
         flex: 0 0 300px;
         min-width: 300px;
         scroll-snap-align: start;
@@ -773,13 +776,13 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
 
-    .dbizlab-board-card:hover {
+    .keai-board-card:hover {
         transform: translateY(-5px);
         border-color: #0F4C81;
         box-shadow: 0 10px 30px rgba(15, 76, 129, 0.15);
     }
 
-    .dbizlab-board-card-thumbnail {
+    .keai-board-card-thumbnail {
         width: 100%;
         height: 180px;
         background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
@@ -787,13 +790,13 @@
         overflow: hidden;
     }
 
-    .dbizlab-board-card-thumbnail img {
+    .keai-board-card-thumbnail img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .dbizlab-board-card-placeholder {
+    .keai-board-card-placeholder {
         width: 100%;
         height: 100%;
         display: flex;
@@ -802,17 +805,17 @@
         background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
     }
 
-    .dbizlab-board-card-placeholder svg {
+    .keai-board-card-placeholder svg {
         width: 48px;
         height: 48px;
         fill: #90CAF9;
     }
 
-    .dbizlab-board-card-content {
+    .keai-board-card-content {
         padding: 20px;
     }
 
-    .dbizlab-board-card-category {
+    .keai-board-card-category {
         display: inline-block;
         padding: 4px 12px;
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
@@ -823,19 +826,19 @@
         margin-bottom: 12px;
     }
 
-    .dbizlab-board-card-category.notice {
+    .keai-board-card-category.notice {
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
     }
 
-    .dbizlab-board-card-category.news {
+    .keai-board-card-category.news {
         background: linear-gradient(135deg, #059669 0%, #10B981 100%);
     }
 
-    .dbizlab-board-card-category.info {
+    .keai-board-card-category.info {
         background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
     }
 
-    .dbizlab-board-card-title {
+    .keai-board-card-title {
         font-size: 17px;
         font-weight: 700;
         color: #1F2937;
@@ -847,7 +850,7 @@
         overflow: hidden;
     }
 
-    .dbizlab-board-card-meta {
+    .keai-board-card-meta {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -855,59 +858,59 @@
         color: #9CA3AF;
     }
 
-    .dbizlab-board-card-date,
-    .dbizlab-board-card-views {
+    .keai-board-card-date,
+    .keai-board-card-views {
         display: flex;
         align-items: center;
         gap: 5px;
     }
 
-    .dbizlab-board-card-date svg,
-    .dbizlab-board-card-views svg {
+    .keai-board-card-date svg,
+    .keai-board-card-views svg {
         width: 14px;
         height: 14px;
         fill: currentColor;
     }
 
-    .dbizlab-board-loading {
+    .keai-board-loading {
         text-align: center;
         padding: 60px 20px;
         color: #6B7280;
     }
 
-    .dbizlab-board-spinner {
+    .keai-board-spinner {
         width: 40px;
         height: 40px;
         border: 3px solid #E5E7EB;
         border-top-color: #0F4C81;
         border-radius: 50%;
-        animation: dbizlabBoardSpin 1s linear infinite;
+        animation: keaiBoardSpin 1s linear infinite;
         margin: 0 auto 15px;
     }
 
-    @keyframes dbizlabBoardSpin {
+    @keyframes keaiBoardSpin {
         to { transform: rotate(360deg); }
     }
 
-    .dbizlab-board-empty {
+    .keai-board-empty {
         text-align: center;
         padding: 60px 20px;
         color: #6B7280;
     }
 
-    .dbizlab-board-empty svg {
+    .keai-board-empty svg {
         width: 60px;
         height: 60px;
         fill: #D1D5DB;
         margin-bottom: 15px;
     }
 
-    .dbizlab-board-more {
+    .keai-board-more {
         text-align: center;
         margin-top: 20px;
     }
 
-    .dbizlab-board-more-btn {
+    .keai-board-more-btn {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -922,13 +925,13 @@
         transition: all 0.3s ease;
     }
 
-    .dbizlab-board-more-btn:hover {
+    .keai-board-more-btn:hover {
         background: #0F4C81;
         color: #FFFFFF;
         transform: translateY(-2px);
     }
 
-    .dbizlab-board-more-btn svg {
+    .keai-board-more-btn svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
@@ -936,19 +939,19 @@
 
     /* Board 반응형 */
     @media (min-width: 768px) {
-        .dbizlab-board-section {
+        .keai-board-section {
             padding: 80px 0;
         }
 
-        .dbizlab-board-header {
+        .keai-board-header {
             margin-bottom: 50px;
         }
 
-        .dbizlab-board-title {
+        .keai-board-title {
             font-size: 42px;
         }
 
-        .dbizlab-board-grid {
+        .keai-board-grid {
             display: grid !important;
             grid-template-columns: repeat(2, 1fr);
             gap: 25px;
@@ -958,67 +961,67 @@
             margin-right: 0;
         }
 
-        .dbizlab-board-card {
+        .keai-board-card {
             flex: none;
             min-width: unset;
             width: 100%;
         }
 
-        .dbizlab-board-card-thumbnail {
+        .keai-board-card-thumbnail {
             height: 200px;
         }
     }
 
     @media (min-width: 1024px) {
-        .dbizlab-board-section {
+        .keai-board-section {
             padding: 100px 0;
         }
 
-        .dbizlab-board-title {
+        .keai-board-title {
             font-size: 48px;
         }
 
-        .dbizlab-board-grid {
+        .keai-board-grid {
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .dbizlab-board-card-thumbnail {
+        .keai-board-card-thumbnail {
             height: 220px;
         }
     }
 
     @media (max-width: 767px) {
-        .dbizlab-board-section {
+        .keai-board-section {
             padding: 40px 0;
         }
 
-        .dbizlab-board-header {
+        .keai-board-header {
             margin-bottom: 25px;
         }
 
-        .dbizlab-board-title {
+        .keai-board-title {
             font-size: 28px;
         }
 
-        .dbizlab-board-subtitle {
+        .keai-board-subtitle {
             font-size: 15px;
         }
 
-        .dbizlab-board-card {
+        .keai-board-card {
             flex: 0 0 280px;
             min-width: 280px;
         }
 
-        .dbizlab-board-card-thumbnail {
+        .keai-board-card-thumbnail {
             height: 160px;
         }
 
-        .dbizlab-board-card-content {
+        .keai-board-card-content {
             padding: 16px;
         }
 
-        .dbizlab-board-card-title {
+        .keai-board-card-title {
             font-size: 15px;
         }
     }
@@ -1029,93 +1032,93 @@
 <!-- ================================================
      HEADER
      ================================================ -->
-<header class="dbizlab-header">
-    <div class="dbizlab-header-container">
-        <div class="dbizlab-header-main">
-            <a href="index.html" class="dbizlab-logo">
-                <img src="logo.png" alt="DreamBizLab 드림비즈랩" class="dbizlab-logo-image" data-image-id="logo">
+<header class="keai-header">
+    <div class="keai-header-container">
+        <div class="keai-header-main">
+            <a href="index.html" class="keai-logo">
+                <img src="logo.png" alt="드림비즈랩 DreamBizLab" class="keai-logo-image" data-image-id="logo">
             </a>
 
-            <nav class="dbizlab-nav">
-                <ul class="dbizlab-nav-list">
-                    <li class="dbizlab-nav-item"><a href="index.html">홈</a></li>
-                    <li class="dbizlab-nav-item"><a href="company.html">회사소개</a></li>
-                    <li class="dbizlab-nav-item"><a href="process.html" class="active">진행과정</a></li>
-                    <li class="dbizlab-nav-item"><a href="fund.html">자금상담</a></li>
-                    <li class="dbizlab-nav-item"><a href="pro.html">전문서비스</a></li>
-                    <li class="dbizlab-nav-item"><a href="mkt.html">온라인마케팅</a></li>
+            <nav class="keai-nav">
+                <ul class="keai-nav-list">
+                    <li class="keai-nav-item"><a href="index.html">홈</a></li>
+                    <li class="keai-nav-item"><a href="company.html">회사소개</a></li>
+                    <li class="keai-nav-item"><a href="process.html" class="active">진행과정</a></li>
+                    <li class="keai-nav-item"><a href="fund.html">자금상담</a></li>
+                    <li class="keai-nav-item"><a href="pro.html">전문서비스</a></li>
+                    <li class="keai-nav-item"><a href="mkt.html">온라인마케팅</a></li>
                 </ul>
             </nav>
 
-            <div class="dbizlab-header-cta">
-                <a href="#form" class="dbizlab-btn-header-cta">
+            <div class="keai-header-cta">
+                <a href="#form" class="keai-btn-header-cta">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     <span>무료심사</span>
                 </a>
             </div>
 
-            <button class="dbizlab-mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+            <button class="keai-mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
                 <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
             </button>
         </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div class="dbizlab-mobile-menu" id="dbizlabMobileMenu">
-        <div class="dbizlab-mobile-menu-header">
-            <span class="dbizlab-mobile-menu-title">메뉴</span>
-            <button class="dbizlab-mobile-menu-close" onclick="toggleMobileMenu()" aria-label="메뉴 닫기">
+    <div class="keai-mobile-menu" id="keaiMobileMenu">
+        <div class="keai-mobile-menu-header">
+            <span class="keai-mobile-menu-title">메뉴</span>
+            <button class="keai-mobile-menu-close" onclick="toggleMobileMenu()" aria-label="메뉴 닫기">
                 <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </button>
         </div>
         <nav>
-            <ul class="dbizlab-mobile-nav-list">
-                <li class="dbizlab-mobile-nav-item"><a href="index.html" onclick="toggleMobileMenu()">홈</a></li>
-                <li class="dbizlab-mobile-nav-item"><a href="company.html" onclick="toggleMobileMenu()">회사소개</a></li>
-                <li class="dbizlab-mobile-nav-item"><a href="process.html" class="active" onclick="toggleMobileMenu()">진행과정</a></li>
-                <li class="dbizlab-mobile-nav-item"><a href="fund.html" onclick="toggleMobileMenu()">자금상담</a></li>
-                <li class="dbizlab-mobile-nav-item"><a href="pro.html" onclick="toggleMobileMenu()">전문서비스</a></li>
-                <li class="dbizlab-mobile-nav-item"><a href="mkt.html" onclick="toggleMobileMenu()">온라인마케팅</a></li>
+            <ul class="keai-mobile-nav-list">
+                <li class="keai-mobile-nav-item"><a href="index.html" onclick="toggleMobileMenu()">홈</a></li>
+                <li class="keai-mobile-nav-item"><a href="company.html" onclick="toggleMobileMenu()">회사소개</a></li>
+                <li class="keai-mobile-nav-item"><a href="process.html" class="active" onclick="toggleMobileMenu()">진행과정</a></li>
+                <li class="keai-mobile-nav-item"><a href="fund.html" onclick="toggleMobileMenu()">자금상담</a></li>
+                <li class="keai-mobile-nav-item"><a href="pro.html" onclick="toggleMobileMenu()">전문서비스</a></li>
+                <li class="keai-mobile-nav-item"><a href="mkt.html" onclick="toggleMobileMenu()">온라인마케팅</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="dbizlab-mobile-overlay" id="dbizlabMobileOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="keai-mobile-overlay" id="keaiMobileOverlay" onclick="toggleMobileMenu()"></div>
 </header>
 
 <!-- ================================================
      HERO SECTION
      ================================================ -->
-<section class="dbizlab-about-hero">
-    <div class="dbizlab-about-hero-container">
+<section class="keai-about-hero">
+    <div class="keai-about-hero-container">
         <!-- Headline -->
-        <div class="dbizlab-about-hero-headline">
-            <div class="dbizlab-about-hero-badge">
+        <div class="keai-about-hero-headline">
+            <div class="keai-about-hero-badge">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="#0F4C81">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                 </svg>
-                <span>DreamBizLab 4단계 컨설팅 시스템</span>
+                <span>드림비즈랩 4단계 컨설팅 시스템</span>
             </div>
 
-            <h1 class="dbizlab-about-hero-title">
+            <h1 class="keai-about-hero-title">
                 기업심사관이 직접 설계한<br>
-                <span class="dbizlab-about-hero-title-highlight">단계별 자금확보 로드맵</span>
+                <span class="keai-about-hero-title-highlight">단계별 자금확보 로드맵</span>
             </h1>
 
-            <p class="dbizlab-about-hero-description">
-                상담부터 확보까지, DreamBizLab만의 검증된 프로세스로<br class="dbizlab-mobile-br">
+            <p class="keai-about-hero-description">
+                상담부터 확보까지, DreamBizLab만의 검증된 프로세스로<br class="keai-mobile-br">
                 대표님의 자금확보 여정을 안내합니다
             </p>
 
             <!-- CTA Buttons -->
-            <div class="dbizlab-hero-cta">
-                <a href="#form" class="dbizlab-btn-primary">
+            <div class="keai-hero-cta">
+                <a href="#form" class="keai-btn-primary">
                     <svg viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                     <span>진행 과정 상담하기</span>
                 </a>
-                <a href="#gov-section" class="dbizlab-btn-secondary">
+                <a href="#gov-section" class="keai-btn-secondary">
                     <svg viewBox="0 0 24 24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
@@ -1125,9 +1128,9 @@
         </div>
 
         <!-- 중요 안내 -->
-        <div class="dbizlab-about-notice-box">
-            <div class="dbizlab-about-notice-title">⚠️ 중요 안내</div>
-            <ul class="dbizlab-about-notice-list">
+        <div class="keai-about-notice-box">
+            <div class="keai-about-notice-title">⚠️ 중요 안내</div>
+            <ul class="keai-about-notice-list">
                 <li>기업의 가치를 평가하지 않습니다</li>
                 <li>자금 접수 및 서류작성 대행을 하지 않습니다</li>
                 <li>자금 접수는 대표자가 직접 작성 및 접수합니다</li>
@@ -1140,31 +1143,31 @@
 <!-- ================================================
      BOARD SECTION - 공지사항 & 뉴스
      ================================================ -->
-<section class="dbizlab-board-section" id="board">
-    <div class="dbizlab-board-container">
-        <div class="dbizlab-board-header">
-            <h2 class="dbizlab-board-title"><span class="dbizlab-board-highlight">공지사항</span> & 뉴스</h2>
-            <p class="dbizlab-board-subtitle">DreamBizLab의 최신 소식과 자금확보 관련 정보를 확인하세요</p>
+<section class="keai-board-section" id="board">
+    <div class="keai-board-container">
+        <div class="keai-board-header">
+            <h2 class="keai-board-title"><span class="keai-board-highlight">공지사항</span> & 뉴스</h2>
+            <p class="keai-board-subtitle">드림비즈랩의 최신 소식과 자금확보 관련 정보를 확인하세요</p>
         </div>
 
         <!-- 로딩 상태 -->
-        <div class="dbizlab-board-loading" id="dbizlab-board-loading">
-            <div class="dbizlab-board-spinner"></div>
+        <div class="keai-board-loading" id="keai-board-loading">
+            <div class="keai-board-spinner"></div>
             <p>게시글을 불러오는 중...</p>
         </div>
 
         <!-- 빈 상태 -->
-        <div class="dbizlab-board-empty" id="dbizlab-board-empty" style="display: none;">
+        <div class="keai-board-empty" id="keai-board-empty" style="display: none;">
             <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-1 12H5c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1z"/></svg>
             <p>등록된 게시글이 없습니다.</p>
         </div>
 
         <!-- 게시글 그리드 -->
-        <div class="dbizlab-board-grid" id="dbizlab-board-grid" style="display: none;"></div>
+        <div class="keai-board-grid" id="keai-board-grid" style="display: none;"></div>
 
         <!-- 더보기 버튼 -->
-        <div class="dbizlab-board-more" id="dbizlab-board-more" style="display: none;">
-            <button class="dbizlab-board-more-btn" id="dbizlab-load-more-btn">
+        <div class="keai-board-more" id="keai-board-more" style="display: none;">
+            <button class="keai-board-more-btn" id="keai-load-more-btn">
                 <span>더 많은 소식 보기</span>
                 <svg viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
             </button>
@@ -1175,105 +1178,105 @@
 <!-- ================================================
      FAQ SECTION
      ================================================ -->
-<section class="dbizlab-faq-section">
-    <div class="dbizlab-faq-container">
-        <div class="dbizlab-faq-header">
+<section class="keai-faq-section">
+    <div class="keai-faq-container">
+        <div class="keai-faq-header">
             <h2>자주 묻는 질문</h2>
-            <p>DreamBizLab 자금확보 컨설팅 진행 전<br class="dbizlab-mobile-br">궁금하신 점을 확인하세요</p>
+            <p>드림비즈랩 자금확보 컨설팅 진행 전<br class="keai-mobile-br">궁금하신 점을 확인하세요</p>
         </div>
 
-        <div class="dbizlab-faq-list">
+        <div class="keai-faq-list">
             <!-- FAQ 1 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q1</span>
-                        <span class="dbizlab-faq-question-text">DreamBizLab는 어떤 서비스를 제공하나요?</span>
+                        <span class="keai-faq-number">Q1</span>
+                        <span class="keai-faq-question-text">드림비즈랩은 어떤 서비스를 제공하나요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
-                        <p>DreamBizLab는 <span class="dbizlab-faq-highlight">대표님이 직접 신청서를 작성하고 접수</span>하실 수 있도록 전문 코칭을 제공합니다. 서류 대행이나 기업 평가는 진행하지 않으며, 심사에서 중요하게 보는 포인트와 작성 노하우를 상세히 안내해 드립니다.</p>
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
+                        <p>드림비즈랩은 <span class="keai-faq-highlight">대표님이 직접 신청서를 작성하고 접수</span>하실 수 있도록 전문 코칭을 제공합니다. 서류 대행이나 기업 평가는 진행하지 않으며, 심사에서 중요하게 보는 포인트와 작성 노하우를 상세히 안내해 드립니다.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 2 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q2</span>
-                        <span class="dbizlab-faq-question-text">4단계 프로세스는 어떻게 진행되나요?</span>
+                        <span class="keai-faq-number">Q2</span>
+                        <span class="keai-faq-question-text">4단계 프로세스는 어떻게 진행되나요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
-                        <p><strong>DreamBizLab 4단계 시스템</strong>으로 진행됩니다. ① 무료심사로 현황 파악 ② 맞춤 자금확보 전략 수립 ③ 서류 작성 및 면접 코칭 ④ 접수 안내 및 사후관리. 각 단계마다 기업심사관의 실무 경험을 바탕으로 핵심 포인트를 짚어드립니다.</p>
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
+                        <p><strong>드림비즈랩 4단계 시스템</strong>으로 진행됩니다. ① 무료심사로 현황 파악 ② 맞춤 자금확보 전략 수립 ③ 서류 작성 및 면접 코칭 ④ 접수 안내 및 사후관리. 각 단계마다 기업심사관의 실무 경험을 바탕으로 핵심 포인트를 짚어드립니다.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 3 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q3</span>
-                        <span class="dbizlab-faq-question-text">어떤 종류의 자금을 확보할 수 있나요?</span>
+                        <span class="keai-faq-number">Q3</span>
+                        <span class="keai-faq-question-text">어떤 종류의 자금을 확보할 수 있나요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
                         <p>중앙정부와 지자체의 다양한 기업자금을 안내합니다. <strong>창업자금, 운전자금, 시설자금, R&D자금, 수출지원, 인증지원</strong> 등 귀사의 업종과 성장 단계에 맞는 최적의 자금확보 방안을 찾아드립니다.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 4 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q4</span>
-                        <span class="dbizlab-faq-question-text">비용은 얼마인가요?</span>
+                        <span class="keai-faq-number">Q4</span>
+                        <span class="keai-faq-question-text">비용은 얼마인가요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
                         <p>첫 상담과 자금확보 가능성 파악은 <strong>무료</strong>입니다. 이후 컨설팅 비용은 귀사 상황과 목표 자금 규모에 따라 달라지며, <strong>무료심사 후 명확한 안내</strong>를 드립니다. 숨겨진 비용 없이 투명하게 진행됩니다.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 5 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q5</span>
-                        <span class="dbizlab-faq-question-text">자금확보까지 기간이 얼마나 걸리나요?</span>
+                        <span class="keai-faq-number">Q5</span>
+                        <span class="keai-faq-question-text">자금확보까지 기간이 얼마나 걸리나요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
-                        <p>자금 종류에 따라 <strong>긴급자금은 3-4주</strong>, 일반 기업자금은 <strong>2-3개월</strong> 정도 소요됩니다. DreamBizLab는 속도보다 <strong>최대 한도, 낮은 금리, 유리한 상환조건</strong>을 우선으로 준비합니다. 꼼꼼한 준비가 더 좋은 결과를 만듭니다.</p>
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
+                        <p>자금 종류에 따라 <strong>긴급자금은 3-4주</strong>, 일반 기업자금은 <strong>2-3개월</strong> 정도 소요됩니다. 드림비즈랩은 속도보다 <strong>최대 한도, 낮은 금리, 유리한 상환조건</strong>을 우선으로 준비합니다. 꼼꼼한 준비가 더 좋은 결과를 만듭니다.</p>
                     </div>
                 </div>
             </div>
 
             <!-- FAQ 6 -->
-            <div class="dbizlab-faq-item">
-                <div class="dbizlab-faq-question" onclick="toggleFAQ(this)">
+            <div class="keai-faq-item">
+                <div class="keai-faq-question" onclick="toggleFAQ(this)">
                     <div style="display: flex; align-items: center;">
-                        <span class="dbizlab-faq-number">Q6</span>
-                        <span class="dbizlab-faq-question-text">자금확보 후에도 관리해주나요?</span>
+                        <span class="keai-faq-number">Q6</span>
+                        <span class="keai-faq-question-text">자금확보 후에도 관리해주나요?</span>
                     </div>
-                    <div class="dbizlab-faq-toggle"></div>
+                    <div class="keai-faq-toggle"></div>
                 </div>
-                <div class="dbizlab-faq-answer">
-                    <div class="dbizlab-faq-answer-inner">
+                <div class="keai-faq-answer">
+                    <div class="keai-faq-answer-inner">
                         <p>네, DreamBizLab는 <strong>장기 파트너십</strong>을 추구합니다. 확보 후에도 자금 활용 점검, 추가 자금확보 기회 안내, 새로운 지원사업 정보 공유 등을 지속적으로 제공합니다. 한 번의 인연이 아닌, 함께 성장하는 관계를 지향합니다.</p>
                     </div>
                 </div>
@@ -1285,92 +1288,92 @@
 <!-- ================================================
      CTA + GOVERNMENT LOGOS SECTION
      ================================================ -->
-<section class="dbizlab-cta-section" id="gov-section">
-    <div class="dbizlab-cta-container">
-        <div class="dbizlab-cta-content">
-            <h2>지금 바로 <span class="dbizlab-cta-highlight">무료심사</span>를 신청하고<br>맞춤 자금확보 전략을 받아보세요</h2>
-            <p>DreamBizLab 기업심사관이 귀사에 딱 맞는<br class="dbizlab-mobile-br">자금확보 로드맵을 설계해 드립니다</p>
+<section class="keai-cta-section" id="gov-section">
+    <div class="keai-cta-container">
+        <div class="keai-cta-content">
+            <h2>지금 바로 <span class="keai-cta-highlight">무료심사</span>를 신청하고<br>맞춤 자금확보 전략을 받아보세요</h2>
+            <p>드림비즈랩 전문가이 귀사에 딱 맞는<br class="keai-mobile-br">자금확보 로드맵을 설계해 드립니다</p>
 
-            <div class="dbizlab-cta-buttons">
-                <a href="#form" class="dbizlab-cta-btn primary">무료 심사 신청</a>
-                <a href="#form" class="dbizlab-cta-btn">맞춤형 자금 전략</a>
+            <div class="keai-cta-buttons">
+                <a href="#form" class="keai-cta-btn primary">무료 심사 신청</a>
+                <a href="#form" class="keai-cta-btn">맞춤형 자금 전략</a>
             </div>
         </div>
 
         <!-- 정부기관 롤링 섹션 -->
-        <div class="dbizlab-gov-section">
-            <h3 class="dbizlab-gov-title">자금확보 정부기관</h3>
-            <div class="dbizlab-gov-logos-wrapper">
-                <div class="dbizlab-gov-logos">
+        <div class="keai-gov-section">
+            <h3 class="keai-gov-title">자금확보 정부기관</h3>
+            <div class="keai-gov-logos-wrapper">
+                <div class="keai-gov-logos">
                     <!-- 첫 번째 세트 -->
-                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="dbizlab-gov-logo" title="서울신용보증재단">
+                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="keai-gov-logo" title="서울신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/87c7644e8191f.jpg" alt="서울신용보증재단">
                     </a>
-                    <a href="https://www.gcgf.or.kr" target="_blank" class="dbizlab-gov-logo" title="경기신용보증재단">
+                    <a href="https://www.gcgf.or.kr" target="_blank" class="keai-gov-logo" title="경기신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/f1e78a6971c4d.jpg" alt="경기신용보증재단">
                     </a>
-                    <a href="https://www.kosmes.or.kr" target="_blank" class="dbizlab-gov-logo" title="중소벤처기업진흥공단">
+                    <a href="https://www.kosmes.or.kr" target="_blank" class="keai-gov-logo" title="중소벤처기업진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/12b1eaa7851a6.png" alt="중소벤처기업진흥공단">
                     </a>
-                    <a href="https://www.kodit.co.kr" target="_blank" class="dbizlab-gov-logo" title="신용보증기금">
+                    <a href="https://www.kodit.co.kr" target="_blank" class="keai-gov-logo" title="신용보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/efdf18145519b.png" alt="신용보증기금">
                     </a>
-                    <a href="https://www.kibo.or.kr" target="_blank" class="dbizlab-gov-logo" title="기술보증기금">
+                    <a href="https://www.kibo.or.kr" target="_blank" class="keai-gov-logo" title="기술보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/28822c88eec59.png" alt="기술보증기금">
                     </a>
-                    <a href="https://www.semas.or.kr" target="_blank" class="dbizlab-gov-logo" title="소상공인진흥공단">
+                    <a href="https://www.semas.or.kr" target="_blank" class="keai-gov-logo" title="소상공인진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/b84a69e337c73.png" alt="소상공인진흥공단">
                     </a>
 
                     <!-- 두 번째 세트 (무한 롤링용) -->
-                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="dbizlab-gov-logo" title="서울신용보증재단">
+                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="keai-gov-logo" title="서울신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/87c7644e8191f.jpg" alt="서울신용보증재단">
                     </a>
-                    <a href="https://www.gcgf.or.kr" target="_blank" class="dbizlab-gov-logo" title="경기신용보증재단">
+                    <a href="https://www.gcgf.or.kr" target="_blank" class="keai-gov-logo" title="경기신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/f1e78a6971c4d.jpg" alt="경기신용보증재단">
                     </a>
-                    <a href="https://www.kosmes.or.kr" target="_blank" class="dbizlab-gov-logo" title="중소벤처기업진흥공단">
+                    <a href="https://www.kosmes.or.kr" target="_blank" class="keai-gov-logo" title="중소벤처기업진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/12b1eaa7851a6.png" alt="중소벤처기업진흥공단">
                     </a>
-                    <a href="https://www.kodit.co.kr" target="_blank" class="dbizlab-gov-logo" title="신용보증기금">
+                    <a href="https://www.kodit.co.kr" target="_blank" class="keai-gov-logo" title="신용보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/efdf18145519b.png" alt="신용보증기금">
                     </a>
-                    <a href="https://www.kibo.or.kr" target="_blank" class="dbizlab-gov-logo" title="기술보증기금">
+                    <a href="https://www.kibo.or.kr" target="_blank" class="keai-gov-logo" title="기술보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/28822c88eec59.png" alt="기술보증기금">
                     </a>
-                    <a href="https://www.semas.or.kr" target="_blank" class="dbizlab-gov-logo" title="소상공인진흥공단">
+                    <a href="https://www.semas.or.kr" target="_blank" class="keai-gov-logo" title="소상공인진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/b84a69e337c73.png" alt="소상공인진흥공단">
                     </a>
 
                     <!-- 세 번째 세트 (무한 롤링용) -->
-                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="dbizlab-gov-logo" title="서울신용보증재단">
+                    <a href="https://www.seoulshinbo.co.kr" target="_blank" class="keai-gov-logo" title="서울신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/87c7644e8191f.jpg" alt="서울신용보증재단">
                     </a>
-                    <a href="https://www.gcgf.or.kr" target="_blank" class="dbizlab-gov-logo" title="경기신용보증재단">
+                    <a href="https://www.gcgf.or.kr" target="_blank" class="keai-gov-logo" title="경기신용보증재단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/f1e78a6971c4d.jpg" alt="경기신용보증재단">
                     </a>
-                    <a href="https://www.kosmes.or.kr" target="_blank" class="dbizlab-gov-logo" title="중소벤처기업진흥공단">
+                    <a href="https://www.kosmes.or.kr" target="_blank" class="keai-gov-logo" title="중소벤처기업진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/12b1eaa7851a6.png" alt="중소벤처기업진흥공단">
                     </a>
-                    <a href="https://www.kodit.co.kr" target="_blank" class="dbizlab-gov-logo" title="신용보증기금">
+                    <a href="https://www.kodit.co.kr" target="_blank" class="keai-gov-logo" title="신용보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/efdf18145519b.png" alt="신용보증기금">
                     </a>
-                    <a href="https://www.kibo.or.kr" target="_blank" class="dbizlab-gov-logo" title="기술보증기금">
+                    <a href="https://www.kibo.or.kr" target="_blank" class="keai-gov-logo" title="기술보증기금">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/28822c88eec59.png" alt="기술보증기금">
                     </a>
-                    <a href="https://www.semas.or.kr" target="_blank" class="dbizlab-gov-logo" title="소상공인진흥공단">
+                    <a href="https://www.semas.or.kr" target="_blank" class="keai-gov-logo" title="소상공인진흥공단">
                         <img src="https://cdn.imweb.me/upload/S20250624bfeeb8bdef278/b84a69e337c73.png" alt="소상공인진흥공단">
                     </a>
                 </div>
 
                 <!-- 인디케이터 -->
-                <div class="dbizlab-gov-indicators">
-                    <div class="dbizlab-gov-dot active"></div>
-                    <div class="dbizlab-gov-dot"></div>
-                    <div class="dbizlab-gov-dot"></div>
-                    <div class="dbizlab-gov-dot"></div>
-                    <div class="dbizlab-gov-dot"></div>
-                    <div class="dbizlab-gov-dot"></div>
+                <div class="keai-gov-indicators">
+                    <div class="keai-gov-dot active"></div>
+                    <div class="keai-gov-dot"></div>
+                    <div class="keai-gov-dot"></div>
+                    <div class="keai-gov-dot"></div>
+                    <div class="keai-gov-dot"></div>
+                    <div class="keai-gov-dot"></div>
                 </div>
             </div>
         </div>
@@ -1380,68 +1383,68 @@
 <!-- ================================================
      FORM SECTION
      ================================================ -->
-<section class="dbizlab-form-section" id="form">
-    <div class="dbizlab-form-container">
-        <div class="dbizlab-form-wrapper">
+<section class="keai-form-section" id="form">
+    <div class="keai-form-container">
+        <div class="keai-form-wrapper">
             <!-- Left: Image -->
-            <div class="dbizlab-form-image">
+            <div class="keai-form-image">
                 <img src="https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/form-consultant.webp" alt="드림비즈랩 자금 상담">
-                <div class="dbizlab-form-image-overlay">
-                    <h3 class="dbizlab-form-image-title">
+                <div class="keai-form-image-overlay">
+                    <h3 class="keai-form-image-title">
                         기업심사 전문가와 함께<br>
                         자금확보의 새 길을 열어보세요
                     </h3>
-                    <p class="dbizlab-form-image-text">
+                    <p class="keai-form-image-text">
                         귀사의 성장 가능성을<br>
                         체계적으로 지원합니다
                     </p>
-                    <p class="dbizlab-form-image-text" style="margin-top: 20px; font-size: 12px; opacity: 0.8;">
+                    <p class="keai-form-image-text" style="margin-top: 20px; font-size: 12px; opacity: 0.8;">
                         ※ 기업대출알선 서비스가 아닙니다
                     </p>
                 </div>
             </div>
 
             <!-- Right: Form -->
-            <div class="dbizlab-form-area">
-                <div class="dbizlab-form-header">
-                    <h3 class="dbizlab-form-title">자금확보 무료 심사 신청</h3>
-                    <p class="dbizlab-form-subtitle">기본 정보 입력 후 맞춤 상담을 받아보세요</p>
+            <div class="keai-form-area">
+                <div class="keai-form-header">
+                    <h3 class="keai-form-title">자금확보 무료 심사 신청</h3>
+                    <p class="keai-form-subtitle">기본 정보 입력 후 맞춤 상담을 받아보세요</p>
                 </div>
 
                 <form id="consultForm" onsubmit="handleSubmit(event)">
                     <!-- Basic Info - 4 columns -->
-                    <div class="dbizlab-form-row four-columns">
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">기업명 <span class="dbizlab-required">*</span></label>
-                            <input type="text" class="dbizlab-form-control" name="company" required>
+                    <div class="keai-form-row four-columns">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">기업명 <span class="keai-required">*</span></label>
+                            <input type="text" class="keai-form-control" name="company" required>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">사업자번호 <span class="dbizlab-required">*</span></label>
-                            <input type="text" class="dbizlab-form-control" name="bizno" placeholder="000-00-00000" required>
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">사업자번호 <span class="keai-required">*</span></label>
+                            <input type="text" class="keai-form-control" name="bizno" placeholder="000-00-00000" required>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">대표자명 <span class="dbizlab-required">*</span></label>
-                            <input type="text" class="dbizlab-form-control" name="name" required>
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">대표자명 <span class="keai-required">*</span></label>
+                            <input type="text" class="keai-form-control" name="name" required>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">직위</label>
-                            <input type="text" class="dbizlab-form-control" name="position" placeholder="대표이사">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">직위</label>
+                            <input type="text" class="keai-form-control" name="position" placeholder="대표이사">
                         </div>
                     </div>
 
                     <!-- Contact Info - 4 columns -->
-                    <div class="dbizlab-form-row four-columns">
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">연락처 <span class="dbizlab-required">*</span></label>
-                            <input type="tel" class="dbizlab-form-control" name="phone" placeholder="010-0000-0000" required>
+                    <div class="keai-form-row four-columns">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">연락처 <span class="keai-required">*</span></label>
+                            <input type="tel" class="keai-form-control" name="phone" placeholder="010-0000-0000" required>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">이메일 <span class="dbizlab-required">*</span></label>
-                            <input type="email" class="dbizlab-form-control" name="email" required>
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">이메일 <span class="keai-required">*</span></label>
+                            <input type="email" class="keai-form-control" name="email" required>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">업종</label>
-                            <select class="dbizlab-form-control" name="industry">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">업종</label>
+                            <select class="keai-form-control" name="industry">
                                 <option value="">선택하세요</option>
                                 <option value="제조업">제조업</option>
                                 <option value="도소매업">도소매업</option>
@@ -1451,17 +1454,17 @@
                                 <option value="기타">기타</option>
                             </select>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">설립연도</label>
-                            <input type="text" class="dbizlab-form-control" name="founded" placeholder="2020">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">설립연도</label>
+                            <input type="text" class="keai-form-control" name="founded" placeholder="2020">
                         </div>
                     </div>
 
                     <!-- Consult Time & Amount -->
-                    <div class="dbizlab-form-row">
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">통화 가능 시간 <span class="dbizlab-required">*</span></label>
-                            <select class="dbizlab-form-control" name="consultTime" required>
+                    <div class="keai-form-row">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">통화 가능 시간 <span class="keai-required">*</span></label>
+                            <select class="keai-form-control" name="consultTime" required>
                                 <option value="">선택하세요</option>
                                 <option value="09:00-10:00">오전 09:00 - 10:00</option>
                                 <option value="10:00-11:00">오전 10:00 - 11:00</option>
@@ -1474,9 +1477,9 @@
                                 <option value="언제나가능">언제나 가능</option>
                             </select>
                         </div>
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">필요 자금 규모</label>
-                            <select class="dbizlab-form-control" name="amount">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">필요 자금 규모</label>
+                            <select class="keai-form-control" name="amount">
                                 <option value="">선택하세요</option>
                                 <option value="5천만원 이하">5천만원 이하</option>
                                 <option value="5천만원~1억원">5천만원 ~ 1억원</option>
@@ -1489,22 +1492,22 @@
                     </div>
 
                     <!-- Fund Type -->
-                    <div class="dbizlab-fund-type-group">
-                        <label class="dbizlab-fund-type-label">지원받고 싶은 자금 종류 (복수 선택 가능)</label>
-                        <div class="dbizlab-fund-type-options">
-                            <div class="dbizlab-fund-type-option">
+                    <div class="keai-fund-type-group">
+                        <label class="keai-fund-type-label">지원받고 싶은 자금 종류 (복수 선택 가능)</label>
+                        <div class="keai-fund-type-options">
+                            <div class="keai-fund-type-option">
                                 <input type="checkbox" id="fund1" name="fundType" value="창업자금">
                                 <label for="fund1">창업자금</label>
                             </div>
-                            <div class="dbizlab-fund-type-option">
+                            <div class="keai-fund-type-option">
                                 <input type="checkbox" id="fund2" name="fundType" value="운전자금">
                                 <label for="fund2">운전자금</label>
                             </div>
-                            <div class="dbizlab-fund-type-option">
+                            <div class="keai-fund-type-option">
                                 <input type="checkbox" id="fund3" name="fundType" value="시설자금">
                                 <label for="fund3">시설자금</label>
                             </div>
-                            <div class="dbizlab-fund-type-option">
+                            <div class="keai-fund-type-option">
                                 <input type="checkbox" id="fund4" name="fundType" value="기타자금">
                                 <label for="fund4">기타자금</label>
                             </div>
@@ -1512,23 +1515,23 @@
                     </div>
 
                     <!-- Message -->
-                    <div class="dbizlab-form-row full">
-                        <div class="dbizlab-form-group">
-                            <label class="dbizlab-form-label">문의사항</label>
-                            <textarea class="dbizlab-form-control" name="message"
+                    <div class="keai-form-row full">
+                        <div class="keai-form-group">
+                            <label class="keai-form-label">문의사항</label>
+                            <textarea class="keai-form-control" name="message"
                                       placeholder="필요하신 자금의 용도나 현재 경영 상황 등을 간략히 적어주세요"></textarea>
                         </div>
                     </div>
 
                     <!-- Privacy -->
-                    <div class="dbizlab-privacy-section">
-                        <h4 class="dbizlab-privacy-title">개인정보 수집·이용 동의</h4>
-                        <div class="dbizlab-privacy-checkbox">
+                    <div class="keai-privacy-section">
+                        <h4 class="keai-privacy-title">개인정보 수집·이용 동의</h4>
+                        <div class="keai-privacy-checkbox">
                             <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">개인정보 수집·이용에 동의합니다 <span class="dbizlab-required">*</span>
-                            <span class="dbizlab-privacy-detail-link" onclick="togglePrivacyDetail()">내용보기</span></label>
+                            <label for="privacy">개인정보 수집·이용에 동의합니다 <span class="keai-required">*</span>
+                            <span class="keai-privacy-detail-link" onclick="togglePrivacyDetail()">내용보기</span></label>
                         </div>
-                        <div class="dbizlab-privacy-content" id="privacyContent">
+                        <div class="keai-privacy-content" id="privacyContent">
                             <p>1. 수집항목: 기업명, 사업자번호, 대표자명, 연락처, 이메일, 문의내용</p>
                             <p>2. 수집목적: 자금확보 상담 및 지원 서비스 제공</p>
                             <p>3. 보유기간: 서비스 종료 후 3년</p>
@@ -1537,17 +1540,17 @@
                     </div>
 
                     <!-- Messages -->
-                    <div class="dbizlab-message-box success" id="successMessage">
+                    <div class="keai-message-box success" id="successMessage">
                         ✅ 심사 신청이 성공적으로 완료되었습니다!
                     </div>
-                    <div class="dbizlab-message-box error" id="errorMessage">
+                    <div class="keai-message-box error" id="errorMessage">
                         ❌ 신청 처리 중 문제가 발생했습니다. 다시 시도해주세요.
                     </div>
 
                     <!-- Submit -->
-                    <div class="dbizlab-submit-section">
-                        <button type="submit" class="dbizlab-submit-button" id="submitButton">무료 심사 신청하기</button>
-                        <p class="dbizlab-submit-note">신청 후 드림비즈랩 전문가가 24시간 내 연락드립니다</p>
+                    <div class="keai-submit-section">
+                        <button type="submit" class="keai-submit-button" id="submitButton">무료 심사 신청하기</button>
+                        <p class="keai-submit-note">신청 후 드림비즈랩 전문가가 24시간 내 연락드립니다</p>
                     </div>
                 </form>
             </div>
@@ -1558,23 +1561,23 @@
 <!-- ================================================
      FOOTER
      ================================================ -->
-<footer class="dbizlab-footer">
-    <div class="dbizlab-footer-wrapper">
-        <div class="dbizlab-footer-container">
-            <div class="dbizlab-footer-top">
-                <div class="dbizlab-footer-info">
-                    <div class="dbizlab-footer-logo">
-                        <img src="white_logo.png" alt="DreamBizLab 드림비즈랩" class="dbizlab-footer-logo-image">
+<footer class="keai-footer">
+    <div class="keai-footer-wrapper">
+        <div class="keai-footer-container">
+            <div class="keai-footer-top">
+                <div class="keai-footer-info">
+                    <div class="keai-footer-logo">
+                        <img src="white_logo.png" alt="드림비즈랩 DreamBizLab" class="keai-footer-logo-image">
                     </div>
-                    <p class="dbizlab-footer-desc">자금확보 전문 컨설팅 | 기업심사 전문가의 1:1 맞춤 컨설팅</p>
+                    <p class="keai-footer-desc">자금확보 전문 컨설팅 | 기업심사 전문가의 1:1 맞춤 컨설팅</p>
                 </div>
             </div>
 
-            <div class="dbizlab-footer-middle">
-                <div class="dbizlab-footer-contact">
-                    <h4 class="dbizlab-footer-title">Contact</h4>
+            <div class="keai-footer-middle">
+                <div class="keai-footer-contact">
+                    <h4 class="keai-footer-title">Contact</h4>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="M16 12h-3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3v7z"></path>
@@ -1582,7 +1585,7 @@
                         <span>대표자: 박현숙</span>
                     </div>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="12" y1="8" x2="12" y2="16"></line>
@@ -1591,14 +1594,14 @@
                         <span>사업자등록번호: 267-10-02880</span>
                     </div>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
                         <span>대표전화: 1551-2889</span>
                     </div>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                             <path d="M12 12l8-5H4l8 5z"></path>
@@ -1606,15 +1609,15 @@
                         <span>이메일: bibiwos@naver.com</span>
                     </div>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <span>주소: 인천광역시 서구 중봉대로 612번길 10-20, 505-J302호(청라동, 청라프라자)</span>
+                        <span>주소: 경기도 수원시 권선구 동수원로 145번길 204호</span>
                     </div>
 
-                    <div class="dbizlab-contact-item">
+                    <div class="keai-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
@@ -1623,9 +1626,9 @@
                     </div>
                 </div>
 
-                <div class="dbizlab-footer-menu">
-                    <h4 class="dbizlab-footer-title">Menu</h4>
-                    <ul class="dbizlab-footer-list">
+                <div class="keai-footer-menu">
+                    <h4 class="keai-footer-title">Menu</h4>
+                    <ul class="keai-footer-list">
                         <li><a href="index.html">홈</a></li>
                         <li><a href="company.html">회사소개</a></li>
                         <li><a href="process.html">진행과정</a></li>
@@ -1637,16 +1640,16 @@
             </div>
 
             <!-- JJK 업무협약 섹션 -->
-            <div class="dbizlab-partnership-section">
-                <a href="https://www.jjk-biz.com/" target="_blank" rel="noopener noreferrer" class="dbizlab-partnership-link">
-                    <img src="https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-partnership.webp" alt="업무협약 아이콘" class="dbizlab-partnership-icon">
+            <div class="keai-partnership-section">
+                <a href="https://www.jjk-biz.com/" target="_blank" rel="noopener noreferrer" class="keai-partnership-link">
+                    <img src="https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-partnership.webp" alt="업무협약 아이콘" class="keai-partnership-icon">
                     <span>정책자금지원센터 | 업무협약 드림비즈랩</span>
                 </a>
             </div>
 
-            <div class="dbizlab-footer-bottom">
-                <p class="dbizlab-copyright">© 2025 드림비즈랩 DreamBizLab. All rights reserved.</p>
-                <div class="dbizlab-footer-links">
+            <div class="keai-footer-bottom">
+                <p class="keai-copyright">© 2025 드림비즈랩 DreamBizLab. All rights reserved.</p>
+                <div class="keai-footer-links">
                     <a href="javascript:void(0)" onclick="openModal('terms')">이용약관</a>
                     <span class="divider">|</span>
                     <a href="javascript:void(0)" onclick="openModal('privacy')">개인정보처리방침</a>
@@ -1657,15 +1660,15 @@
 </footer>
 
 <!-- 이용약관 모달 -->
-<div class="dbizlab-modal-overlay" id="termsModal" onclick="closeModal('terms', event)">
-    <div class="dbizlab-modal" onclick="event.stopPropagation()">
-        <div class="dbizlab-modal-header">
-            <h3 class="dbizlab-modal-title">이용약관</h3>
-            <button class="dbizlab-modal-close" onclick="closeModal('terms')">
+<div class="keai-modal-overlay" id="termsModal" onclick="closeModal('terms', event)">
+    <div class="keai-modal" onclick="event.stopPropagation()">
+        <div class="keai-modal-header">
+            <h3 class="keai-modal-title">이용약관</h3>
+            <button class="keai-modal-close" onclick="closeModal('terms')">
                 <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </button>
         </div>
-        <div class="dbizlab-modal-body">
+        <div class="keai-modal-body">
             <h4>제1조 (목적)</h4>
             <p>본 약관은 드림비즈랩(이하 "회사")이 제공하는 자금확보 컨설팅 서비스의 이용조건 및 절차, 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</p>
 
@@ -1701,30 +1704,30 @@
             <h4>제6조 (약관의 변경)</h4>
             <p>회사는 필요한 경우 관련 법령에 위배되지 않는 범위에서 본 약관을 변경할 수 있으며, 변경된 약관은 웹사이트에 공지함으로써 효력을 발생합니다.</p>
 
-            <div class="dbizlab-legal-info">
+            <div class="keai-legal-info">
                 <p><strong>드림비즈랩</strong></p>
                 <p>대표자: 박현숙</p>
                 <p>사업자등록번호: 267-10-02880</p>
-                <p>주소: 인천광역시 서구 중봉대로 612번길 10-20, 505-J302호</p>
+                <p>주소: 경기도 수원시 권선구 동수원로 145번길 204호</p>
                 <p>시행일: 2025년 1월 1일</p>
             </div>
         </div>
-        <div class="dbizlab-modal-footer">
+        <div class="keai-modal-footer">
             <button onclick="closeModal('terms')">확인</button>
         </div>
     </div>
 </div>
 
 <!-- 개인정보처리방침 모달 -->
-<div class="dbizlab-modal-overlay" id="privacyModal" onclick="closeModal('privacy', event)">
-    <div class="dbizlab-modal" onclick="event.stopPropagation()">
-        <div class="dbizlab-modal-header">
-            <h3 class="dbizlab-modal-title">개인정보처리방침</h3>
-            <button class="dbizlab-modal-close" onclick="closeModal('privacy')">
+<div class="keai-modal-overlay" id="privacyModal" onclick="closeModal('privacy', event)">
+    <div class="keai-modal" onclick="event.stopPropagation()">
+        <div class="keai-modal-header">
+            <h3 class="keai-modal-title">개인정보처리방침</h3>
+            <button class="keai-modal-close" onclick="closeModal('privacy')">
                 <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </button>
         </div>
-        <div class="dbizlab-modal-body">
+        <div class="keai-modal-body">
             <h4>제1조 (개인정보의 수집 및 이용 목적)</h4>
             <p>드림비즈랩(이하 "회사")은 다음의 목적을 위하여 개인정보를 수집 및 이용합니다.</p>
             <ul>
@@ -1763,7 +1766,7 @@
             <p>이용자는 언제든지 자신의 개인정보에 대해 열람, 정정, 삭제, 처리정지를 요청할 수 있습니다.</p>
 
             <h4>제7조 (개인정보보호 책임자)</h4>
-            <div class="dbizlab-legal-info">
+            <div class="keai-legal-info">
                 <p><strong>개인정보보호 책임자</strong></p>
                 <p>성명: 박현숙</p>
                 <p>직책: 대표</p>
@@ -1772,7 +1775,7 @@
                 <p>시행일: 2025년 1월 1일</p>
             </div>
         </div>
-        <div class="dbizlab-modal-footer">
+        <div class="keai-modal-footer">
             <button onclick="closeModal('privacy')">확인</button>
         </div>
     </div>
@@ -1792,11 +1795,11 @@
     let isLoading = false;
 
     // DOM 요소
-    const loadingEl = document.getElementById('dbizlab-board-loading');
-    const emptyEl = document.getElementById('dbizlab-board-empty');
-    const gridEl = document.getElementById('dbizlab-board-grid');
-    const moreEl = document.getElementById('dbizlab-board-more');
-    const loadMoreBtn = document.getElementById('dbizlab-load-more-btn');
+    const loadingEl = document.getElementById('keai-board-loading');
+    const emptyEl = document.getElementById('keai-board-empty');
+    const gridEl = document.getElementById('keai-board-grid');
+    const moreEl = document.getElementById('keai-board-more');
+    const loadMoreBtn = document.getElementById('keai-load-more-btn');
 
     // API 호출
     async function fetchPosts() {
@@ -1816,10 +1819,9 @@
                 content: post.내용 || post.content,
                 excerpt: post.요약 || (post.내용 || '').substring(0, 100),
                 category: post.카테고리 || post.category || '공지',
-                thumbnail: post.썸네일 || null,
+                thumbnail: post.썸네일 && post.썸네일[0] ? post.썸네일[0].url : null,
                 date: post.작성일 || post.date,
-                views: post.조회수 || 0,
-                slug: post.슬러그 || ''
+                views: post.조회수 || 0
             }));
 
             renderPosts();
@@ -1846,9 +1848,9 @@
             },
             {
                 id: '2',
-                title: 'DreamBizLab 컨설팅으로 5억 자금 확보 성공 사례',
-                content: 'AI 기반 솔루션 개발 기업이 DreamBizLab 컨설팅을 통해 정책자금 5억원을 확보했습니다.',
-                excerpt: 'AI 기반 솔루션 개발 기업이 DreamBizLab의 전문 컨설팅을 통해 정책자금 5억원을 성공적으로...',
+                title: '드림비즈랩 컨설팅으로 5억 자금 확보 성공 사례',
+                content: 'AI 기반 솔루션 개발 기업이 드림비즈랩 컨설팅을 통해 정책자금 5억원을 확보했습니다.',
+                excerpt: 'AI 기반 솔루션 개발 기업이 드림비즈랩의 전문 컨설팅을 통해 정책자금 5억원을 성공적으로...',
                 category: '뉴스',
                 thumbnail: null,
                 date: '2025-01-10',
@@ -1885,24 +1887,24 @@
         const postsToShow = allPosts.slice(0, currentPage * POSTS_PER_PAGE);
 
         gridEl.innerHTML = postsToShow.map((post, index) => `
-            <article class="dbizlab-board-card" data-id="${post.id}" data-slug="${post.slug}">
-                <div class="dbizlab-board-card-thumbnail">
+            <article class="keai-board-card" data-id="${post.id}">
+                <div class="keai-board-card-thumbnail">
                     ${post.thumbnail
                         ? `<img src="${post.thumbnail}" alt="${post.title}" loading="lazy">`
-                        : `<div class="dbizlab-board-card-placeholder">
+                        : `<div class="keai-board-card-placeholder">
                             <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
                            </div>`
                     }
                 </div>
-                <div class="dbizlab-board-card-content">
-                    <span class="dbizlab-board-card-category ${getCategoryClass(post.category)}">${post.category}</span>
-                    <h3 class="dbizlab-board-card-title">${post.title}</h3>
-                    <div class="dbizlab-board-card-meta">
-                        <span class="dbizlab-board-card-date">
+                <div class="keai-board-card-content">
+                    <span class="keai-board-card-category ${getCategoryClass(post.category)}">${post.category}</span>
+                    <h3 class="keai-board-card-title">${post.title}</h3>
+                    <div class="keai-board-card-meta">
+                        <span class="keai-board-card-date">
                             <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
                             ${formatDate(post.date)}
                         </span>
-                        <span class="dbizlab-board-card-views">
+                        <span class="keai-board-card-views">
                             <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                             ${formatViews(post.views)}
                         </span>
@@ -1919,14 +1921,10 @@
         }
 
         // 카드 클릭 이벤트
-        gridEl.querySelectorAll('.dbizlab-board-card').forEach(card => {
+        gridEl.querySelectorAll('.keai-board-card').forEach(card => {
             card.addEventListener('click', () => {
-                const slug = card.dataset.slug;
-                if (slug) {
-                    window.location.href = `/p/${encodeURIComponent(slug)}`;
-                } else {
-                    window.location.href = `post.html?id=${card.dataset.id}`;
-                }
+                const postId = card.dataset.id;
+                window.location.href = `post.html?id=${postId}`;
             });
         });
     }
@@ -1974,7 +1972,7 @@
 <script>
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
-    const allItems = document.querySelectorAll('.dbizlab-faq-item');
+    const allItems = document.querySelectorAll('.keai-faq-item');
 
     // 다른 모든 FAQ 닫기
     allItems.forEach(item => {

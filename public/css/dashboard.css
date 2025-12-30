@@ -1,13 +1,13 @@
 /* ================================================
-   BIZEN 대시보드 CSS
+   DreamBizLab 대시보드 CSS
    ================================================ */
 
 /* CSS Variables */
 :root {
-  --primary: #0066CC;
-  --primary-dark: #003D7A;
-  --primary-light: #E6F2FF;
-  --accent: #F59E0B;
+  --primary: #2A5278;
+  --primary-dark: #1C3654;
+  --primary-light: #E3EDF5;
+  --accent: #D49B4E;
   --success: #10B981;
   --warning: #F59E0B;
   --error: #EF4444;

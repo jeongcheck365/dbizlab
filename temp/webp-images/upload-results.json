@@ -1,0 +1,39 @@
+{
+  "success": [
+    "form-consultant.webp",
+    "icon-expert.webp",
+    "icon-fund.webp",
+    "icon-support.webp",
+    "card-analysis.webp",
+    "card-strategy.webp",
+    "card-document.webp",
+    "card-aftercare.webp",
+    "expert-card-1.webp",
+    "expert-card-2.webp",
+    "expert-card-3.webp",
+    "expert-card-4.webp",
+    "section-bg-1.webp",
+    "section-bg-2.webp",
+    "section-bg-3.webp",
+    "icon-partnership.webp"
+  ],
+  "failed": [],
+  "r2Urls": {
+    "form-consultant.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/form-consultant.webp",
+    "icon-expert.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-expert.webp",
+    "icon-fund.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-fund.webp",
+    "icon-support.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-support.webp",
+    "card-analysis.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/card-analysis.webp",
+    "card-strategy.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/card-strategy.webp",
+    "card-document.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/card-document.webp",
+    "card-aftercare.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/card-aftercare.webp",
+    "expert-card-1.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/expert-card-1.webp",
+    "expert-card-2.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/expert-card-2.webp",
+    "expert-card-3.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/expert-card-3.webp",
+    "expert-card-4.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/expert-card-4.webp",
+    "section-bg-1.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/section-bg-1.webp",
+    "section-bg-2.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/section-bg-2.webp",
+    "section-bg-3.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/section-bg-3.webp",
+    "icon-partnership.webp": "https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/icon-partnership.webp"
+  }
+}
