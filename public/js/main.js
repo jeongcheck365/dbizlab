@@ -270,12 +270,12 @@
     // FORM HANDLING
     // ================================================
 
-    // Cloudflare Workers URL (DreamBizLab용으로 변경 필요)
-    const WORKER_URL = 'https://dbizlab.lkh1000712.workers.dev/';
+    // Cloudflare Workers URL
+    const WORKER_URL = 'https://dbizlab.jeongcheck365.workers.dev/';
 
     // Airtable 설정 - DreamBizLab (토큰은 Worker 환경변수에서 관리)
     const AIRTABLE_CONFIG = {
-        baseId: 'appxVw5QQ0g4JEjoR',
+        baseId: 'appFGupCEadYZPk0i',
         tableName: '드림비즈랩'
     };
 
@@ -285,7 +285,7 @@
         ceo: '박현숙',
         phone: '1551-2889',
         email: 'bibiwos@naver.com',
-        address: '인천광역시 서구 중봉대로 612번길 10-20, 505-J302호(청라동, 청라프라자)',
+        address: '경기도 수원시 권선구 동수원로 145번길 204호',
         bizno: '267-10-02880',
         hours: '평일 09:00-18:00',
         logo: 'https://dbizlab.co.kr/logo.png'
@@ -370,7 +370,7 @@
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.ceo}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표전화</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.phone}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">이메일</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.email}</td></tr>
-                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">인천광역시 서구 중봉대로 612번길 10-20<br><span style="color: #888;">505-J302호 (청라동, 청라프라자)</span></td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">경기도 수원시 권선구<br><span style="color: #888;">동수원로 145번길 204호</span></td></tr>
                     <tr><td style="padding: 8px 0;"><span style="color: #999;">사업자번호</span></td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${BRAND_INFO.bizno}</td></tr>
                 </table>
             </div>
