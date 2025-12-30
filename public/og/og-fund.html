@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>OG Image - Fund</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', sans-serif; }
+
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #2A5278 0%, #1C3654 100%);
+        }
+
+        .wave-pattern { position: absolute; bottom: 0; left: 0; right: 0; }
+
+        .top-decoration {
+            position: absolute;
+            top: 24px;
+            left: 32px;
+            right: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dots { display: flex; gap: 8px; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; background: #D49B4E; }
+        .dot:nth-child(2) { opacity: 0.6; }
+        .dot:nth-child(3) { opacity: 0.3; }
+        .domain { color: rgba(255, 255, 255, 0.6); font-size: 18px; }
+
+        .main-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 48px 64px 0;
+        }
+
+        .logo { height: 80px; margin-bottom: 16px; filter: brightness(0) invert(1); }
+        .page-title { font-size: 56px; font-weight: 700; color: white; margin-bottom: 8px; }
+        .page-eng { font-size: 24px; color: rgba(255, 255, 255, 0.6); letter-spacing: 4px; margin-bottom: 20px; }
+        .page-desc { font-size: 28px; color: rgba(255, 255, 255, 0.8); }
+        .brand-badge {
+            margin-top: 24px;
+            background: rgba(212, 155, 78, 0.3);
+            padding: 12px 32px;
+            border-radius: 30px;
+            border: 1px solid rgba(212, 155, 78, 0.5);
+        }
+        .brand-badge span { font-size: 20px; color: white; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <svg class="wave-pattern" viewBox="0 0 1200 200" preserveAspectRatio="none">
+            <path d="M0,100 C300,180 600,20 900,100 C1050,140 1150,80 1200,100 L1200,200 L0,200 Z" fill="#D49B4E" opacity="0.3"/>
+            <path d="M0,140 C250,180 500,100 750,140 C900,160 1050,120 1200,140 L1200,200 L0,200 Z" fill="#D49B4E" opacity="0.5"/>
+            <path d="M0,160 C200,200 400,140 600,160 C800,180 1000,140 1200,160 L1200,200 L0,200 Z" fill="#D49B4E"/>
+        </svg>
+
+        <div class="top-decoration">
+            <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+            <span class="domain">dbizlab.co.kr</span>
+        </div>
+
+        <div class="main-content">
+            <img src="../logo.png" alt="드림비즈랩" class="logo">
+            <h1 class="page-title">기업자금</h1>
+            <p class="page-eng">BUSINESS FUND</p>
+            <p class="page-desc">맞춤형 자금 솔루션 제공</p>
+            <div class="brand-badge"><span>드림비즈랩 DreamBizLab</span></div>
+        </div>
+    </div>
+</body>
+</html>
