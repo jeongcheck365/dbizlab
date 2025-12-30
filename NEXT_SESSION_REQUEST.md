@@ -1,95 +1,67 @@
-# 다음 세션 요청문 - 텍스트 리라이팅
+# 다음 세션 요청문 - 히어로 이미지 교체 + 리라이팅
 
 ## 복사해서 사용:
 
 ```
-드림비즈랩 텍스트 리라이팅 작업 진행해줘.
+드림비즈랩 히어로 이미지 교체 및 리라이팅 작업
 
-index.html부터 시작해서 한 페이지씩 진행하고,
-각 페이지마다 BAS 규칙 체크하면서 커밋해줘.
+## 완료된 작업
+- 히어로 이미지 6개 생성 완료 (public/images/hero/)
+- CLAUDE.md 프로젝트 설정 완료
 
-NEXT_SESSION_REQUEST.md 파일에 상세 컨텍스트 있음.
+## 이번 세션 작업
+1. 히어로 이미지 src 교체 (CSS/HTML)
+2. 리라이팅 진행 (헤더/폼/푸터 제외)
+
+상세: NEXT_SESSION_REQUEST.md 참조
 ```
 
 ---
 
-## 작업 배경
+## 완료된 작업 (클로드1)
 
-| 항목 | 내용 |
-|------|------|
-| 원본 사이트 | k-eai.kr (KEAI) |
-| 신규 사이트 | dbizlab.co.kr (드림비즈랩) |
-| 문제점 | 동일한 텍스트는 SEO에 불리 (중복 콘텐츠 패널티) |
-| 해결책 | 맥락/의미/글자수 유지하면서 텍스트 리라이팅 |
+### ✅ 히어로 이미지 생성
+| 파일 | 위치 | 용량 |
+|------|------|------|
+| hero-index.webp | public/images/hero/ | 860KB |
+| hero-company.webp | public/images/hero/ | 1020KB |
+| hero-fund.webp | public/images/hero/ | 1038KB |
+| hero-process.webp | public/images/hero/ | 996KB |
+| hero-pro.webp | public/images/hero/ | 882KB |
+| hero-mkt.webp | public/images/hero/ | 897KB |
 
----
-
-## 이전 세션 완료 작업 (2025-12-30)
-
-### ✅ 이미지 작업 완료
-- 23개 이미지 AI 생성 및 R2 업로드 완료
-- CSS 이미지 표시 수정 (폼 이미지, CEO 사진, card-aftercare)
-- 모든 이미지 WebP 압축 완료
-
-### ❌ 텍스트 리라이팅 미진행
-- 2,451개 KEAI 관련 텍스트 남음
-- CSS 클래스명(keai-*)은 변경 불필요 (코드임)
-- 실제 콘텐츠 텍스트만 리라이팅 필요
+### ✅ 문서 작성
+- CLAUDE.md (프로젝트 필수 참조)
+- docs/rewriting-rules.md
+- docs/rewriting-TDD.md
+- docs/claude2-request.md
+- docs/claude3-request.md
 
 ---
 
-## 이번 세션 작업: 텍스트 리라이팅
+## 이번 세션 작업 1: 히어로 이미지 src 교체
 
-### 작업 순서 (한 페이지씩)
+### 교체 대상
 
-| 순서 | 파일 | 설명 | 상태 |
-|------|------|------|------|
-| 1 | index.html | 메인 페이지 | ⏳ 대기 |
-| 2 | company.html | 회사소개 | ⏳ 대기 |
-| 3 | fund.html | 자금지원 | ⏳ 대기 |
-| 4 | process.html | 진행절차 | ⏳ 대기 |
-| 5 | pro.html | 전문가소개 | ⏳ 대기 |
-| 6 | mkt.html | 마케팅지원 | ⏳ 대기 |
+| 파일:줄 | 현재 이미지 | 변경할 이미지 |
+|---------|------------|--------------|
+| public/css/styles.css:378 | hero-main.webp | /images/hero/hero-index.webp |
+| public/css/styles.css:1981 | hero-main.webp | /images/hero/hero-company.webp |
+| public/process.html:51 | hero-main.webp | /images/hero/hero-process.webp |
+| public/mkt.html:111 | section-bg-1.webp | /images/hero/hero-mkt.webp |
 
-### 각 페이지별 작업 체크리스트
-- [ ] 원본 텍스트 섹션별로 읽기
-- [ ] 리라이팅 (맥락/의미/글자수 유지, 표현 방식만 변경)
-- [ ] BAS 규칙 준수 확인
-- [ ] 브랜드명 변경 (KEAI → 드림비즈랩)
-- [ ] public 폴더 동기화
-- [ ] 커밋 및 배포
-- [ ] 다음 페이지 진행
+### 이미 맞는 것 (확인만)
+- public/fund.html:51 → hero-fund.webp ✅
+- public/pro.html:53 → hero-pro.webp ✅
 
 ---
 
-## BAS 규칙 (필수 준수)
+## 이번 세션 작업 2: 리라이팅
 
-### 🚫 금지 표현
-- 성공사례, 성공금액, 성공률
-- 대출알선, 대출소개, 서류대행
-- 기업평가, 기업분석, 기업진단
-- 정책자금, 정부정책자금
-- 승인, 승인률
-
-### ✅ 권장 표현
-- 자금확보, 기업자금확보
-- 역량파악, 파악, 안내, 코칭
-- 확보 가능성, 무료심사
-
-### 📌 필수 면책 문구
-```
-※ 정부정책자금 대행서비스가 아닙니다. 기업대출알선 서비스가 아닙니다.
-```
-
----
-
-## 리라이팅 규칙
-
-1. **의미 동일** - 핵심 메시지는 유지
-2. **표현 변경** - 문장 구조, 어순, 동의어 활용
-3. **글자수 유지** - ±10% 이내
-4. **자연스러운 한국어** - 어색하지 않게
-5. **CSS 클래스명 유지** - keai-* 클래스는 코드이므로 변경 X
+### 핵심 규칙
+1. **리라이팅 = 문장 새로 작성** (브랜드명만 바꾸는 게 아님)
+2. **헤더/입력폼/푸터 절대 건드리지 않음**
+3. **한 섹션씩 수동으로** (스크립트 일괄처리 X)
 
 ### 리라이팅 예시
 ```
@@ -97,36 +69,32 @@ NEXT_SESSION_REQUEST.md 파일에 상세 컨텍스트 있음.
 변경: "비즈니스 확장에 필요한 맞춤형 자금 지원 방안을 안내해 드립니다"
 ```
 
----
+### BAS 금지 표현
+성공사례, 성공금액, 성공률, 대출알선, 대출소개, 서류대행, 기업평가, 기업분석, 기업진단, 정책자금, 정부정책자금, 승인, 승인률
 
-## 브랜드 정보
-
-| 항목 | 내용 |
-|------|------|
-| 브랜드명 | 드림비즈랩 (DreamBizLab) |
-| 사업자명 | 케이피제이 |
-| 사업자등록번호 | 267-10-02880 |
-| 대표번호 | 1551-2889 |
-| 휴대폰 | 010-7257-9487 |
-| 이메일 | bibiwos@naver.com |
-| 주소 | 경기도 수원시 권선구 동수원로 145번길 204호 |
+### 작업 대상 (6페이지)
+- public/index.html
+- public/company.html
+- public/fund.html
+- public/process.html
+- public/pro.html
+- public/mkt.html
 
 ---
 
 ## 프로젝트 정보
 
-| 항목 | 내용 |
-|------|------|
+| 항목 | 값 |
+|------|-----|
 | 로컬 경로 | F:\pola_homepage\5.14th_parkhyunsuk_dreambizlab |
+| 작업 폴더 | public/ |
 | GitHub | https://github.com/jeongcheck365/dbizlab |
-| Vercel | https://dbizlab.vercel.app |
-| 도메인 | dbizlab.co.kr |
-| PRD | PRD.md |
+| 이미지 생성 모델 | gemini-3-pro-image-preview |
 
 ---
 
-## 참고사항
+## 참고 문서
 
-- 스크립트로 일괄 변경하지 말고 한 페이지씩 수동으로 진행
-- 각 페이지 완료 후 바로 커밋/배포
-- public 폴더와 루트 폴더 HTML 동기화 필수
+- CLAUDE.md (프로젝트 필수 참조)
+- docs/rewriting-rules.md
+- docs/rewriting-TDD.md
