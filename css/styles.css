@@ -146,8 +146,8 @@ img {
 
 .keai-logo {
     display: flex;
-    align-items: flex-end;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
 }
 
 .keai-logo-image {
@@ -1724,7 +1724,7 @@ textarea.keai-form-control {
 
 .keai-footer-logo {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 12px;
     margin-bottom: 12px;
     justify-content: flex-start;
@@ -1758,7 +1758,7 @@ textarea.keai-form-control {
 }
 
 .keai-footer-logo-text {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
     color: #FFFFFF;
     line-height: 1;
