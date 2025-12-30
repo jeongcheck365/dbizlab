@@ -362,19 +362,19 @@
             <p style="background: #e8f4fd; padding: 15px; border-radius: 8px; text-align: center; color: #0F4C81; font-weight: 600;">담당 전문가가 24시간 내 연락드리겠습니다.</p>
         </div>
         <div style="background: #f8f9fa; padding: 25px 30px; border-top: 1px solid #eee;">
-            <div style="text-align: center;">
-                <img src="${BRAND_INFO.logo}" alt="${BRAND_INFO.name}" style="height: 35px; margin-bottom: 20px;">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="${BRAND_INFO.logo}" alt="${BRAND_INFO.name}" style="height: 50px; vertical-align: middle;">
+                <span style="font-size: 20px; font-weight: 700; color: #0F4C81; vertical-align: middle; margin-left: 10px;">${BRAND_INFO.name}</span>
             </div>
             <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
                 <table style="width: 100%; font-size: 13px; color: #555;">
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.ceo}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표전화</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.phone}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">이메일</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.email}</td></tr>
-                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">인천광역시 서구 중봉대로 612번길 10-20<br><span style="color: #888;">505-J302호 (청라동, 청라프라자)</span></td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">상담시간</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.hours}</td></tr>
                     <tr><td style="padding: 8px 0;"><span style="color: #999;">사업자번호</span></td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${BRAND_INFO.bizno}</td></tr>
                 </table>
             </div>
-            <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #999;">상담시간: ${BRAND_INFO.hours}</p>
         </div>
     </div>
 </body>
