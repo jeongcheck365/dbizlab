@@ -10,8 +10,8 @@
     // MOBILE MENU
     // ================================================
     window.toggleMobileMenu = function() {
-        const menu = document.getElementById('keaiMobileMenu');
-        const overlay = document.getElementById('keaiMobileOverlay');
+        const menu = document.getElementById('dbizlabMobileMenu');
+        const overlay = document.getElementById('dbizlabMobileOverlay');
         if (menu && overlay) {
             menu.classList.toggle('active');
             overlay.classList.toggle('active');
@@ -53,14 +53,14 @@
     // HERO SLIDER (Mobile)
     // ================================================
     function initHeroSlider() {
-        const section = document.querySelector('.keai-hero');
+        const section = document.querySelector('.dbizlab-hero');
         if (!section) return false;
 
-        const track = section.querySelector('.keai-features-track');
-        const cards = section.querySelectorAll('.keai-feature-card');
-        const prevBtn = section.querySelector('.keai-slider-prev');
-        const nextBtn = section.querySelector('.keai-slider-next');
-        const dots = section.querySelectorAll('.keai-slider-dot');
+        const track = section.querySelector('.dbizlab-features-track');
+        const cards = section.querySelectorAll('.dbizlab-feature-card');
+        const prevBtn = section.querySelector('.dbizlab-slider-prev');
+        const nextBtn = section.querySelector('.dbizlab-slider-next');
+        const dots = section.querySelectorAll('.dbizlab-slider-dot');
 
         if (!track || cards.length === 0) return false;
 
@@ -158,8 +158,8 @@
 
         // Target elements
         const elements = document.querySelectorAll(
-            '.keai-hero-headline, .keai-feature-card, .keai-notice-box, ' +
-            '.keai-step-card, .keai-mobile-step-card, .keai-service-card'
+            '.dbizlab-hero-headline, .dbizlab-feature-card, .dbizlab-notice-box, ' +
+            '.dbizlab-step-card, .dbizlab-mobile-step-card, .dbizlab-service-card'
         );
 
         elements.forEach((el, index) => {
@@ -193,7 +193,7 @@
         if (window.innerWidth >= 768) return;
         if (processSwiperInstance) return;
 
-        const swiperEl = document.querySelector('.keai-process .mobile-swiper');
+        const swiperEl = document.querySelector('.dbizlab-process .mobile-swiper');
         if (!swiperEl) return;
 
         processSwiperInstance = new Swiper(swiperEl, {
@@ -204,11 +204,11 @@
             grabCursor: true,
             watchOverflow: true,
             navigation: {
-                nextEl: '.keai-process .swiper-button-next',
-                prevEl: '.keai-process .swiper-button-prev',
+                nextEl: '.dbizlab-process .swiper-button-next',
+                prevEl: '.dbizlab-process .swiper-button-prev',
             },
             pagination: {
-                el: '.keai-process .swiper-pagination',
+                el: '.dbizlab-process .swiper-pagination',
                 clickable: true,
             }
         });
@@ -221,7 +221,7 @@
         if (window.innerWidth >= 768) return;
         if (serviceSwiperInstance) return;
 
-        const swiperEl = document.querySelector('.keai-service .mobile-swiper');
+        const swiperEl = document.querySelector('.dbizlab-service .mobile-swiper');
         if (!swiperEl) return;
 
         serviceSwiperInstance = new Swiper(swiperEl, {
@@ -232,11 +232,11 @@
             grabCursor: true,
             watchOverflow: true,
             navigation: {
-                nextEl: '.keai-service .swiper-button-next',
-                prevEl: '.keai-service .swiper-button-prev',
+                nextEl: '.dbizlab-service .swiper-button-next',
+                prevEl: '.dbizlab-service .swiper-button-prev',
             },
             pagination: {
-                el: '.keai-service .swiper-pagination',
+                el: '.dbizlab-service .swiper-pagination',
                 clickable: true,
             }
         });
@@ -271,7 +271,7 @@
     // ================================================
 
     // Cloudflare Workers URL (DreamBizLab용으로 변경 필요)
-    const WORKER_URL = 'https://keai.lkh1000712.workers.dev/';
+    const WORKER_URL = 'https://dbizlab.lkh1000712.workers.dev/';
 
     // Airtable 설정 - DreamBizLab (토큰은 Worker 환경변수에서 관리)
     const AIRTABLE_CONFIG = {
@@ -509,7 +509,7 @@
     // ESC 키로 모달 닫기
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            const modals = document.querySelectorAll('.keai-modal-overlay.active');
+            const modals = document.querySelectorAll('.dbizlab-modal-overlay.active');
             modals.forEach(modal => {
                 modal.classList.remove('active');
             });
@@ -552,7 +552,7 @@
     // Mobile input scroll
     function initMobileInputScroll() {
         if (window.innerWidth <= 768) {
-            const inputs = document.querySelectorAll('.keai-form-control');
+            const inputs = document.querySelectorAll('.dbizlab-form-control');
             inputs.forEach(input => {
                 input.addEventListener('focus', function() {
                     setTimeout(() => {

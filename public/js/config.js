@@ -7,7 +7,7 @@ const CONFIG = {
   API_BASE: '/api',
 
   // 관리자 비밀번호 (자동 인증용)
-  ADMIN_PASSWORD: 'keai2025',
+  ADMIN_PASSWORD: 'dbizlab2025',
 
   // 브랜드 정보
   BRAND: {
