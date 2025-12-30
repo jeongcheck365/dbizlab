@@ -1,84 +1,74 @@
-# 다음 세션 요청문 - 히어로 이미지 교체 + 리라이팅
+# 다음 세션 요청문
 
 ## 복사해서 사용:
-
 ```
-드림비즈랩 히어로 이미지 교체 및 리라이팅 작업
+드림비즈랩 리라이팅 작업 이어서 진행
 
 ## 완료된 작업
-- 히어로 이미지 6개 생성 완료 (public/images/hero/)
-- CLAUDE.md 프로젝트 설정 완료
+- 히어로 이미지 4개 교체 완료
+- index.html 리라이팅 완료
+- company.html 리라이팅 완료
 
-## 이번 세션 작업
-1. 히어로 이미지 src 교체 (CSS/HTML)
-2. 리라이팅 진행 (헤더/폼/푸터 제외)
+## 남은 작업
+- fund.html 리라이팅
+- process.html 리라이팅
+- pro.html 리라이팅
+- mkt.html 리라이팅
 
 상세: NEXT_SESSION_REQUEST.md 참조
 ```
 
 ---
 
-## 완료된 작업 (클로드1)
+## 완료된 작업
 
-### ✅ 히어로 이미지 생성
-| 파일 | 위치 | 용량 |
-|------|------|------|
-| hero-index.webp | public/images/hero/ | 860KB |
-| hero-company.webp | public/images/hero/ | 1020KB |
-| hero-fund.webp | public/images/hero/ | 1038KB |
-| hero-process.webp | public/images/hero/ | 996KB |
-| hero-pro.webp | public/images/hero/ | 882KB |
-| hero-mkt.webp | public/images/hero/ | 897KB |
+### 1. 히어로 이미지 교체 (4개)
+| 파일 | 변경 전 | 변경 후 |
+|------|---------|---------|
+| styles.css:378 | R2/hero-main.webp | /images/hero/hero-index.webp |
+| styles.css:1981 | R2/hero-main.webp | /images/hero/hero-company.webp |
+| process.html:51 | R2/hero-main.webp | /images/hero/hero-process.webp |
+| mkt.html:111 | R2/section-bg-1.webp | /images/hero/hero-mkt.webp |
 
-### ✅ 문서 작성
-- CLAUDE.md (프로젝트 필수 참조)
-- docs/rewriting-rules.md
-- docs/rewriting-TDD.md
-- docs/claude2-request.md
-- docs/claude3-request.md
+### 2. 리라이팅 완료 파일
 
----
+**index.html:**
+- HERO 섹션 (배지, 제목, 설명, Feature Cards)
+- PROCESS 섹션 (헤더, 모바일 Step 1-4, 데스크톱 Step 1-4)
+- SERVICE 섹션 (헤더, 모바일 카드 3개, 데스크톱 카드 3개)
 
-## 이번 세션 작업 1: 히어로 이미지 src 교체
-
-### 교체 대상
-
-| 파일:줄 | 현재 이미지 | 변경할 이미지 |
-|---------|------------|--------------|
-| public/css/styles.css:378 | hero-main.webp | /images/hero/hero-index.webp |
-| public/css/styles.css:1981 | hero-main.webp | /images/hero/hero-company.webp |
-| public/process.html:51 | hero-main.webp | /images/hero/hero-process.webp |
-| public/mkt.html:111 | section-bg-1.webp | /images/hero/hero-mkt.webp |
-
-### 이미 맞는 것 (확인만)
-- public/fund.html:51 → hero-fund.webp ✅
-- public/pro.html:53 → hero-pro.webp ✅
+**company.html:**
+- ABOUT HERO 섹션 (subtitle, description)
+- SERVICE 섹션 (타이틀, 4개 서비스 카드)
+- CEO 섹션 (헤더, 인사말 본문)
 
 ---
 
-## 이번 세션 작업 2: 리라이팅
+## 남은 작업
 
-### 핵심 규칙
-1. **리라이팅 = 문장 새로 작성** (브랜드명만 바꾸는 게 아님)
-2. **헤더/입력폼/푸터 절대 건드리지 않음**
-3. **한 섹션씩 수동으로** (스크립트 일괄처리 X)
+### 리라이팅 대상 파일 (4개)
+1. **fund.html** - 자금상담 페이지
+2. **process.html** - 진행과정 페이지
+3. **pro.html** - 전문서비스 페이지
+4. **mkt.html** - 온라인마케팅 페이지
 
-### 리라이팅 예시
-```
-원본: "기업의 성장을 위한 최적의 자금 솔루션을 제공합니다"
-변경: "비즈니스 확장에 필요한 맞춤형 자금 지원 방안을 안내해 드립니다"
-```
+---
+
+## 리라이팅 규칙 (중요)
+
+### 건드리지 않는 영역
+- 헤더 (HEADER)
+- 입력폼 (FORM SECTION)
+- 푸터 (FOOTER)
+- 스크립트
+- CSS 클래스명
+
+### 리라이팅 = 문장 새로 작성
+- 브랜드명만 바꾸는 게 아님
+- 의도/맥락/글자수 유지하면서 표현 완전히 변경
 
 ### BAS 금지 표현
 성공사례, 성공금액, 성공률, 대출알선, 대출소개, 서류대행, 기업평가, 기업분석, 기업진단, 정책자금, 정부정책자금, 승인, 승인률
-
-### 작업 대상 (6페이지)
-- public/index.html
-- public/company.html
-- public/fund.html
-- public/process.html
-- public/pro.html
-- public/mkt.html
 
 ---
 
@@ -86,15 +76,14 @@
 
 | 항목 | 값 |
 |------|-----|
-| 로컬 경로 | F:\pola_homepage\5.14th_parkhyunsuk_dreambizlab |
-| 작업 폴더 | public/ |
+| 브랜드 | 드림비즈랩 (DreamBizLab) |
 | GitHub | https://github.com/jeongcheck365/dbizlab |
-| 이미지 생성 모델 | gemini-3-pro-image-preview |
+| Vercel | https://dbizlab.vercel.app |
+| 도메인 | dbizlab.co.kr |
+| 경로 | F:\pola_homepage\5.14th_parkhyunsuk_dreambizlab |
 
 ---
 
 ## 참고 문서
-
-- CLAUDE.md (프로젝트 필수 참조)
-- docs/rewriting-rules.md
-- docs/rewriting-TDD.md
+- `docs/rewriting-rules.md` - 리라이팅 규칙 상세
+- `CLAUDE.md` - 프로젝트 설정

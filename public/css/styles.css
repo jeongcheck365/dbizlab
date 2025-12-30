@@ -375,7 +375,7 @@ img {
 .keai-hero {
     position: relative;
     width: 100%;
-    background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/hero-main.webp') center/cover no-repeat;
+    background: url('/images/hero/hero-index.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
@@ -1978,7 +1978,7 @@ textarea.keai-form-control {
 .keai-about-hero {
     position: relative;
     width: 100%;
-    background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/hero-main.webp') center/cover no-repeat;
+    background: url('/images/hero/hero-company.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
