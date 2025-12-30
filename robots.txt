@@ -1,0 +1,14 @@
+# DreamBizLab - 드림비즈랩 robots.txt
+# https://dbizlab.co.kr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dbizlab.co.kr/sitemap.xml
+
+# Disallow
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /js/config.js
