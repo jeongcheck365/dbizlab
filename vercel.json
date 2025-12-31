@@ -4,6 +4,16 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "admin.dbizlab.co.kr" }],
+      "destination": "/admin-login.html"
+    },
+    {
+      "source": "/dashboard/:path*",
+      "has": [{ "type": "host", "value": "admin.dbizlab.co.kr" }],
+      "destination": "/dashboard/:path*"
+    },
     { "source": "/board", "destination": "/board.html" },
     { "source": "/admin-login", "destination": "/admin-login.html" },
     { "source": "/company", "destination": "/company.html" },
