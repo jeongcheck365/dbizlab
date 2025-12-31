@@ -555,8 +555,8 @@ export default async function handler(req, res) {
             const record = {
                 'date': date,
                 'visitors': ga4.visitors,
-                'pageviews': ga4.pageviews,
-                'avgDuration': Math.round(ga4.duration * 10) / 10,
+                'pageViews': ga4.pageviews,
+                'avgDuration': Math.round(ga4.duration),
                 'sessions': ga4.sessions,
                 'leads': leadsCount,
                 'clicks': search.clicks,
@@ -576,7 +576,6 @@ export default async function handler(req, res) {
                 'topPages': JSON.stringify(topPages),
                 'topCountries': JSON.stringify(countries),
                 'topReferrers': JSON.stringify(referrers),
-                'collectedAt': new Date().toISOString(),
             };
 
             const success = await upsertAnalyticsData(record);
