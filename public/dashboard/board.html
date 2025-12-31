@@ -444,9 +444,10 @@
             <!-- 필터 -->
             <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">전체</button>
-                <button class="filter-btn" data-filter="공지">공지</button>
-                <button class="filter-btn" data-filter="뉴스">뉴스</button>
-                <button class="filter-btn" data-filter="정보">정보</button>
+                <button class="filter-btn" data-filter="정부정책자금">정부정책자금</button>
+                <button class="filter-btn" data-filter="정부지원자금">정부지원자금</button>
+                <button class="filter-btn" data-filter="정책소식">정책소식</button>
+                <button class="filter-btn" data-filter="소상공인정보">소상공인정보</button>
             </div>
 
             <!-- 테이블 -->
@@ -534,17 +535,17 @@
             emptyState.style.display = 'none';
 
             tbody.innerHTML = posts.map(post => {
-                const category = post.카테고리 || '공지';
-                const categoryClass = category === '뉴스' ? 'news' : category === '정보' ? 'info' : 'notice';
-                const date = post.작성일 ? formatDate(post.작성일) : '-';
-                const isPublic = post.공개여부 !== false;
+                const category = post.category || '정책소식';
+                const categoryClass = getCategoryClass(category);
+                const date = post.publishedAt ? formatDate(post.publishedAt) : '-';
+                const isPublic = post.status === 'published';
 
                 return `
                     <tr>
                         <td><span class="category-badge ${categoryClass}">${category}</span></td>
-                        <td class="title-cell"><span class="title-text">${post.제목 || '(제목 없음)'}</span></td>
+                        <td class="title-cell"><span class="title-text">${post.title || '(제목 없음)'}</span></td>
                         <td>${date}</td>
-                        <td>${(post.조회수 || 0).toLocaleString()}</td>
+                        <td>${(post.views || 0).toLocaleString()}</td>
                         <td><span class="status-badge ${isPublic ? 'public' : 'private'}">${isPublic ? '공개' : '비공개'}</span></td>
                         <td>
                             <div class="action-btns">
@@ -555,6 +556,17 @@
                     </tr>
                 `;
             }).join('');
+        }
+
+        // 카테고리 클래스 반환
+        function getCategoryClass(category) {
+            const classMap = {
+                '정부정책자금': 'notice',
+                '정부지원자금': 'news',
+                '정책소식': 'info',
+                '소상공인정보': 'notice'
+            };
+            return classMap[category] || 'notice';
         }
 
         // 필터 설정
@@ -570,7 +582,7 @@
                     if (filter === 'all') {
                         renderPosts(allPosts);
                     } else {
-                        const filtered = allPosts.filter(p => p.카테고리 === filter);
+                        const filtered = allPosts.filter(p => p.category === filter);
                         renderPosts(filtered);
                     }
                 });
