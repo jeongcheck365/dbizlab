@@ -119,10 +119,10 @@ export default async function handler(req, res) {
         const dailyData = records.map(record => ({
             date: record.fields['date'] || '',  // YYYY-MM-DD 형식 유지
             visitors: record.fields['visitors'] || 0,
-            pageviews: record.fields['pageviews'] || 0,
+            pageviews: record.fields['pageViews'] || 0,
             avg_duration: record.fields['avgDuration'] || 0,  // analytics.html 호환
             bounce_rate: record.fields['sessions'] > 0
-                ? (1 - (record.fields['pageviews'] / record.fields['sessions']))
+                ? (1 - (record.fields['pageViews'] / record.fields['sessions']))
                 : 0,  // 이탈률 계산
             sessions: record.fields['sessions'] || 0,
             leads: record.fields['leads'] || 0,
