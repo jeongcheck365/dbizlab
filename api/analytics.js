@@ -16,10 +16,8 @@ const ANALYTICS_TABLE_ID = process.env.AIRTABLE_ANALYTICS_TABLE_ID || 'tblsBeDHU
 async function getAnalyticsFromAirtable(startDate, endDate) {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${ANALYTICS_TABLE_ID}`;
 
-    // 날짜 범위 필터 (startDate 이상 AND endDate 이하)
-    const filterFormula = `AND({date} >= '${startDate}', {date} <= '${endDate}')`;
+    // 모든 레코드 가져오기 (Airtable date 필드 비교 제한으로 인해 코드에서 필터링)
     const params = new URLSearchParams({
-        'filterByFormula': filterFormula,
         'sort[0][field]': 'date',
         'sort[0][direction]': 'asc',
         'maxRecords': '365'
@@ -40,7 +38,13 @@ async function getAnalyticsFromAirtable(startDate, endDate) {
         }
 
         const data = await response.json();
-        return data.records || [];
+        const records = data.records || [];
+
+        // 코드에서 날짜 필터링
+        return records.filter(r => {
+            const date = r.fields['date'];
+            return date && date >= startDate && date <= endDate;
+        });
     } catch (error) {
         console.error('Airtable fetch error:', error);
         return [];
