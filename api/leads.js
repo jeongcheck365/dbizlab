@@ -2,6 +2,7 @@
 // GET /api/leads - 접수 내역 조회
 // GET /api/leads?id=xxx - 상세 조회
 // PUT /api/leads?id=xxx - 상태 업데이트
+// DELETE /api/leads?id=xxx - 삭제
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appFGupCEadYZPk0i';
@@ -10,7 +11,7 @@ const AIRTABLE_TABLE_NAME = '고객정보';
 export default async function handler(req, res) {
     // CORS 헤더
     res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, OPTIONS');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
     if (req.method === 'OPTIONS') {
@@ -42,6 +43,15 @@ export default async function handler(req, res) {
             const data = req.body;
             const updatedLead = await updateLead(id, data);
             return res.status(200).json({ success: true, lead: updatedLead });
+        }
+
+        // DELETE - 삭제
+        if (req.method === 'DELETE') {
+            if (!id) {
+                return res.status(400).json({ success: false, error: 'ID가 필요합니다' });
+            }
+            await deleteLead(id);
+            return res.status(200).json({ success: true, message: '삭제되었습니다' });
         }
 
         return res.status(405).json({ success: false, error: 'Method not allowed' });
@@ -165,4 +175,23 @@ async function updateLead(id, data) {
         기업명: record.fields['기업명'] || '',
         상태: record.fields['상태'] || '신규'
     };
+}
+
+// 접수 내역 삭제
+async function deleteLead(id) {
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}/${id}`;
+
+    const response = await fetch(url, {
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${AIRTABLE_TOKEN}`
+        }
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Airtable API Error: ${response.status} - ${errorText}`);
+    }
+
+    return true;
 }

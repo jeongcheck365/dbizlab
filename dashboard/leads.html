@@ -505,6 +505,7 @@
             </div>
             <div class="modal-body" id="modalBody"></div>
             <div class="modal-footer">
+                <button class="btn-modal btn-delete" onclick="deleteLead()" style="background:#EF4444;color:#fff;margin-right:auto;">삭제</button>
                 <button class="btn-modal btn-cancel" onclick="closeModal()">닫기</button>
                 <button class="btn-modal btn-save" onclick="saveStatus()">상태 저장</button>
             </div>
@@ -715,6 +716,30 @@
             } catch (error) {
                 console.error('Save error:', error);
                 alert('저장 중 오류가 발생했습니다.');
+            }
+        }
+
+        // 접수 삭제
+        async function deleteLead() {
+            if (!currentLeadId) return;
+
+            if (!confirm('정말 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.')) return;
+
+            try {
+                const response = await fetch(`${API_BASE}/leads?id=${currentLeadId}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('Delete failed');
+
+                allLeads = allLeads.filter(l => l.id !== currentLeadId);
+                closeModal();
+                renderLeads();
+                alert('삭제되었습니다.');
+
+            } catch (error) {
+                console.error('Delete error:', error);
+                alert('삭제 중 오류가 발생했습니다.');
             }
         }
 
