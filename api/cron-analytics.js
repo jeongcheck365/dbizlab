@@ -592,12 +592,20 @@ export default async function handler(req, res) {
 
         console.log(`[Cron Analytics] Completed. Saved: ${savedCount}, Errors: ${errorCount}`);
 
+        // GA4 데이터가 없으면 에러 정보 반환
+        const ga4Entries = Object.keys(ga4Map).length;
+
         return res.status(200).json({
             success: true,
             message: `Analytics data synced`,
             period: { startDate: startDateStr, endDate: endDateStr },
             savedCount,
             errorCount,
+            debug: {
+                ga4Entries,
+                ga4PropertyId: GA4_PROPERTY_ID || 'NOT_SET',
+                hasCredentials: !!(process.env.GOOGLE_PRIVATE_KEY && process.env.GOOGLE_CLIENT_EMAIL),
+            }
         });
 
     } catch (error) {
@@ -605,6 +613,7 @@ export default async function handler(req, res) {
         return res.status(500).json({
             success: false,
             error: error.message || 'Unknown error',
+            stack: error.stack,
         });
     }
 }
