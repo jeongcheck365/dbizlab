@@ -7,7 +7,7 @@
    HERO STYLE GUIDE (히어로 폰트 스타일 가이드)
    ================================================
 
-   [기준: index.html 메인 히어로 (.keai-hero)]
+   [기준: index.html 메인 히어로 (.dbizlab-hero)]
    모든 히어로 섹션은 이 기준을 따릅니다.
 
    ▸ Badge (배지)
@@ -29,8 +29,8 @@
      - Description: rgba(255, 255, 255, 0.9)
 
    적용 대상:
-   - .keai-hero (메인 페이지)
-   - .keai-about-hero (회사소개 페이지)
+   - .dbizlab-hero (메인 페이지)
+   - .dbizlab-about-hero (회사소개 페이지)
    - 기타 히어로 섹션 추가 시 동일 적용
    ================================================ */
 
@@ -119,7 +119,7 @@ img {
 /* ================================================
    HEADER
    ================================================ */
-.keai-header {
+.dbizlab-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -131,31 +131,31 @@ img {
     padding-bottom: 9px;
 }
 
-.keai-header-container {
+.dbizlab-header-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.keai-header-main {
+.dbizlab-header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 4px 0;
 }
 
-.keai-logo {
+.dbizlab-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.keai-logo-image {
+.dbizlab-logo-image {
     height: 50px;
     width: auto;
 }
 
-.keai-logo-text {
+.dbizlab-logo-text {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary);
@@ -164,7 +164,7 @@ img {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.keai-logo-title {
+.dbizlab-logo-title {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary);
@@ -172,25 +172,25 @@ img {
     letter-spacing: 0.5px;
 }
 
-.keai-logo-subtitle {
+.dbizlab-logo-subtitle {
     font-size: 11px;
     color: var(--text-muted);
     letter-spacing: 0.3px;
 }
 
 /* Navigation */
-.keai-nav {
+.dbizlab-nav {
     display: none;
 }
 
-.keai-nav-list {
+.dbizlab-nav-list {
     display: flex;
     align-items: center;
     gap: 8px;
     list-style: none;
 }
 
-.keai-nav-item a {
+.dbizlab-nav-item a {
     display: block;
     padding: 10px 20px;
     font-size: 15px;
@@ -200,22 +200,22 @@ img {
     transition: var(--transition);
 }
 
-.keai-nav-item a:hover {
+.dbizlab-nav-item a:hover {
     background: var(--bg-light);
     color: var(--primary);
 }
 
-.keai-nav-item a.active {
+.dbizlab-nav-item a.active {
     background: var(--primary);
     color: var(--bg-white);
 }
 
 /* Header CTA */
-.keai-header-cta {
+.dbizlab-header-cta {
     display: none;
 }
 
-.keai-btn-header-cta {
+.dbizlab-btn-header-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -232,19 +232,19 @@ img {
     min-width: 110px;
 }
 
-.keai-btn-header-cta:hover {
+.dbizlab-btn-header-cta:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-md);
 }
 
-.keai-btn-header-cta svg {
+.dbizlab-btn-header-cta svg {
     width: 16px;
     height: 16px;
     fill: currentColor;
 }
 
 /* Mobile Menu Button */
-.keai-mobile-menu-btn {
+.dbizlab-mobile-menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,14 +255,14 @@ img {
     cursor: pointer;
 }
 
-.keai-mobile-menu-btn svg {
+.dbizlab-mobile-menu-btn svg {
     width: 24px;
     height: 24px;
     fill: var(--text-primary);
 }
 
 /* Mobile Menu */
-.keai-mobile-menu {
+.dbizlab-mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -276,11 +276,11 @@ img {
     z-index: 1001;
 }
 
-.keai-mobile-menu.active {
+.dbizlab-mobile-menu.active {
     right: 0;
 }
 
-.keai-mobile-menu-header {
+.dbizlab-mobile-menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -289,13 +289,13 @@ img {
     border-bottom: 2px solid var(--gray-100);
 }
 
-.keai-mobile-menu-title {
+.dbizlab-mobile-menu-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.keai-mobile-menu-close {
+.dbizlab-mobile-menu-close {
     width: 32px;
     height: 32px;
     display: flex;
@@ -306,16 +306,16 @@ img {
     cursor: pointer;
 }
 
-.keai-mobile-nav-list {
+.dbizlab-mobile-nav-list {
     list-style: none;
     margin-bottom: 24px;
 }
 
-.keai-mobile-nav-item {
+.dbizlab-mobile-nav-item {
     margin-bottom: 8px;
 }
 
-.keai-mobile-nav-item a {
+.dbizlab-mobile-nav-item a {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -327,12 +327,12 @@ img {
     transition: var(--transition);
 }
 
-.keai-mobile-nav-item a.active {
+.dbizlab-mobile-nav-item a.active {
     background: var(--primary);
     color: var(--bg-white);
 }
 
-.keai-mobile-overlay {
+.dbizlab-mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -345,26 +345,26 @@ img {
     z-index: 999;
 }
 
-.keai-mobile-overlay.active {
+.dbizlab-mobile-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
 /* Header Responsive */
 @media (min-width: 768px) {
-    .keai-nav {
+    .dbizlab-nav {
         display: block;
     }
-    .keai-mobile-menu-btn {
+    .dbizlab-mobile-menu-btn {
         display: none;
     }
-    .keai-logo-title {
+    .dbizlab-logo-title {
         font-size: 20px;
     }
 }
 
 @media (min-width: 1024px) {
-    .keai-header-cta {
+    .dbizlab-header-cta {
         display: block;
     }
 }
@@ -372,14 +372,14 @@ img {
 /* ================================================
    HERO SECTION
    ================================================ */
-.keai-hero {
+.dbizlab-hero {
     position: relative;
     width: 100%;
     background: url('/images/hero/hero-index.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
-.keai-hero::before {
+.dbizlab-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -390,7 +390,7 @@ img {
     z-index: 0;
 }
 
-.keai-hero-container {
+.dbizlab-hero-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -399,12 +399,12 @@ img {
     min-height: 100%;
 }
 
-.keai-hero-headline {
+.dbizlab-hero-headline {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.keai-hero-badge {
+.dbizlab-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -418,13 +418,13 @@ img {
     margin-bottom: 20px;
 }
 
-.keai-hero-badge svg {
+.dbizlab-hero-badge svg {
     width: 16px;
     height: 16px;
     fill: var(--bg-white);
 }
 
-.keai-hero-title {
+.dbizlab-hero-title {
     font-size: 28px;
     font-weight: 700;
     line-height: 1.4;
@@ -434,7 +434,7 @@ img {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.keai-hero-description {
+.dbizlab-hero-description {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
@@ -442,14 +442,14 @@ img {
 }
 
 /* Hero CTA Buttons */
-.keai-hero-cta {
+.dbizlab-hero-cta {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 32px;
 }
 
-.keai-btn-primary {
+.dbizlab-btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -467,19 +467,19 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.keai-btn-primary:hover {
+.dbizlab-btn-primary:hover {
     background: var(--bg-light);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.keai-btn-primary svg {
+.dbizlab-btn-primary svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
-.keai-btn-secondary {
+.dbizlab-btn-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -496,41 +496,41 @@ img {
     transition: var(--transition);
 }
 
-.keai-btn-secondary:hover {
+.dbizlab-btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--bg-white);
     transform: translateY(-2px);
 }
 
-.keai-btn-secondary svg {
+.dbizlab-btn-secondary svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
 /* Hero Feature Cards */
-.keai-features-grid {
+.dbizlab-features-grid {
     margin-top: 60px;
     position: relative;
 }
 
-.keai-features-slider {
+.dbizlab-features-slider {
     position: relative;
     overflow: hidden;
     padding: 0 0 50px;
 }
 
-.keai-features-track {
+.dbizlab-features-track {
     display: flex;
     transition: transform 0.3s ease;
 }
 
-.keai-features-track .keai-feature-card {
+.dbizlab-features-track .dbizlab-feature-card {
     flex: 0 0 100%;
     min-width: 100%;
 }
 
-.keai-feature-card {
+.dbizlab-feature-card {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-radius: 12px;
@@ -541,13 +541,13 @@ img {
     transition: var(--transition);
 }
 
-.keai-feature-card:hover {
+.dbizlab-feature-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.keai-feature-image {
+.dbizlab-feature-image {
     width: 100%;
     height: 240px;
     overflow: hidden;
@@ -555,7 +555,7 @@ img {
     background: var(--gray-50);
 }
 
-.keai-feature-image img {
+.dbizlab-feature-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -564,23 +564,23 @@ img {
     transition: transform 0.3s ease;
 }
 
-.keai-feature-card:hover .keai-feature-image img {
+.dbizlab-feature-card:hover .dbizlab-feature-image img {
     transform: scale(1.05);
 }
 
-.keai-feature-content {
+.dbizlab-feature-content {
     padding: 28px 24px;
     text-align: center;
 }
 
-.keai-feature-title {
+.dbizlab-feature-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 12px;
 }
 
-.keai-feature-description {
+.dbizlab-feature-description {
     font-size: 14px;
     line-height: 1.6;
     color: var(--text-muted);
@@ -588,7 +588,7 @@ img {
 }
 
 /* Slider Navigation */
-.keai-slider-nav {
+.dbizlab-slider-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -606,32 +606,32 @@ img {
     transition: var(--transition);
 }
 
-.keai-slider-nav:hover {
+.dbizlab-slider-nav:hover {
     background: var(--primary);
     border-color: var(--primary);
     transform: translateY(-50%) scale(1.1);
 }
 
-.keai-slider-nav svg {
+.dbizlab-slider-nav svg {
     width: 20px;
     height: 20px;
     fill: var(--navy);
 }
 
-.keai-slider-nav:hover svg {
+.dbizlab-slider-nav:hover svg {
     fill: var(--bg-white);
 }
 
-.keai-slider-prev {
+.dbizlab-slider-prev {
     left: 10px;
 }
 
-.keai-slider-next {
+.dbizlab-slider-next {
     right: 10px;
 }
 
 /* Slider Dots */
-.keai-slider-dots {
+.dbizlab-slider-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -642,7 +642,7 @@ img {
     transform: translateX(-50%);
 }
 
-.keai-slider-dot {
+.dbizlab-slider-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -653,14 +653,14 @@ img {
     padding: 0;
 }
 
-.keai-slider-dot.active {
+.dbizlab-slider-dot.active {
     background: var(--bg-white);
     width: 24px;
     border-radius: 4px;
 }
 
 /* Hero Notice Box */
-.keai-notice-box {
+.dbizlab-notice-box {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-left: 4px solid var(--primary);
@@ -672,7 +672,7 @@ img {
     max-width: 100%;
 }
 
-.keai-notice-title {
+.dbizlab-notice-title {
     font-size: 15px;
     font-weight: 700;
     color: var(--primary);
@@ -683,13 +683,13 @@ img {
     gap: 6px;
 }
 
-.keai-notice-title svg {
+.dbizlab-notice-title svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
-.keai-notice-list {
+.dbizlab-notice-list {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.8;
@@ -700,13 +700,13 @@ img {
     text-align: left;
 }
 
-.keai-notice-list li {
+.dbizlab-notice-list li {
     padding-left: 20px;
     position: relative;
     margin-bottom: 8px;
 }
 
-.keai-notice-list li::before {
+.dbizlab-notice-list li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -716,86 +716,86 @@ img {
 
 /* Hero Responsive */
 @media (min-width: 768px) {
-    .keai-hero-container {
+    .dbizlab-hero-container {
         padding: 100px 40px 120px;
     }
-    .keai-hero-badge {
+    .dbizlab-hero-badge {
         font-size: 14px;
     }
-    .keai-hero-title {
+    .dbizlab-hero-title {
         font-size: 40px;
     }
-    .keai-hero-description {
+    .dbizlab-hero-description {
         font-size: 17px;
     }
-    .keai-hero-cta {
+    .dbizlab-hero-cta {
         flex-direction: row;
         justify-content: center;
         gap: 16px;
     }
-    .keai-btn-primary,
-    .keai-btn-secondary {
+    .dbizlab-btn-primary,
+    .dbizlab-btn-secondary {
         width: auto;
         min-width: 200px;
     }
 
     /* Grid layout for features */
-    .keai-features-slider {
+    .dbizlab-features-slider {
         overflow: visible;
         padding: 0;
     }
-    .keai-features-track {
+    .dbizlab-features-track {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         transform: none;
         transition: none;
     }
-    .keai-features-track .keai-feature-card {
+    .dbizlab-features-track .dbizlab-feature-card {
         flex: none;
         min-width: auto;
     }
-    .keai-slider-nav,
-    .keai-slider-dots {
+    .dbizlab-slider-nav,
+    .dbizlab-slider-dots {
         display: none;
     }
-    .keai-feature-image {
+    .dbizlab-feature-image {
         height: 260px;
     }
-    .keai-feature-content {
+    .dbizlab-feature-content {
         padding: 32px 28px;
     }
-    .keai-notice-box {
+    .dbizlab-notice-box {
         padding: 28px 40px;
     }
-    .keai-notice-title {
+    .dbizlab-notice-title {
         font-size: 16px;
     }
-    .keai-notice-list {
+    .dbizlab-notice-list {
         font-size: 14px;
     }
 }
 
 @media (min-width: 1024px) {
-    .keai-hero-container {
+    .dbizlab-hero-container {
         padding: 120px 40px 140px;
     }
-    .keai-hero-title {
+    .dbizlab-hero-title {
         font-size: 50px;
     }
-    .keai-hero-description {
+    .dbizlab-hero-description {
         font-size: 19px;
     }
-    .keai-feature-image {
+    .dbizlab-feature-image {
         height: 280px;
     }
-    .keai-feature-content {
+    .dbizlab-feature-content {
         padding: 36px 32px;
     }
-    .keai-feature-title {
+    .dbizlab-feature-title {
         font-size: 20px;
     }
-    .keai-feature-description {
+    .dbizlab-feature-description {
         font-size: 15px;
     }
 }
@@ -803,13 +803,13 @@ img {
 /* ================================================
    PROCESS SECTION
    ================================================ */
-.keai-process {
+.dbizlab-process {
     position: relative;
     width: 100%;
     background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/hero-process.webp') center/cover no-repeat;
 }
 
-.keai-process::before {
+.dbizlab-process::before {
     content: '';
     position: absolute;
     top: 0;
@@ -823,7 +823,7 @@ img {
     z-index: 0;
 }
 
-.keai-process-container {
+.dbizlab-process-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -833,12 +833,12 @@ img {
 }
 
 /* Section Header */
-.keai-section-header {
+.dbizlab-section-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.keai-section-badge {
+.dbizlab-section-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -852,13 +852,13 @@ img {
     margin-bottom: 16px;
 }
 
-.keai-section-badge svg {
+.dbizlab-section-badge svg {
     width: 16px;
     height: 16px;
     fill: var(--primary);
 }
 
-.keai-section-title {
+.dbizlab-section-title {
     font-size: 32px;
     font-weight: 700;
     line-height: 1.4;
@@ -867,7 +867,7 @@ img {
     word-break: keep-all;
 }
 
-.keai-section-description {
+.dbizlab-section-description {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-muted);
@@ -884,7 +884,7 @@ img {
 }
 
 /* Process Steps Grid (Desktop) */
-.keai-steps-grid {
+.dbizlab-steps-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
@@ -892,7 +892,7 @@ img {
 }
 
 /* Step Card */
-.keai-step-card {
+.dbizlab-step-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -905,14 +905,14 @@ img {
     position: relative;
 }
 
-.keai-step-card:hover {
+.dbizlab-step-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateX(8px);
 }
 
 /* Mobile Step Card */
-.keai-mobile-step-card {
+.dbizlab-mobile-step-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -926,13 +926,13 @@ img {
     align-items: center;
 }
 
-.keai-mobile-step-card:hover {
+.dbizlab-mobile-step-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
 }
 
 /* Step Icon */
-.keai-step-icon-wrapper {
+.dbizlab-step-icon-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -940,7 +940,7 @@ img {
     gap: 12px;
 }
 
-.keai-step-icon {
+.dbizlab-step-icon {
     width: 80px;
     height: 80px;
     display: flex;
@@ -952,13 +952,13 @@ img {
     flex-shrink: 0;
 }
 
-.keai-step-icon svg {
+.dbizlab-step-icon svg {
     width: 40px;
     height: 40px;
     fill: var(--bg-white);
 }
 
-.keai-step-number {
+.dbizlab-step-number {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -976,11 +976,11 @@ img {
 }
 
 /* Step Content */
-.keai-step-content {
+.dbizlab-step-content {
     flex: 1;
 }
 
-.keai-step-title {
+.dbizlab-step-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
@@ -988,7 +988,7 @@ img {
     word-break: keep-all;
 }
 
-.keai-step-description {
+.dbizlab-step-description {
     font-size: 15px;
     line-height: 1.7;
     color: var(--text-muted);
@@ -996,7 +996,7 @@ img {
     margin-bottom: 16px;
 }
 
-.keai-step-details {
+.dbizlab-step-details {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -1004,7 +1004,7 @@ img {
     justify-content: center;
 }
 
-.keai-step-detail-item {
+.dbizlab-step-detail-item {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1015,19 +1015,19 @@ img {
     color: var(--text-secondary);
 }
 
-.keai-step-detail-item svg {
+.dbizlab-step-detail-item svg {
     width: 14px;
     height: 14px;
     fill: var(--primary);
 }
 
 /* Process CTA */
-.keai-process-cta {
+.dbizlab-process-cta {
     text-align: center;
     margin-top: 32px;
 }
 
-.keai-btn-cta {
+.dbizlab-btn-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1044,13 +1044,13 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.keai-btn-cta:hover {
+.dbizlab-btn-cta:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.keai-btn-cta svg {
+.dbizlab-btn-cta svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
@@ -1058,7 +1058,7 @@ img {
 
 /* Process Responsive */
 @media (min-width: 768px) {
-    .keai-process-container {
+    .dbizlab-process-container {
         padding: 80px 40px 100px;
     }
     .mobile-only {
@@ -1067,32 +1067,32 @@ img {
     .desktop-only {
         display: block;
     }
-    .keai-section-title {
+    .dbizlab-section-title {
         font-size: 40px;
     }
-    .keai-section-description {
+    .dbizlab-section-description {
         font-size: 18px;
     }
-    .keai-steps-grid {
+    .dbizlab-steps-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    .keai-process-cta {
+    .dbizlab-process-cta {
         margin-top: 60px;
     }
 }
 
 @media (min-width: 1024px) {
-    .keai-process-container {
+    .dbizlab-process-container {
         padding: 100px 40px 120px;
     }
-    .keai-section-title {
+    .dbizlab-section-title {
         font-size: 48px;
     }
-    .keai-step-title {
+    .dbizlab-step-title {
         font-size: 22px;
     }
-    .keai-step-description {
+    .dbizlab-step-description {
         font-size: 16px;
     }
 }
@@ -1100,7 +1100,7 @@ img {
 /* ================================================
    SERVICE SECTION
    ================================================ */
-.keai-service {
+.dbizlab-service {
     position: relative;
     width: 100vw;
     max-width: 100vw;
@@ -1109,7 +1109,7 @@ img {
     background: url('https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev/images/section-bg-2.webp') center/cover no-repeat;
 }
 
-.keai-service::before {
+.dbizlab-service::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1120,7 +1120,7 @@ img {
     z-index: 0;
 }
 
-.keai-service-container {
+.dbizlab-service-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -1130,33 +1130,33 @@ img {
 }
 
 /* Service Header (White text) */
-.keai-service .keai-section-badge {
+.dbizlab-service .dbizlab-section-badge {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.4);
     color: var(--bg-white);
 }
 
-.keai-service .keai-section-badge svg {
+.dbizlab-service .dbizlab-section-badge svg {
     fill: var(--bg-white);
 }
 
-.keai-service .keai-section-title {
+.dbizlab-service .dbizlab-section-title {
     color: var(--bg-white);
 }
 
-.keai-service .keai-section-description {
+.dbizlab-service .dbizlab-section-description {
     color: rgba(255, 255, 255, 0.9);
 }
 
 /* Service Grid */
-.keai-service-grid {
+.dbizlab-service-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
 }
 
 /* Service Card */
-.keai-service-card {
+.dbizlab-service-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -1168,13 +1168,13 @@ img {
     transition: var(--transition);
 }
 
-.keai-service-card:hover {
+.dbizlab-service-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.keai-service-icon {
+.dbizlab-service-icon {
     width: 80px;
     height: 80px;
     display: flex;
@@ -1186,13 +1186,13 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.keai-service-icon svg {
+.dbizlab-service-icon svg {
     width: 40px;
     height: 40px;
     fill: var(--bg-white);
 }
 
-.keai-service-title {
+.dbizlab-service-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
@@ -1200,7 +1200,7 @@ img {
     word-break: keep-all;
 }
 
-.keai-service-description {
+.dbizlab-service-description {
     font-size: 15px;
     line-height: 1.7;
     color: var(--text-muted);
@@ -1208,7 +1208,7 @@ img {
     margin-bottom: 20px;
 }
 
-.keai-service-features {
+.dbizlab-service-features {
     list-style: none;
     width: 100%;
     display: flex;
@@ -1217,7 +1217,7 @@ img {
     align-items: center;
 }
 
-.keai-service-feature-item {
+.dbizlab-service-feature-item {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1226,7 +1226,7 @@ img {
     text-align: left;
 }
 
-.keai-service-feature-item svg {
+.dbizlab-service-feature-item svg {
     width: 18px;
     height: 18px;
     fill: var(--primary);
@@ -1235,34 +1235,34 @@ img {
 
 /* Service Responsive */
 @media (min-width: 768px) {
-    .keai-service-container {
+    .dbizlab-service-container {
         padding: 80px 40px 100px;
     }
-    .keai-service-grid {
+    .dbizlab-service-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
 }
 
 @media (min-width: 1024px) {
-    .keai-service-container {
+    .dbizlab-service-container {
         padding: 100px 40px 120px;
     }
-    .keai-service-grid {
+    .dbizlab-service-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .keai-service-icon {
+    .dbizlab-service-icon {
         width: 96px;
         height: 96px;
     }
-    .keai-service-icon svg {
+    .dbizlab-service-icon svg {
         width: 48px;
         height: 48px;
     }
-    .keai-service-title {
+    .dbizlab-service-title {
         font-size: 22px;
     }
-    .keai-service-description {
+    .dbizlab-service-description {
         font-size: 16px;
     }
 }
@@ -1500,7 +1500,7 @@ textarea.dbizlab-form-control {
 }
 
 /* Privacy Section */
-.keai-privacy-section {
+.dbizlab-privacy-section {
     margin: 20px 0;
     padding: 16px;
     background: var(--gray-50);
@@ -1508,14 +1508,14 @@ textarea.dbizlab-form-control {
     border-radius: 8px;
 }
 
-.keai-privacy-title {
+.dbizlab-privacy-title {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
 
-.keai-privacy-content {
+.dbizlab-privacy-content {
     font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.6;
@@ -1529,17 +1529,17 @@ textarea.dbizlab-form-control {
     display: none;
 }
 
-.keai-privacy-content.show {
+.dbizlab-privacy-content.show {
     display: block;
 }
 
-.keai-privacy-checkbox {
+.dbizlab-privacy-checkbox {
     display: flex;
     align-items: flex-start;
     gap: 8px;
 }
 
-.keai-privacy-checkbox input[type="checkbox"] {
+.dbizlab-privacy-checkbox input[type="checkbox"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -1548,14 +1548,14 @@ textarea.dbizlab-form-control {
     accent-color: var(--primary);
 }
 
-.keai-privacy-checkbox label {
+.dbizlab-privacy-checkbox label {
     font-size: 14px;
     color: var(--text-secondary);
     cursor: pointer;
     line-height: 1.4;
 }
 
-.keai-privacy-detail-link {
+.dbizlab-privacy-detail-link {
     color: var(--primary);
     text-decoration: underline;
     cursor: pointer;
@@ -1564,11 +1564,11 @@ textarea.dbizlab-form-control {
 }
 
 /* Submit Section */
-.keai-submit-section {
+.dbizlab-submit-section {
     text-align: center;
 }
 
-.keai-submit-button {
+.dbizlab-submit-button {
     background: var(--primary);
     color: var(--bg-white);
     padding: 16px 48px;
@@ -1581,27 +1581,27 @@ textarea.dbizlab-form-control {
     box-shadow: var(--shadow-md);
 }
 
-.keai-submit-button:hover {
+.dbizlab-submit-button:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.keai-submit-button:disabled {
+.dbizlab-submit-button:disabled {
     background: var(--gray-400);
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
-.keai-submit-note {
+.dbizlab-submit-note {
     font-size: 13px;
     color: var(--text-muted);
     margin-top: 12px;
 }
 
 /* Message Boxes */
-.keai-message-box {
+.dbizlab-message-box {
     display: none;
     padding: 15px;
     border-radius: 8px;
@@ -1609,19 +1609,19 @@ textarea.dbizlab-form-control {
     text-align: center;
 }
 
-.keai-message-box.success {
+.dbizlab-message-box.success {
     background: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
 
-.keai-message-box.error {
+.dbizlab-message-box.error {
     background: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
-.keai-message-box.active {
+.dbizlab-message-box.active {
     display: block;
 }
 
@@ -1672,7 +1672,7 @@ textarea.dbizlab-form-control {
         font-size: 14px;
         height: 38px;
     }
-    .keai-submit-button {
+    .dbizlab-submit-button {
         width: 100%;
         padding: 12px 24px;
         font-size: 15px;
@@ -1689,11 +1689,11 @@ textarea.dbizlab-form-control {
 /* ================================================
    FOOTER
    ================================================ */
-.keai-footer {
+.dbizlab-footer {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.keai-footer-wrapper {
+.dbizlab-footer-wrapper {
     background: #1e293b;
     color: var(--bg-white);
     padding: 60px 0 0;
@@ -1706,23 +1706,23 @@ textarea.dbizlab-form-control {
     margin-right: -50vw;
 }
 
-.keai-footer-container {
+.dbizlab-footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* Footer Top */
-.keai-footer-top {
+.dbizlab-footer-top {
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(15, 76, 129, 0.2);
 }
 
-.keai-footer-info {
+.dbizlab-footer-info {
     margin-bottom: 0;
 }
 
-.keai-footer-logo {
+.dbizlab-footer-logo {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1730,7 +1730,7 @@ textarea.dbizlab-form-control {
     justify-content: flex-start;
 }
 
-.keai-footer-logo-image {
+.dbizlab-footer-logo-image {
     height: 50px;
     width: auto;
     filter: drop-shadow(0 0 10px rgba(66, 133, 244, 0.8))
@@ -1749,7 +1749,7 @@ textarea.dbizlab-form-control {
     }
 }
 
-.keai-footer-logo-text-wrapper {
+.dbizlab-footer-logo-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1757,7 +1757,7 @@ textarea.dbizlab-form-control {
     padding-bottom: 2px;
 }
 
-.keai-footer-logo-text {
+.dbizlab-footer-logo-text {
     font-size: 32px;
     font-weight: 700;
     color: #FFFFFF;
@@ -1783,7 +1783,7 @@ textarea.dbizlab-form-control {
     }
 }
 
-.keai-footer-desc {
+.dbizlab-footer-desc {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
     font-size: 15px;
@@ -1793,7 +1793,7 @@ textarea.dbizlab-form-control {
 }
 
 /* Footer Middle */
-.keai-footer-middle {
+.dbizlab-footer-middle {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     gap: 80px;
@@ -1801,36 +1801,36 @@ textarea.dbizlab-form-control {
     border-bottom: 1px solid rgba(15, 76, 129, 0.2);
 }
 
-.keai-footer-title {
+.dbizlab-footer-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--primary-bright);
 }
 
-.keai-footer-list {
+.dbizlab-footer-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.keai-footer-list li {
+.dbizlab-footer-list li {
     margin-bottom: 12px;
 }
 
-.keai-footer-list a {
+.dbizlab-footer-list a {
     color: rgba(255, 255, 255, 0.8);
     transition: var(--transition);
     font-size: 15px;
 }
 
-.keai-footer-list a:hover {
+.dbizlab-footer-list a:hover {
     color: var(--primary-bright);
     padding-left: 5px;
 }
 
 /* Contact Items */
-.keai-contact-item {
+.dbizlab-contact-item {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -1839,12 +1839,12 @@ textarea.dbizlab-form-control {
     font-size: 15px;
 }
 
-.keai-contact-item span {
+.dbizlab-contact-item span {
     word-break: keep-all;
     line-height: 1.4;
 }
 
-.keai-contact-item svg {
+.dbizlab-contact-item svg {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
@@ -1852,46 +1852,46 @@ textarea.dbizlab-form-control {
 }
 
 /* Footer Bottom */
-.keai-footer-bottom {
+.dbizlab-footer-bottom {
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.keai-copyright {
+.dbizlab-copyright {
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
     font-size: 14px;
 }
 
-.keai-footer-links {
+.dbizlab-footer-links {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.keai-footer-links a {
+.dbizlab-footer-links a {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
     font-size: 14px;
 }
 
-.keai-footer-links a:hover {
+.dbizlab-footer-links a:hover {
     color: var(--primary-bright);
 }
 
-.keai-footer-links .divider {
+.dbizlab-footer-links .divider {
     color: rgba(15, 76, 129, 0.4);
 }
 
 /* Footer Responsive */
 @media (max-width: 968px) {
-    .keai-footer-middle {
+    .dbizlab-footer-middle {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .keai-footer-bottom {
+    .dbizlab-footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
@@ -1899,36 +1899,36 @@ textarea.dbizlab-form-control {
 }
 
 @media (max-width: 768px) {
-    .keai-footer-wrapper {
+    .dbizlab-footer-wrapper {
         padding: 40px 0 0;
     }
-    .keai-footer-container {
+    .dbizlab-footer-container {
         padding: 0 16px;
     }
-    .keai-footer-middle {
+    .dbizlab-footer-middle {
         grid-template-columns: 1.5fr 0.7fr;
         gap: 12px;
         padding: 30px 0;
     }
-    .keai-footer-logo-image {
+    .dbizlab-footer-logo-image {
         height: 40px;
     }
-    .keai-footer-logo-text {
+    .dbizlab-footer-logo-text {
         font-size: 20px;
     }
-    .keai-footer-desc {
+    .dbizlab-footer-desc {
         font-size: 13px;
     }
-    .keai-contact-item {
+    .dbizlab-contact-item {
         font-size: 11.5px;
         margin-bottom: 8px;
         gap: 8px;
     }
-    .keai-contact-item svg {
+    .dbizlab-contact-item svg {
         width: 12px;
         height: 12px;
     }
-    .keai-footer-list a {
+    .dbizlab-footer-list a {
         font-size: 10.5px;
     }
 }
@@ -1975,14 +1975,14 @@ textarea.dbizlab-form-control {
 /* ================================================
    COMPANY PAGE - ABOUT HERO SECTION
    ================================================ */
-.keai-about-hero {
+.dbizlab-about-hero {
     position: relative;
     width: 100%;
     background: url('/images/hero/hero-company.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
-.keai-about-hero::before {
+.dbizlab-about-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1993,7 +1993,7 @@ textarea.dbizlab-form-control {
     z-index: 0;
 }
 
-.keai-about-hero-container {
+.dbizlab-about-hero-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -2002,12 +2002,12 @@ textarea.dbizlab-form-control {
     min-height: 100%;
 }
 
-.keai-about-hero-headline {
+.dbizlab-about-hero-headline {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.keai-about-hero-badge {
+.dbizlab-about-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -2021,7 +2021,7 @@ textarea.dbizlab-form-control {
     margin-bottom: 20px;
 }
 
-.keai-about-hero-title {
+.dbizlab-about-hero-title {
     font-size: 28px;
     font-weight: 700;
     line-height: 1.4;
@@ -2031,11 +2031,11 @@ textarea.dbizlab-form-control {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.keai-about-hero-title-highlight {
+.dbizlab-about-hero-title-highlight {
     color: var(--bg-white);
 }
 
-.keai-about-hero-subtitle {
+.dbizlab-about-hero-subtitle {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.95);
@@ -2044,7 +2044,7 @@ textarea.dbizlab-form-control {
     margin-bottom: 16px;
 }
 
-.keai-about-hero-description {
+.dbizlab-about-hero-description {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
@@ -2053,7 +2053,7 @@ textarea.dbizlab-form-control {
 }
 
 /* About Hero Notice Box */
-.keai-about-notice-box {
+.dbizlab-about-notice-box {
     background: rgba(26, 115, 232, 0.15);
     border: 1px solid rgba(26, 115, 232, 0.4);
     border-left: 4px solid var(--primary-bright);
@@ -2068,7 +2068,7 @@ textarea.dbizlab-form-control {
     margin-right: auto;
 }
 
-.keai-about-notice-title {
+.dbizlab-about-notice-title {
     font-size: 14px;
     font-weight: 700;
     color: var(--primary-bright);
@@ -2078,7 +2078,7 @@ textarea.dbizlab-form-control {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.keai-about-notice-list {
+.dbizlab-about-notice-list {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.7;
@@ -2089,14 +2089,14 @@ textarea.dbizlab-form-control {
     text-align: left;
 }
 
-.keai-about-notice-list li {
+.dbizlab-about-notice-list li {
     padding-left: 18px;
     position: relative;
     margin-bottom: 6px;
     white-space: nowrap;
 }
 
-.keai-about-notice-list li::before {
+.dbizlab-about-notice-list li::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -2106,75 +2106,75 @@ textarea.dbizlab-form-control {
 
 /* About Hero Responsive */
 @media (min-width: 768px) {
-    .keai-about-hero-container {
+    .dbizlab-about-hero-container {
         padding: 100px 40px 80px;
     }
-    .keai-about-hero-badge {
+    .dbizlab-about-hero-badge {
         font-size: 14px;
     }
-    .keai-about-hero-title {
+    .dbizlab-about-hero-title {
         font-size: 40px;
     }
-    .keai-about-hero-subtitle {
+    .dbizlab-about-hero-subtitle {
         font-size: 17px;
     }
-    .keai-about-hero-description {
+    .dbizlab-about-hero-description {
         font-size: 17px;
     }
-    .keai-about-notice-box {
+    .dbizlab-about-notice-box {
         padding: 24px 32px;
     }
-    .keai-about-notice-title {
+    .dbizlab-about-notice-title {
         font-size: 15px;
     }
-    .keai-about-notice-list {
+    .dbizlab-about-notice-list {
         font-size: 14px;
     }
 }
 
 @media (min-width: 1024px) {
-    .keai-about-hero-container {
+    .dbizlab-about-hero-container {
         padding: 120px 40px 80px;
     }
-    .keai-about-hero-title {
+    .dbizlab-about-hero-title {
         font-size: 50px;
     }
-    .keai-about-hero-subtitle {
+    .dbizlab-about-hero-subtitle {
         font-size: 19px;
     }
-    .keai-about-hero-description {
+    .dbizlab-about-hero-description {
         font-size: 19px;
     }
 }
 
 @media (max-width: 480px) {
-    .keai-about-notice-list {
+    .dbizlab-about-notice-list {
         font-size: 11px;
     }
-    .keai-about-notice-title {
+    .dbizlab-about-notice-title {
         font-size: 12px;
     }
-    .keai-about-notice-box {
+    .dbizlab-about-notice-box {
         padding: 16px 12px;
     }
 }
 
-.keai-mobile-br {
+.dbizlab-mobile-br {
     display: none;
 }
 
-.keai-pc-br {
+.dbizlab-pc-br {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .keai-mobile-br {
+    .dbizlab-mobile-br {
         display: inline;
     }
 }
 
 @media (min-width: 769px) {
-    .keai-pc-br {
+    .dbizlab-pc-br {
         display: inline;
     }
 }
@@ -2182,7 +2182,7 @@ textarea.dbizlab-form-control {
 /* ================================================
    COMPANY PAGE - SERVICE SECTION
    ================================================ */
-.keai-company-service {
+.dbizlab-company-service {
     position: relative;
     width: 100%;
     padding: 100px 20px;
@@ -2190,19 +2190,19 @@ textarea.dbizlab-form-control {
     overflow: hidden;
 }
 
-.keai-company-service-container {
+.dbizlab-company-service-container {
     position: relative;
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.keai-company-service-title {
+.dbizlab-company-service-title {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.keai-company-service-title h2 {
+.dbizlab-company-service-title h2 {
     font-size: clamp(32px, 4vw, 42px);
     font-weight: 800;
     color: var(--navy);
@@ -2210,19 +2210,19 @@ textarea.dbizlab-form-control {
     letter-spacing: -0.5px;
 }
 
-.keai-company-service-title p {
+.dbizlab-company-service-title p {
     font-size: clamp(16px, 2vw, 20px);
     color: var(--text-muted);
     font-weight: 400;
 }
 
-.keai-company-service-grid {
+.dbizlab-company-service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
-.keai-company-service-card {
+.dbizlab-company-service-card {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-radius: 16px;
@@ -2231,44 +2231,44 @@ textarea.dbizlab-form-control {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-.keai-company-service-card:hover {
+.dbizlab-company-service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(15, 76, 129, 0.15);
     border-color: var(--primary);
 }
 
-.keai-company-service-card-image {
+.dbizlab-company-service-card-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
 }
 
-.keai-company-service-card-content {
+.dbizlab-company-service-card-content {
     padding: 32px;
 }
 
-.keai-company-service-card h3 {
+.dbizlab-company-service-card h3 {
     font-size: 22px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 16px;
 }
 
-.keai-company-service-card p {
+.dbizlab-company-service-card p {
     font-size: 16px;
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 24px;
 }
 
-.keai-company-service-tags {
+.dbizlab-company-service-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.keai-company-service-tag {
+.dbizlab-company-service-tag {
     display: inline-block;
     padding: 6px 14px;
     background: var(--bg-light);
@@ -2281,68 +2281,68 @@ textarea.dbizlab-form-control {
 
 /* Company Service Responsive */
 @media (max-width: 1024px) {
-    .keai-company-service {
+    .dbizlab-company-service {
         padding: 80px 20px;
     }
-    .keai-company-service-grid {
+    .dbizlab-company-service-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    .keai-company-service-card-image {
+    .dbizlab-company-service-card-image {
         height: 200px;
     }
 }
 
 @media (max-width: 768px) {
-    .keai-company-service {
+    .dbizlab-company-service {
         padding: 60px 16px;
     }
-    .keai-company-service-title {
+    .dbizlab-company-service-title {
         margin-bottom: 40px;
     }
-    .keai-company-service-title h2 {
+    .dbizlab-company-service-title h2 {
         font-size: 28px;
     }
-    .keai-company-service-title p {
+    .dbizlab-company-service-title p {
         font-size: 16px;
     }
-    .keai-company-service-grid {
+    .dbizlab-company-service-grid {
         gap: 20px;
     }
-    .keai-company-service-card-image {
+    .dbizlab-company-service-card-image {
         height: 180px;
     }
-    .keai-company-service-card-content {
+    .dbizlab-company-service-card-content {
         padding: 24px;
     }
-    .keai-company-service-card h3 {
+    .dbizlab-company-service-card h3 {
         font-size: 20px;
         margin-bottom: 12px;
     }
-    .keai-company-service-card p {
+    .dbizlab-company-service-card p {
         font-size: 15px;
         margin-bottom: 20px;
     }
-    .keai-company-service-tag {
+    .dbizlab-company-service-tag {
         font-size: 12px;
         padding: 5px 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .keai-company-service-card-image {
+    .dbizlab-company-service-card-image {
         height: 160px;
     }
-    .keai-company-service-card-content {
+    .dbizlab-company-service-card-content {
         padding: 20px;
     }
-    .keai-company-service-card h3 {
+    .dbizlab-company-service-card h3 {
         font-size: 18px;
     }
-    .keai-company-service-card p {
+    .dbizlab-company-service-card p {
         font-size: 14px;
     }
-    .keai-company-service-tag {
+    .dbizlab-company-service-tag {
         font-size: 11px;
         padding: 4px 10px;
     }
@@ -2351,7 +2351,7 @@ textarea.dbizlab-form-control {
 /* ================================================
    COMPANY PAGE - CEO SECTION
    ================================================ */
-.keai-ceo-section {
+.dbizlab-ceo-section {
     position: relative;
     width: 100vw;
     max-width: 100vw;
@@ -2364,7 +2364,7 @@ textarea.dbizlab-form-control {
     isolation: isolate;
 }
 
-.keai-ceo-section::before {
+.dbizlab-ceo-section::before {
     content: '';
     position: absolute;
     top: -100px;
@@ -2375,7 +2375,7 @@ textarea.dbizlab-form-control {
     z-index: 0;
 }
 
-.keai-ceo-container {
+.dbizlab-ceo-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -2383,12 +2383,12 @@ textarea.dbizlab-form-control {
     z-index: 1;
 }
 
-.keai-ceo-section-header {
+.dbizlab-ceo-section-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.keai-ceo-section-header h2 {
+.dbizlab-ceo-section-header h2 {
     font-size: clamp(32px, 4vw, 42px);
     font-weight: 800;
     color: var(--bg-white);
@@ -2397,13 +2397,13 @@ textarea.dbizlab-form-control {
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
-.keai-ceo-section-header p {
+.dbizlab-ceo-section-header p {
     font-size: clamp(16px, 2vw, 20px);
     color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
 }
 
-.keai-ceo-intro-container {
+.dbizlab-ceo-intro-container {
     background: var(--bg-white);
     border: 1px solid var(--gray-300);
     border-radius: 20px;
@@ -2417,12 +2417,12 @@ textarea.dbizlab-form-control {
     margin-bottom: 0;
 }
 
-.keai-ceo-intro-container:hover {
+.dbizlab-ceo-intro-container:hover {
     box-shadow: 0 8px 32px rgba(15, 76, 129, 0.2);
     transform: translateY(-4px);
 }
 
-.keai-ceo-content-wrapper {
+.dbizlab-ceo-content-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 60px;
@@ -2430,13 +2430,13 @@ textarea.dbizlab-form-control {
 }
 
 /* CEO Photo Section */
-.keai-ceo-photo-section {
+.dbizlab-ceo-photo-section {
     flex: 0 0 320px;
     text-align: center;
     position: relative;
 }
 
-.keai-ceo-card {
+.dbizlab-ceo-card {
     background: var(--bg-white);
     padding: 20px;
     border-radius: 16px;
@@ -2448,12 +2448,12 @@ textarea.dbizlab-form-control {
     transition: var(--transition);
 }
 
-.keai-ceo-card:hover {
+.dbizlab-ceo-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.keai-ceo-card::before {
+.dbizlab-ceo-card::before {
     content: '대표';
     position: absolute;
     top: 15px;
@@ -2467,7 +2467,7 @@ textarea.dbizlab-form-control {
     box-shadow: 0 2px 8px rgba(15, 76, 129, 0.4);
 }
 
-.keai-ceo-member-image {
+.dbizlab-ceo-member-image {
     width: 280px;
     height: 320px;
     border-radius: 12px;
@@ -2476,19 +2476,19 @@ textarea.dbizlab-form-control {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.keai-ceo-member-image img {
+.dbizlab-ceo-member-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 15%;
 }
 
-.keai-ceo-member-info {
+.dbizlab-ceo-member-info {
     text-align: center;
     margin-top: 20px;
 }
 
-.keai-ceo-member-name {
+.dbizlab-ceo-member-name {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary);
@@ -2497,18 +2497,18 @@ textarea.dbizlab-form-control {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.keai-ceo-member-title {
+.dbizlab-ceo-member-title {
     font-size: 18px;
     color: var(--primary);
     font-weight: 600;
 }
 
 /* CEO Greeting Section */
-.keai-ceo-greeting-section {
+.dbizlab-ceo-greeting-section {
     flex: 1;
 }
 
-.keai-ceo-greeting-section h3 {
+.dbizlab-ceo-greeting-section h3 {
     font-size: 28px;
     font-weight: 700;
     color: var(--text-primary);
@@ -2516,7 +2516,7 @@ textarea.dbizlab-form-control {
     line-height: 1.6;
 }
 
-.keai-ceo-greeting-section h3::after {
+.dbizlab-ceo-greeting-section h3::after {
     content: '';
     display: block;
     width: 60px;
@@ -2526,138 +2526,138 @@ textarea.dbizlab-form-control {
     margin-top: 16px;
 }
 
-.keai-ceo-highlight-text {
+.dbizlab-ceo-highlight-text {
     color: var(--primary);
     font-weight: 800;
 }
 
-.keai-ceo-greeting-text p {
+.dbizlab-ceo-greeting-text p {
     font-size: 17px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 24px;
 }
 
-.keai-ceo-greeting-text p:first-of-type {
+.dbizlab-ceo-greeting-text p:first-of-type {
     font-size: 18px;
     color: var(--text-primary);
     font-weight: 500;
     margin-bottom: 28px;
 }
 
-.keai-ceo-greeting-text p:last-of-type {
+.dbizlab-ceo-greeting-text p:last-of-type {
     margin-bottom: 0;
 }
 
-.keai-ceo-emphasis {
+.dbizlab-ceo-emphasis {
     color: var(--primary);
     font-weight: 700;
 }
 
-.keai-ceo-pc-br {
+.dbizlab-ceo-pc-br {
     display: inline;
 }
 
-.keai-ceo-mobile-br {
+.dbizlab-ceo-mobile-br {
     display: none;
 }
 
 /* CEO Section Responsive */
 @media (max-width: 1024px) {
-    .keai-ceo-intro-container {
+    .dbizlab-ceo-intro-container {
         gap: 40px;
         padding: 40px;
     }
-    .keai-ceo-photo-section {
+    .dbizlab-ceo-photo-section {
         flex: 0 0 280px;
     }
-    .keai-ceo-member-image {
+    .dbizlab-ceo-member-image {
         width: 240px;
         height: 320px;
     }
 }
 
 @media (max-width: 768px) {
-    .keai-ceo-section {
+    .dbizlab-ceo-section {
         padding: 0 16px;
         margin-top: 0;
         margin-bottom: 0;
     }
-    .keai-ceo-container {
+    .dbizlab-ceo-container {
         padding: 60px 20px;
     }
-    .keai-ceo-section-header {
+    .dbizlab-ceo-section-header {
         margin-bottom: 40px;
     }
-    .keai-ceo-section-header h2 {
+    .dbizlab-ceo-section-header h2 {
         font-size: 28px;
     }
-    .keai-ceo-section-header p {
+    .dbizlab-ceo-section-header p {
         font-size: 16px;
     }
-    .keai-ceo-intro-container {
+    .dbizlab-ceo-intro-container {
         padding: 30px 20px;
         gap: 30px;
     }
-    .keai-ceo-pc-br {
+    .dbizlab-ceo-pc-br {
         display: none;
     }
-    .keai-ceo-mobile-br {
+    .dbizlab-ceo-mobile-br {
         display: inline;
     }
-    .keai-ceo-content-wrapper {
+    .dbizlab-ceo-content-wrapper {
         flex-direction: column;
         gap: 40px;
     }
-    .keai-ceo-photo-section {
+    .dbizlab-ceo-photo-section {
         flex: none;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
     }
-    .keai-ceo-member-image {
+    .dbizlab-ceo-member-image {
         width: 220px;
         height: 280px;
     }
-    .keai-ceo-member-name {
+    .dbizlab-ceo-member-name {
         font-size: 24px;
     }
-    .keai-ceo-member-title {
+    .dbizlab-ceo-member-title {
         font-size: 16px;
     }
-    .keai-ceo-greeting-section h3 {
+    .dbizlab-ceo-greeting-section h3 {
         font-size: 20px;
         line-height: 1.6;
     }
-    .keai-ceo-greeting-text p {
+    .dbizlab-ceo-greeting-text p {
         font-size: 15px;
     }
-    .keai-ceo-greeting-text p:first-of-type {
+    .dbizlab-ceo-greeting-text p:first-of-type {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .keai-ceo-intro-container {
+    .dbizlab-ceo-intro-container {
         padding: 24px 16px;
     }
-    .keai-ceo-member-image {
+    .dbizlab-ceo-member-image {
         width: 180px;
         height: 240px;
     }
-    .keai-ceo-member-name {
+    .dbizlab-ceo-member-name {
         font-size: 22px;
     }
-    .keai-ceo-member-title {
+    .dbizlab-ceo-member-title {
         font-size: 15px;
     }
-    .keai-ceo-greeting-section h3 {
+    .dbizlab-ceo-greeting-section h3 {
         font-size: 20px;
     }
-    .keai-ceo-greeting-text p {
+    .dbizlab-ceo-greeting-text p {
         font-size: 14px;
     }
-    .keai-ceo-greeting-text p:first-of-type {
+    .dbizlab-ceo-greeting-text p:first-of-type {
         font-size: 15px;
     }
 }
@@ -2684,7 +2684,7 @@ textarea.dbizlab-form-control {
 /* ================================================
    LEGAL MODAL
    ================================================ */
-.keai-modal-overlay {
+.dbizlab-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -2699,11 +2699,11 @@ textarea.dbizlab-form-control {
     padding: 20px;
 }
 
-.keai-modal-overlay.active {
+.dbizlab-modal-overlay.active {
     display: flex;
 }
 
-.keai-modal {
+.dbizlab-modal {
     background: var(--bg-white);
     border-radius: 16px;
     width: 100%;
@@ -2726,7 +2726,7 @@ textarea.dbizlab-form-control {
     }
 }
 
-.keai-modal-header {
+.dbizlab-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2734,13 +2734,13 @@ textarea.dbizlab-form-control {
     border-bottom: 1px solid var(--gray-200);
 }
 
-.keai-modal-title {
+.dbizlab-modal-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.keai-modal-close {
+.dbizlab-modal-close {
     width: 36px;
     height: 36px;
     display: flex;
@@ -2753,53 +2753,53 @@ textarea.dbizlab-form-control {
     transition: var(--transition);
 }
 
-.keai-modal-close:hover {
+.dbizlab-modal-close:hover {
     background: var(--gray-200);
 }
 
-.keai-modal-close svg {
+.dbizlab-modal-close svg {
     width: 20px;
     height: 20px;
     fill: var(--text-secondary);
 }
 
-.keai-modal-body {
+.dbizlab-modal-body {
     padding: 28px;
     overflow-y: auto;
     flex: 1;
 }
 
-.keai-modal-body h4 {
+.dbizlab-modal-body h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--primary);
     margin: 24px 0 12px;
 }
 
-.keai-modal-body h4:first-child {
+.dbizlab-modal-body h4:first-child {
     margin-top: 0;
 }
 
-.keai-modal-body p {
+.dbizlab-modal-body p {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 12px;
 }
 
-.keai-modal-body ul {
+.dbizlab-modal-body ul {
     padding-left: 20px;
     margin-bottom: 16px;
 }
 
-.keai-modal-body li {
+.dbizlab-modal-body li {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 6px;
 }
 
-.keai-modal-body .keai-legal-info {
+.dbizlab-modal-body .dbizlab-legal-info {
     background: var(--gray-50);
     border: 1px solid var(--gray-200);
     border-radius: 8px;
@@ -2807,22 +2807,22 @@ textarea.dbizlab-form-control {
     margin-top: 24px;
 }
 
-.keai-modal-body .keai-legal-info p {
+.dbizlab-modal-body .dbizlab-legal-info p {
     margin-bottom: 6px;
     font-size: 13px;
 }
 
-.keai-modal-body .keai-legal-info p:last-child {
+.dbizlab-modal-body .dbizlab-legal-info p:last-child {
     margin-bottom: 0;
 }
 
-.keai-modal-footer {
+.dbizlab-modal-footer {
     padding: 20px 28px;
     border-top: 1px solid var(--gray-200);
     text-align: center;
 }
 
-.keai-modal-footer button {
+.dbizlab-modal-footer button {
     padding: 12px 40px;
     background: var(--primary);
     color: var(--bg-white);
@@ -2834,25 +2834,25 @@ textarea.dbizlab-form-control {
     transition: var(--transition);
 }
 
-.keai-modal-footer button:hover {
+.dbizlab-modal-footer button:hover {
     background: var(--primary-dark);
 }
 
 /* Modal Responsive */
 @media (max-width: 768px) {
-    .keai-modal {
+    .dbizlab-modal {
         max-height: 90vh;
     }
-    .keai-modal-header {
+    .dbizlab-modal-header {
         padding: 20px;
     }
-    .keai-modal-title {
+    .dbizlab-modal-title {
         font-size: 18px;
     }
-    .keai-modal-body {
+    .dbizlab-modal-body {
         padding: 20px;
     }
-    .keai-modal-footer {
+    .dbizlab-modal-footer {
         padding: 16px 20px;
     }
 }
@@ -2860,7 +2860,7 @@ textarea.dbizlab-form-control {
 /* ================================================
    JJK PARTNERSHIP SECTION
    ================================================ */
-.keai-partnership-section {
+.dbizlab-partnership-section {
     padding: 30px 0;
     border-bottom: 1px solid rgba(26, 115, 232, 0.2);
     display: flex;
@@ -2868,7 +2868,7 @@ textarea.dbizlab-form-control {
     align-items: center;
 }
 
-.keai-partnership-link {
+.dbizlab-partnership-link {
     display: inline-flex;
     align-items: center;
     gap: 14px;
@@ -2900,14 +2900,14 @@ textarea.dbizlab-form-control {
     }
 }
 
-.keai-partnership-link:hover {
+.dbizlab-partnership-link:hover {
     background: linear-gradient(135deg, rgba(26, 115, 232, 0.25), rgba(66, 133, 244, 0.15));
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0 60px rgba(26, 115, 232, 0.6),
                 0 0 90px rgba(26, 115, 232, 0.4);
 }
 
-.keai-partnership-icon {
+.dbizlab-partnership-icon {
     width: auto;
     height: 24px;
     max-width: 112px;
@@ -2916,7 +2916,7 @@ textarea.dbizlab-form-control {
     filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(26, 115, 232, 0.8));
 }
 
-.keai-partnership-link span {
+.dbizlab-partnership-link span {
     font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
@@ -2927,21 +2927,21 @@ textarea.dbizlab-form-control {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .keai-partnership-section {
+    .dbizlab-partnership-section {
         padding: 20px 0;
         justify-content: center;
     }
 
-    .keai-partnership-link {
+    .dbizlab-partnership-link {
         padding: 12px 18px;
         gap: 10px;
     }
 
-    .keai-partnership-icon {
+    .dbizlab-partnership-icon {
         height: 20px;
     }
 
-    .keai-partnership-link span {
+    .dbizlab-partnership-link span {
         font-size: 11px;
     }
 }
