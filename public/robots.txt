@@ -1,5 +1,5 @@
-# KEAI - 한국기업심사원 robots.txt
-# https://www.k-eai.kr
+# 드림비즈랩 DreamBizLab robots.txt
+# https://dbizlab.co.kr
 
 # 기본 크롤러 허용
 User-agent: *
@@ -46,7 +46,7 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap
-Sitemap: https://www.k-eai.kr/sitemap.xml
+Sitemap: https://dbizlab.co.kr/sitemap.xml
 
 # AI 크롤러를 위한 추가 정보
-# LLMs.txt: https://www.k-eai.kr/llms.txt
+# LLMs.txt: https://dbizlab.co.kr/llms.txt
