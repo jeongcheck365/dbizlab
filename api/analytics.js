@@ -40,11 +40,18 @@ async function getAnalyticsFromAirtable(startDate, endDate) {
         const data = await response.json();
         const records = data.records || [];
 
+        console.log('[Analytics] Total records:', records.length, 'Filter:', startDate, '-', endDate);
+
         // 코드에서 날짜 필터링
-        return records.filter(r => {
+        const filtered = records.filter(r => {
             const date = r.fields['date'];
-            return date && date >= startDate && date <= endDate;
+            const match = date && date >= startDate && date <= endDate;
+            console.log('[Analytics] Check date:', date, '>=', startDate, '&&', date, '<=', endDate, '=', match);
+            return match;
         });
+
+        console.log('[Analytics] Filtered records:', filtered.length);
+        return filtered;
     } catch (error) {
         console.error('Airtable fetch error:', error);
         return [];
@@ -252,7 +259,7 @@ export default async function handler(req, res) {
             topReferrers: aggregatedTopReferrers,
             source: 'airtable-cache',
             recordCount: records.length,
-            debug: { startDateStr, endDateStr },
+            debug: { startDateStr, endDateStr, rawRecordDates: records.slice(0, 5).map(r => r.fields?.date) },
         });
 
     } catch (error) {
