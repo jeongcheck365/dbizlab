@@ -959,6 +959,243 @@
             font-size: 18px;
         }
     }
+
+    /* ================================================
+       POST CONTENT STYLES (k-eai 스타일)
+       ================================================ */
+    .post-spacer {
+        height: 20px;
+    }
+
+    .post-h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1F2937;
+        margin: 40px 0 20px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid #0F4C81;
+        position: relative;
+    }
+
+    .post-h2::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #0F4C81, #1A73E8);
+    }
+
+    .post-h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0F4C81;
+        margin: 32px 0 16px;
+        padding-left: 16px;
+        border-left: 4px solid #0F4C81;
+    }
+
+    .post-h4 {
+        font-size: 17px;
+        font-weight: 600;
+        color: #374151;
+        margin: 24px 0 12px;
+    }
+
+    .post-paragraph {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #374151;
+        margin: 12px 0;
+    }
+
+    .post-paragraph strong {
+        color: #0F4C81;
+        font-weight: 600;
+    }
+
+    /* 불릿 리스트 */
+    .post-bullet-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+    }
+
+    .post-bullet-list li {
+        position: relative;
+        padding-left: 24px;
+        margin: 10px 0;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #4B5563;
+    }
+
+    .post-bullet-list li::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+        background: #0F4C81;
+        border-radius: 50%;
+    }
+
+    /* 숫자 리스트 */
+    .post-number-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+        counter-reset: item;
+    }
+
+    .post-number-list li {
+        position: relative;
+        padding-left: 40px;
+        margin: 14px 0;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #4B5563;
+        counter-increment: item;
+    }
+
+    .post-number-list li::before {
+        content: counter(item);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, #0F4C81, #1A73E8);
+        color: white;
+        border-radius: 50%;
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 체크리스트 */
+    .post-checklist {
+        list-style: none;
+        padding: 20px 24px;
+        margin: 20px 0;
+        background: #F0F9FF;
+        border-radius: 12px;
+        border-left: 4px solid #0F4C81;
+    }
+
+    .post-check-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin: 12px 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #374151;
+    }
+
+    .check-icon {
+        flex-shrink: 0;
+        width: 22px;
+        height: 22px;
+        background: #10B981;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    /* 주의사항 박스 */
+    .post-warning-box {
+        padding: 20px 24px;
+        margin: 24px 0;
+        background: #FEF3C7;
+        border-radius: 12px;
+        border-left: 4px solid #F59E0B;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #92400E;
+    }
+
+    /* 팁 박스 */
+    .post-tip-box {
+        padding: 20px 24px;
+        margin: 24px 0;
+        background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+        border-radius: 12px;
+        border-left: 4px solid #3B82F6;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #1E40AF;
+    }
+
+    /* 테이블 */
+    .post-table-wrap {
+        margin: 24px 0;
+        overflow-x: auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .post-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+    .post-table th,
+    .post-table td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .post-table th {
+        background: linear-gradient(135deg, #0F4C81, #1A73E8);
+        color: white;
+        font-weight: 600;
+    }
+
+    .post-table tr:nth-child(even) td {
+        background: #F9FAFB;
+    }
+
+    .post-table tr:hover td {
+        background: #EFF6FF;
+    }
+
+    @media (max-width: 767px) {
+        .post-h2 {
+            font-size: 20px;
+            margin: 32px 0 16px;
+        }
+
+        .post-h3 {
+            font-size: 17px;
+            margin: 24px 0 12px;
+        }
+
+        .post-checklist {
+            padding: 16px 20px;
+        }
+
+        .post-warning-box,
+        .post-tip-box {
+            padding: 16px 20px;
+        }
+
+        .post-table th,
+        .post-table td {
+            padding: 10px 12px;
+            font-size: 13px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -1527,97 +1764,172 @@
         return `${year}.${month}.${day}`;
     }
 
-    // 콘텐츠 포맷팅
+    // 콘텐츠 포맷팅 (k-eai 스타일)
     function formatContent(content) {
         if (!content) return '';
 
-        let normalized = content.trim();
+        let html = content.trim();
 
-        // 구조화 패턴 확인
-        const hasStructurePatterns = /(■|\d+[\.\)]\s|[•\-\*]\s)/m.test(normalized);
+        // 1. 인라인 스타일 먼저 처리
+        // **볼드** → <strong>
+        html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 
-        if (hasStructurePatterns) {
-            return formatStructuredContent(normalized);
-        }
+        // 2. 테이블 처리 (| 구분자)
+        html = processMarkdownTables(html);
 
-        // 일반 텍스트
-        return normalized
-            .split('\n')
-            .map(line => {
-                const trimmed = line.trim();
-                if (!trimmed) return '<div style="height: 16px;"></div>';
-                return `<p>${trimmed}</p>`;
-            })
-            .join('');
-    }
+        // 3. 줄 단위 처리
+        const lines = html.split('\n');
+        let result = '';
+        let inList = false;
+        let listType = '';
 
-    // 구조화된 콘텐츠 포맷팅
-    function formatStructuredContent(content) {
-        let html = '';
-        const lines = content.split('\n');
-        let inNumberList = false;
-        let inBulletList = false;
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const trimmed = line.trim();
 
-        lines.forEach((line, index) => {
-            const trimmedLine = line.trim();
-
-            if (!trimmedLine) {
-                if (inNumberList) { html += '</ul>'; inNumberList = false; }
-                if (inBulletList) { html += '</ul>'; inBulletList = false; }
-                html += '<div style="height: 16px;"></div>';
-                return;
+            // 빈 줄
+            if (!trimmed) {
+                if (inList) { result += '</ul>'; inList = false; }
+                result += '<div class="post-spacer"></div>';
+                continue;
             }
 
-            // ■ 섹션 제목
-            if (trimmedLine.startsWith('■')) {
-                if (inNumberList) { html += '</ul>'; inNumberList = false; }
-                if (inBulletList) { html += '</ul>'; inBulletList = false; }
-                const title = trimmedLine.replace(/^■\s*/, '');
-                html += `<div class="section-title">${title}</div>`;
-                return;
+            // ## 대제목
+            if (trimmed.startsWith('## ')) {
+                if (inList) { result += '</ul>'; inList = false; }
+                const title = trimmed.replace(/^##\s*/, '');
+                result += '<h2 class="post-h2">' + title + '</h2>';
+                continue;
+            }
+
+            // ### 소제목
+            if (trimmed.startsWith('### ')) {
+                if (inList) { result += '</ul>'; inList = false; }
+                const title = trimmed.replace(/^###\s*/, '');
+                result += '<h3 class="post-h3">' + title + '</h3>';
+                continue;
+            }
+
+            // #### 소소제목
+            if (trimmed.startsWith('#### ')) {
+                if (inList) { result += '</ul>'; inList = false; }
+                const title = trimmed.replace(/^####\s*/, '');
+                result += '<h4 class="post-h4">' + title + '</h4>';
+                continue;
+            }
+
+            // ⚠️ 주의사항 박스
+            if (trimmed.startsWith('⚠️') || trimmed.startsWith('주의사항') || trimmed.startsWith('※')) {
+                if (inList) { result += '</ul>'; inList = false; }
+                result += '<div class="post-warning-box">' + trimmed + '</div>';
+                continue;
+            }
+
+            // 💡 팁 박스
+            if (trimmed.startsWith('💡') || trimmed.startsWith('TIP') || trimmed.startsWith('팁')) {
+                if (inList) { result += '</ul>'; inList = false; }
+                result += '<div class="post-tip-box">' + trimmed + '</div>';
+                continue;
+            }
+
+            // ✅ ✓ 체크리스트
+            if (/^[✅✓]\s/.test(trimmed)) {
+                if (inList && listType !== 'check') { result += '</ul>'; inList = false; }
+                if (!inList) { result += '<ul class="post-checklist">'; inList = true; listType = 'check'; }
+                const text = trimmed.replace(/^[✅✓]\s*/, '');
+                result += '<li class="post-check-item"><span class="check-icon">✓</span>' + text + '</li>';
+                continue;
+            }
+
+            // - 불릿 리스트
+            if (/^[-•]\s/.test(trimmed)) {
+                if (inList && listType !== 'bullet') { result += '</ul>'; inList = false; }
+                if (!inList) { result += '<ul class="post-bullet-list">'; inList = true; listType = 'bullet'; }
+                const text = trimmed.replace(/^[-•]\s*/, '');
+                result += '<li>' + text + '</li>';
+                continue;
             }
 
             // 숫자 리스트 (1. 2. 3.)
-            if (/^\d+[\.\)]\s/.test(trimmedLine)) {
-                if (inBulletList) { html += '</ul>'; inBulletList = false; }
-                if (!inNumberList) {
-                    html += '<ul class="number-list">';
-                    inNumberList = true;
-                }
-                const number = trimmedLine.match(/^(\d+)/)[1];
-                const text = trimmedLine.replace(/^\d+[\.\)]\s*/, '');
-                html += `<li><span class="number-badge">${number}</span><span>${text}</span></li>`;
-                return;
-            }
-
-            // 하위 항목 (들여쓰기 + -)
-            if (/^\s{2,}-\s/.test(line)) {
-                const text = line.replace(/^\s*-\s*/, '');
-                html += `<div class="sub-item">- ${text}</div>`;
-                return;
-            }
-
-            // 불릿 리스트 (• - *)
-            if (/^[•\-\*]\s/.test(trimmedLine)) {
-                if (inNumberList) { html += '</ul>'; inNumberList = false; }
-                if (!inBulletList) {
-                    html += '<ul class="bullet-list">';
-                    inBulletList = true;
-                }
-                const text = trimmedLine.replace(/^[•\-\*]\s*/, '');
-                html += `<li>${text}</li>`;
-                return;
+            if (/^\d+\.\s/.test(trimmed)) {
+                if (inList && listType !== 'number') { result += '</ul>'; inList = false; }
+                if (!inList) { result += '<ol class="post-number-list">'; inList = true; listType = 'number'; }
+                const text = trimmed.replace(/^\d+\.\s*/, '');
+                result += '<li>' + text + '</li>';
+                continue;
             }
 
             // 일반 텍스트
-            if (inNumberList) { html += '</ul>'; inNumberList = false; }
-            if (inBulletList) { html += '</ul>'; inBulletList = false; }
-            html += `<p>${trimmedLine}</p>`;
+            if (inList) {
+                if (listType === 'number') result += '</ol>';
+                else result += '</ul>';
+                inList = false;
+            }
+            result += '<p class="post-paragraph">' + trimmed + '</p>';
+        }
+
+        if (inList) {
+            if (listType === 'number') result += '</ol>';
+            else result += '</ul>';
+        }
+
+        return result;
+    }
+
+    // 마크다운 테이블 처리
+    function processMarkdownTables(content) {
+        const lines = content.split('\n');
+        let result = [];
+        let tableLines = [];
+        let inTable = false;
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+
+            // 테이블 행 감지 (| 로 시작하고 | 로 끝남)
+            if (line.startsWith('|') && line.endsWith('|')) {
+                // 구분선 행 (|---|---| 형태) 건너뛰기
+                if (/^\|[\s\-:]+\|$/.test(line.replace(/\|/g, '|').replace(/[^|:-]/g, ''))) {
+                    continue;
+                }
+                inTable = true;
+                tableLines.push(line);
+            } else {
+                if (inTable && tableLines.length > 0) {
+                    result.push(convertTableToHtml(tableLines));
+                    tableLines = [];
+                    inTable = false;
+                }
+                result.push(lines[i]);
+            }
+        }
+
+        if (tableLines.length > 0) {
+            result.push(convertTableToHtml(tableLines));
+        }
+
+        return result.join('\n');
+    }
+
+    // 테이블 HTML 변환
+    function convertTableToHtml(tableLines) {
+        if (tableLines.length === 0) return '';
+
+        let html = '<div class="post-table-wrap"><table class="post-table">';
+
+        tableLines.forEach((line, idx) => {
+            const cells = line.split('|').filter(c => c.trim() !== '');
+            const tag = idx === 0 ? 'th' : 'td';
+            const rowClass = idx === 0 ? 'post-table-header' : '';
+
+            html += '<tr class="' + rowClass + '">';
+            cells.forEach(cell => {
+                html += '<' + tag + '>' + cell.trim() + '</' + tag + '>';
+            });
+            html += '</tr>';
         });
 
-        if (inNumberList) html += '</ul>';
-        if (inBulletList) html += '</ul>';
-
+        html += '</table></div>';
         return html;
     }
 
