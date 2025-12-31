@@ -3,17 +3,15 @@
   "buildCommand": "",
   "outputDirectory": "public",
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
       "has": [{ "type": "host", "value": "admin.dbizlab.co.kr" }],
-      "destination": "/admin-login.html"
-    },
-    {
-      "source": "/dashboard/:path*",
-      "has": [{ "type": "host", "value": "admin.dbizlab.co.kr" }],
-      "destination": "/dashboard/:path*"
-    },
+      "destination": "/admin-login",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     { "source": "/board", "destination": "/board.html" },
     { "source": "/admin-login", "destination": "/admin-login.html" },
     { "source": "/company", "destination": "/company.html" },
