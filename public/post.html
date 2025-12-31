@@ -1340,14 +1340,14 @@
             const post = singleResult.post;
             currentPost = {
                 id: post.id,
-                title: post.제목,
-                content: post.내용,
-                excerpt: post.요약 || (post.내용 || '').substring(0, 100),
-                category: post.카테고리 || '공지',
-                thumbnail: post.썸네일,
-                date: post.작성일,
-                views: (post.조회수 || 0) + 1, // 방금 증가된 조회수 반영
-                slug: post.슬러그 || ''
+                title: post.title,
+                content: post.content,
+                excerpt: post.excerpt || (post.content || '').substring(0, 100),
+                category: post.category || '공지',
+                thumbnail: post.thumbnailUrl,
+                date: post.publishedAt,
+                views: (post.views || 0) + 1, // 방금 증가된 조회수 반영
+                slug: post.slug || ''
             };
 
             // 2. 관련 게시글용 전체 목록 조회 (별도)
@@ -1358,14 +1358,14 @@
                     if (listResult.success) {
                         allPosts = listResult.posts.map(p => ({
                             id: p.id,
-                            title: p.제목,
-                            content: p.내용,
-                            excerpt: p.요약 || (p.내용 || '').substring(0, 100),
-                            category: p.카테고리 || '공지',
-                            thumbnail: p.썸네일,
-                            date: p.작성일,
-                            views: p.조회수 || 0,
-                            slug: p.슬러그 || ''
+                            title: p.title,
+                            content: p.content,
+                            excerpt: p.excerpt || (p.content || '').substring(0, 100),
+                            category: p.category || '공지',
+                            thumbnail: p.thumbnailUrl,
+                            date: p.publishedAt,
+                            views: p.views || 0,
+                            slug: p.slug || ''
                         }));
                     }
                 }

@@ -824,14 +824,14 @@
 
             allPosts = result.posts.map(post => ({
                 id: post.id,
-                title: post.제목 || post.title,
-                content: post.내용 || post.content,
-                excerpt: post.요약 || (post.내용 || '').substring(0, 100),
-                category: post.카테고리 || post.category || '공지',
-                thumbnail: post.썸네일 || null,
-                date: post.작성일 || post.date,
-                views: post.조회수 || 0,
-                slug: post.슬러그 || ''
+                title: post.title,
+                content: post.content,
+                excerpt: post.excerpt || (post.content || '').substring(0, 100),
+                category: post.category || '공지',
+                thumbnail: post.thumbnailUrl || null,
+                date: post.publishedAt,
+                views: post.views || 0,
+                slug: post.slug || ''
             }));
 
             filterAndRender();
