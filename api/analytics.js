@@ -16,8 +16,8 @@ const ANALYTICS_TABLE_ID = process.env.AIRTABLE_ANALYTICS_TABLE_ID || 'tblsBeDHU
 async function getAnalyticsFromAirtable(startDate, endDate) {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${ANALYTICS_TABLE_ID}`;
 
-    // 날짜 범위 필터
-    const filterFormula = `AND(IS_AFTER({date}, '${startDate}'), IS_BEFORE({date}, '${endDate}'))`;
+    // 날짜 범위 필터 (startDate 이후 AND endDate 이전 또는 같음)
+    const filterFormula = `AND(IS_AFTER({date}, '${startDate}'), OR(IS_BEFORE({date}, '${endDate}'), {date} = '${endDate}'))`;
     const params = new URLSearchParams({
         'filterByFormula': filterFormula,
         'sort[0][field]': 'date',
