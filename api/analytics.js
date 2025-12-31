@@ -248,6 +248,7 @@ export default async function handler(req, res) {
             topReferrers: aggregatedTopReferrers,
             source: 'airtable-cache',
             recordCount: records.length,
+            debug: { startDateStr, endDateStr },
         });
 
     } catch (error) {
