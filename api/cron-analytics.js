@@ -11,13 +11,13 @@ function getEnv(key, defaultValue = '') {
     return value.trim().replace(/[\r\n]/g, '');
 }
 
-const CRON_SECRET = getEnv('CRON_SECRET', 'keai-cron-secret-2024');
+const CRON_SECRET = getEnv('CRON_SECRET', 'dbizlab-cron-secret-2024');
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
-const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
-const ANALYTICS_TABLE_ID = 'tblvtCiOigcPRPXpY'; // Analytics 테이블 ID
-const LEADS_TABLE_ID = 'tblS5O4LN5C7L9Km7'; // 한국기업심사원 테이블 ID
-const GA4_PROPERTY_ID = getEnv('GA4_PROPERTY_ID', '516503347');
-const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE', 'https://k-eai.kr');
+const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appFGupCEadYZPk0i');
+const ANALYTICS_TABLE_ID = process.env.AIRTABLE_ANALYTICS_TABLE_ID || 'tblsBeDHUUKvAjRQw'; // Analytics 테이블 ID
+const LEADS_TABLE_ID = process.env.AIRTABLE_LEADS_TABLE_ID || 'tblwV6AZCvTM1R3kg'; // 고객정보 테이블 ID
+const GA4_PROPERTY_ID = getEnv('GA4_PROPERTY_ID', ''); // GA4 속성 ID (설정 필요)
+const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE', 'https://dbizlab.co.kr');
 
 // Google API Access Token 획득
 async function getAccessToken() {

@@ -14,20 +14,20 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 // 환경변수
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblvARTwWZRjnft2B';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appFGupCEadYZPk0i';
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_BOARD_TABLE_ID || 'tblOLsGzYIHNHirNJ';
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-1003394139746';
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-1002518719491';
 const CRON_SECRET = process.env.CRON_SECRET;
 
 // Cloudflare R2 (이미지 저장 - S3 호환 API)
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '75123333ef4e1c6368873dd55fca00ab';
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'keai';
+const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || 'ceaccbba2547f2c6a871a003f5c55a71';
+const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'dbizlab';
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
 const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
 const R2_ENDPOINT = process.env.R2_ENDPOINT || `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
 // R2 퍼블릭 URL (r2.dev 도메인 또는 커스텀 도메인)
-const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || `https://pub-${R2_ACCOUNT_ID}.r2.dev`;
+const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL || 'https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev';
 
 // 정책자금 기준 연도 (다음 연도 정책 기준으로 작성)
 // 12월~1월은 다음 연도 정책자금 시즌이므로 다음 연도 기준 사용
@@ -689,7 +689,7 @@ function parseGeneratedContent(text) {
   };
 }
 
-// Airtable에 저장
+// Airtable에 저장 (영어 필드명 사용 - Board 테이블)
 async function saveToAirtable(post, category) {
   if (!AIRTABLE_TOKEN) {
     console.log('⚠️ AIRTABLE_TOKEN 미설정 - 저장 스킵');
@@ -698,19 +698,29 @@ async function saveToAirtable(post, category) {
 
   const today = new Date().toISOString().split('T')[0];
 
+  // 슬러그 생성
+  const slug = post.제목
+    .toLowerCase()
+    .replace(/[^\w\s가-힣-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+    .substring(0, 80);
+
   const fields = {
-    '제목': post.제목,
-    '내용': post.내용,
-    '요약': post.요약 || '',
-    '카테고리': CATEGORIES[category].label,
-    '작성일': today,
-    '조회수': 0,
-    '공개여부': true
+    'title': post.제목,
+    'slug': slug,
+    'content': post.내용,
+    'excerpt': post.요약 || '',
+    'category': CATEGORIES[category].label,
+    'publishedAt': today,
+    'views': 0,
+    'status': 'published'
   };
 
-  // 썸네일 URL이 있으면 추가 (URL 필드 타입)
+  // 썸네일 URL이 있으면 추가
   if (post.thumbnailUrl) {
-    fields['썸네일'] = post.thumbnailUrl;
+    fields['thumbnailUrl'] = post.thumbnailUrl;
   }
 
   try {
@@ -963,7 +973,7 @@ async function refreshBoardCache() {
     // 내부 API 호출로 캐시 갱신
     const baseUrl = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : 'https://keai-three.vercel.app';
+      : 'https://dbizlab.vercel.app';
 
     const response = await fetch(`${baseUrl}/api/board?refresh=true`, {
       method: 'GET',

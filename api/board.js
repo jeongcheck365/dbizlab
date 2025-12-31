@@ -11,12 +11,12 @@ import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3
 
 // 환경변수
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblvARTwWZRjnft2B';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appFGupCEadYZPk0i';
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_BOARD_TABLE_ID || 'tblOLsGzYIHNHirNJ';
 
 // R2 설정
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '75123333ef4e1c6368873dd55fca00ab';
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'keai';
+const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || 'ceaccbba2547f2c6a871a003f5c55a71';
+const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'dbizlab';
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
 const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
 const R2_ENDPOINT = process.env.R2_ENDPOINT || `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
@@ -24,11 +24,6 @@ const R2_ENDPOINT = process.env.R2_ENDPOINT || `https://${R2_ACCOUNT_ID}.r2.clou
 // 캐시 설정
 const CACHE_KEY = 'cache/board-posts.json';
 const CACHE_TTL = 5 * 60 * 1000; // 5분 캐시
-
-// 상단 고정 게시글 ID (순서대로) - 현재 비활성화, 최신순 정렬 사용
-const PINNED_POST_IDS = [
-    // 고정 게시글 비활성화 - 작성일 기준 최신순 정렬
-];
 
 // 슬러그 생성 함수 (제목에서 자동 생성)
 function generateSlug(title) {
@@ -133,7 +128,7 @@ export default async function handler(req, res) {
                 if (!post) {
                     return res.status(404).json({ success: false, error: '게시글을 찾을 수 없습니다' });
                 }
-                await incrementViews(post.id, post.조회수 || 0);
+                await incrementViews(post.id, post.views || 0);
                 return res.status(200).json({ success: true, post });
             }
 
@@ -144,7 +139,7 @@ export default async function handler(req, res) {
                 if (!post) {
                     return res.status(404).json({ success: false, error: '게시글을 찾을 수 없습니다' });
                 }
-                await incrementViews(id, post.조회수 || 0);
+                await incrementViews(id, post.views || 0);
                 return res.status(200).json({ success: true, post });
             } else {
                 // 목록 조회 - R2 캐시 우선
@@ -214,13 +209,13 @@ export default async function handler(req, res) {
     }
 }
 
-// 모든 게시글 조회 (공개여부 = true만)
+// 모든 게시글 조회 (status = published만)
 async function getAllPosts() {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
 
     const params = new URLSearchParams({
-        'filterByFormula': '{공개여부} = TRUE()',
-        'sort[0][field]': '작성일',
+        'filterByFormula': '{status} = "published"',
+        'sort[0][field]': 'publishedAt',
         'sort[0][direction]': 'desc',
         'maxRecords': '100'
     });
@@ -239,31 +234,24 @@ async function getAllPosts() {
 
     const data = await response.json();
 
-    // 게시글 매핑 (슬러그 추가)
+    // 게시글 매핑 (영어 필드명 사용)
     const allPosts = data.records.map(record => {
-        const title = record.fields['제목'] || '';
+        const title = record.fields['title'] || '';
         return {
             id: record.id,
-            제목: title,
-            내용: record.fields['내용'] || '',
-            요약: record.fields['요약'] || '',
-            카테고리: record.fields['카테고리'] || '공지',
-            썸네일: record.fields['썸네일'] || null,
-            작성일: record.fields['작성일'] || null,
-            조회수: record.fields['조회수'] || 0,
-            슬러그: generateSlug(title),
-            고정: PINNED_POST_IDS.includes(record.id)
+            title: title,
+            content: record.fields['content'] || '',
+            excerpt: record.fields['excerpt'] || '',
+            category: record.fields['category'] || '마케팅소식',
+            thumbnailUrl: record.fields['thumbnailUrl'] || null,
+            publishedAt: record.fields['publishedAt'] || null,
+            views: record.fields['views'] || 0,
+            slug: record.fields['slug'] || generateSlug(title),
+            status: record.fields['status'] || 'draft'
         };
     });
 
-    // 상단 고정 게시글 정렬 (고정 게시글을 먼저, 고정 순서대로)
-    const pinnedPosts = PINNED_POST_IDS
-        .map(id => allPosts.find(p => p.id === id))
-        .filter(Boolean);
-
-    const regularPosts = allPosts.filter(p => !PINNED_POST_IDS.includes(p.id));
-
-    return [...pinnedPosts, ...regularPosts];
+    return allPosts;
 }
 
 // 단일 게시글 조회
@@ -287,23 +275,23 @@ async function getPostById(id) {
 
     const record = await response.json();
 
-    // 공개여부 확인
-    if (!record.fields['공개여부']) {
+    // status 확인
+    if (record.fields['status'] !== 'published') {
         return null;
     }
 
-    const title = record.fields['제목'] || '';
+    const title = record.fields['title'] || '';
     return {
         id: record.id,
-        제목: title,
-        내용: record.fields['내용'] || '',
-        요약: record.fields['요약'] || '',
-        카테고리: record.fields['카테고리'] || '공지',
-        썸네일: record.fields['썸네일'] || null,
-        작성일: record.fields['작성일'] || null,
-        조회수: record.fields['조회수'] || 0,
-        슬러그: generateSlug(title),
-        고정: PINNED_POST_IDS.includes(record.id)
+        title: title,
+        content: record.fields['content'] || '',
+        excerpt: record.fields['excerpt'] || '',
+        category: record.fields['category'] || '마케팅소식',
+        thumbnailUrl: record.fields['thumbnailUrl'] || null,
+        publishedAt: record.fields['publishedAt'] || null,
+        views: record.fields['views'] || 0,
+        slug: record.fields['slug'] || generateSlug(title),
+        status: record.fields['status'] || 'draft'
     };
 }
 
@@ -313,7 +301,7 @@ async function getPostBySlug(slug) {
     const posts = await getAllPosts();
 
     // 슬러그 일치 검색
-    const post = posts.find(p => p.슬러그 === slug);
+    const post = posts.find(p => p.slug === slug);
 
     return post || null;
 }
@@ -331,7 +319,7 @@ async function incrementViews(id, currentViews) {
             },
             body: JSON.stringify({
                 fields: {
-                    '조회수': (currentViews || 0) + 1
+                    'views': (currentViews || 0) + 1
                 }
             })
         });
@@ -344,19 +332,21 @@ async function incrementViews(id, currentViews) {
 async function createPost(data) {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
 
+    const title = data.title || '';
     const fields = {
-        '제목': data.제목 || '',
-        '내용': data.내용 || '',
-        '요약': data.요약 || '',
-        '카테고리': data.카테고리 || '공지',
-        '작성일': data.작성일 || new Date().toISOString().split('T')[0],
-        '조회수': 0,
-        '공개여부': data.공개여부 !== false
+        'title': title,
+        'slug': data.slug || generateSlug(title),
+        'content': data.content || '',
+        'excerpt': data.excerpt || '',
+        'category': data.category || '마케팅소식',
+        'publishedAt': data.publishedAt || new Date().toISOString().split('T')[0],
+        'views': 0,
+        'status': data.status || 'published'
     };
 
     // 썸네일 URL이 있으면 추가
-    if (data.썸네일) {
-        fields['썸네일URL'] = data.썸네일;
+    if (data.thumbnailUrl) {
+        fields['thumbnailUrl'] = data.thumbnailUrl;
     }
 
     const response = await fetch(url, {
@@ -377,12 +367,14 @@ async function createPost(data) {
 
     return {
         id: record.id,
-        제목: record.fields['제목'] || '',
-        내용: record.fields['내용'] || '',
-        요약: record.fields['요약'] || '',
-        카테고리: record.fields['카테고리'] || '공지',
-        작성일: record.fields['작성일'] || null,
-        조회수: record.fields['조회수'] || 0
+        title: record.fields['title'] || '',
+        slug: record.fields['slug'] || '',
+        content: record.fields['content'] || '',
+        excerpt: record.fields['excerpt'] || '',
+        category: record.fields['category'] || '마케팅소식',
+        publishedAt: record.fields['publishedAt'] || null,
+        views: record.fields['views'] || 0,
+        status: record.fields['status'] || 'draft'
     };
 }
 
@@ -392,12 +384,18 @@ async function updatePost(id, data) {
 
     const fields = {};
 
-    if (data.제목 !== undefined) fields['제목'] = data.제목;
-    if (data.내용 !== undefined) fields['내용'] = data.내용;
-    if (data.요약 !== undefined) fields['요약'] = data.요약;
-    if (data.카테고리 !== undefined) fields['카테고리'] = data.카테고리;
-    if (data.공개여부 !== undefined) fields['공개여부'] = data.공개여부;
-    if (data.썸네일 !== undefined) fields['썸네일URL'] = data.썸네일;
+    if (data.title !== undefined) {
+        fields['title'] = data.title;
+        if (!data.slug) {
+            fields['slug'] = generateSlug(data.title);
+        }
+    }
+    if (data.slug !== undefined) fields['slug'] = data.slug;
+    if (data.content !== undefined) fields['content'] = data.content;
+    if (data.excerpt !== undefined) fields['excerpt'] = data.excerpt;
+    if (data.category !== undefined) fields['category'] = data.category;
+    if (data.status !== undefined) fields['status'] = data.status;
+    if (data.thumbnailUrl !== undefined) fields['thumbnailUrl'] = data.thumbnailUrl;
 
     const response = await fetch(url, {
         method: 'PATCH',
@@ -417,12 +415,14 @@ async function updatePost(id, data) {
 
     return {
         id: record.id,
-        제목: record.fields['제목'] || '',
-        내용: record.fields['내용'] || '',
-        요약: record.fields['요약'] || '',
-        카테고리: record.fields['카테고리'] || '공지',
-        작성일: record.fields['작성일'] || null,
-        조회수: record.fields['조회수'] || 0
+        title: record.fields['title'] || '',
+        slug: record.fields['slug'] || '',
+        content: record.fields['content'] || '',
+        excerpt: record.fields['excerpt'] || '',
+        category: record.fields['category'] || '마케팅소식',
+        publishedAt: record.fields['publishedAt'] || null,
+        views: record.fields['views'] || 0,
+        status: record.fields['status'] || 'draft'
     };
 }
 

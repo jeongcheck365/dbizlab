@@ -17,16 +17,16 @@ function getEnv(key, defaultValue = '') {
 }
 
 // 환경 변수
-const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID');
+const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID', 'ceaccbba2547f2c6a871a003f5c55a71');
 const R2_ACCESS_KEY_ID = getEnv('R2_ACCESS_KEY_ID');
 const R2_SECRET_ACCESS_KEY = getEnv('R2_SECRET_ACCESS_KEY');
-const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'keai');
-const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || `https://pub-${R2_ACCOUNT_ID}.r2.dev`;
+const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'dbizlab');
+const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || 'https://pub-f4383ed498414dc59b27aeef0847aea6.r2.dev';
 
 // Airtable 설정
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
-const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
-const AIRTABLE_TABLE_ID = 'tblS5O4LN5C7L9Km7'; // 팝업 테이블
+const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appFGupCEadYZPk0i');
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_POPUPS_TABLE_ID || 'tbl3MhsZbZqXdiCzI'; // 팝업 테이블
 
 // 최대 파일 크기
 const MAX_FILE_SIZE = 100 * 1024; // 100KB

@@ -4,8 +4,8 @@
 // PUT /api/leads?id=xxx - 상태 업데이트
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_NAME = '한국기업심사원';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appFGupCEadYZPk0i';
+const AIRTABLE_TABLE_NAME = '고객정보';
 
 export default async function handler(req, res) {
     // CORS 헤더

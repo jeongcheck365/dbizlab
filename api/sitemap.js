@@ -2,9 +2,9 @@
 // GET /api/sitemap - XML sitemap 반환
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblvARTwWZRjnft2B';
-const SITE_URL = 'https://www.k-eai.kr';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appFGupCEadYZPk0i';
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_BOARD_TABLE_ID || 'tblOLsGzYIHNHirNJ';
+const SITE_URL = 'https://dbizlab.co.kr';
 
 // 슬러그 생성 함수
 function generateSlug(title) {
@@ -24,11 +24,11 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Airtable에서 공개 게시글 조회
+        // Airtable에서 공개 게시글 조회 (영어 필드명 사용)
         const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
         const params = new URLSearchParams({
-            'filterByFormula': '{공개여부} = TRUE()',
-            'sort[0][field]': '작성일',
+            'filterByFormula': '{status} = "published"',
+            'sort[0][field]': 'publishedAt',
             'sort[0][direction]': 'desc',
             'maxRecords': '100'
         });
@@ -44,8 +44,8 @@ export default async function handler(req, res) {
         if (response.ok) {
             const data = await response.json();
             posts = data.records.map(record => ({
-                slug: generateSlug(record.fields['제목'] || ''),
-                date: record.fields['작성일'] || new Date().toISOString().split('T')[0]
+                slug: record.fields['slug'] || generateSlug(record.fields['title'] || ''),
+                date: record.fields['publishedAt'] || new Date().toISOString().split('T')[0]
             })).filter(p => p.slug);
         }
 
