@@ -653,9 +653,10 @@
                 <div class="form-row">
                     <label class="form-label">카테고리 *</label>
                     <select id="post-category" class="form-select">
-                        <option value="공지">공지</option>
-                        <option value="뉴스">뉴스</option>
-                        <option value="정보">정보</option>
+                        <option value="정부정책자금">정부정책자금</option>
+                        <option value="정부지원자금">정부지원자금</option>
+                        <option value="정책소식">정책소식</option>
+                        <option value="소상공인정보">소상공인정보</option>
                     </select>
                 </div>
                 <div class="form-row">
@@ -886,16 +887,16 @@
 
                 if (result.success && result.post) {
                     const post = result.post;
-                    document.getElementById('post-title').value = post.제목 || '';
-                    document.getElementById('post-summary').value = post.요약 || '';
-                    document.getElementById('post-category').value = post.카테고리 || '공지';
-                    document.getElementById('post-thumbnail').value = post.썸네일 || '';
-                    document.getElementById('content-editor').value = post.내용 || '';
+                    document.getElementById('post-title').value = post.title || '';
+                    document.getElementById('post-summary').value = post.excerpt || '';
+                    document.getElementById('post-category').value = post.category || '정책소식';
+                    document.getElementById('post-thumbnail').value = post.thumbnailUrl || '';
+                    document.getElementById('content-editor').value = post.content || '';
 
                     // 기존 썸네일 표시
-                    if (post.썸네일) {
+                    if (post.thumbnailUrl) {
                         const preview = document.getElementById('thumbnail-preview');
-                        preview.innerHTML = `<img src="${post.썸네일}" alt="썸네일">`;
+                        preview.innerHTML = `<img src="${post.thumbnailUrl}" alt="썸네일">`;
                         preview.classList.add('has-image');
                         document.getElementById('btn-remove-thumbnail').style.display = 'inline-flex';
                     }
@@ -1084,11 +1085,11 @@
             const data = collectFormData();
 
             // 유효성 검사
-            if (!data.제목) {
+            if (!data.title) {
                 showToast('제목을 입력하세요', 'error');
                 return;
             }
-            if (!data.내용) {
+            if (!data.content) {
                 showToast('내용을 입력하세요', 'error');
                 return;
             }
@@ -1123,13 +1124,13 @@
         // 폼 데이터 수집
         function collectFormData() {
             return {
-                제목: document.getElementById('post-title').value.trim(),
-                요약: document.getElementById('post-summary').value.trim(),
-                카테고리: document.getElementById('post-category').value,
-                썸네일: document.getElementById('post-thumbnail').value.trim(),
-                내용: document.getElementById('content-editor').value,
-                작성일: new Date().toISOString().split('T')[0],
-                공개여부: true
+                title: document.getElementById('post-title').value.trim(),
+                excerpt: document.getElementById('post-summary').value.trim(),
+                category: document.getElementById('post-category').value,
+                thumbnailUrl: document.getElementById('post-thumbnail').value.trim(),
+                content: document.getElementById('content-editor').value,
+                publishedAt: new Date().toISOString().split('T')[0],
+                status: 'published'
             };
         }
 
@@ -1150,11 +1151,11 @@
                 if (draft) {
                     const data = JSON.parse(draft);
                     if (confirm('임시저장된 글이 있습니다. 복원하시겠습니까?')) {
-                        document.getElementById('post-title').value = data.제목 || '';
-                        document.getElementById('post-summary').value = data.요약 || '';
-                        document.getElementById('post-category').value = data.카테고리 || '공지';
-                        document.getElementById('post-thumbnail').value = data.썸네일 || '';
-                        document.getElementById('content-editor').value = data.내용 || '';
+                        document.getElementById('post-title').value = data.title || '';
+                        document.getElementById('post-summary').value = data.excerpt || '';
+                        document.getElementById('post-category').value = data.category || '정책소식';
+                        document.getElementById('post-thumbnail').value = data.thumbnailUrl || '';
+                        document.getElementById('content-editor').value = data.content || '';
                     }
                 }
             }
